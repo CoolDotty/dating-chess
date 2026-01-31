@@ -1,4 +1,8 @@
-# #StopWaitingForGodot Chess
+# Dating Chess
+
+This is a fork of [stopwaitingforgodot-chess](https://github.com/thearst3rd/stopwaitingforgodot-chess0)
+
+# Original Readme
 
 A simple chess implementation in [Godot](https://godotengine.org/). This is [my submission](https://itch.io/jam/stop-waiting-for-godot/rate/1188240) to Terry Cavanaugh's [STOP WAITING FOR GODOT](https://itch.io/jam/stop-waiting-for-godot) Jam!
 

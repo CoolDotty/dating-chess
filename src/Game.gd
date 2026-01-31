@@ -210,6 +210,7 @@ func update_state(after_move := false) -> void:
 				capture_sound.play()
 			else:
 				move_sound.play()
+				print(last_move.piece_type)
 
 			if result != Chess.RESULT.ONGOING:
 				terminal_sound.play()

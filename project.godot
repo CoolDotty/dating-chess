@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Settings="*res://src/Settings.gd"
 Dialogic="*uid://ds2q0uclmolvu"
+Global="*uid://bwq1ano4tn5gg"
 
 [dialogic]
 

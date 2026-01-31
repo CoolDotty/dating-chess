@@ -878,6 +878,7 @@ func notate_moves(moves: Array) -> void:
 	# Second pass, actually generate SAN
 	for move in moves:
 		var piece_type = pieces[move.from_square].to_upper()
+		move.piece_type = piece_type
 
 		if piece_type == "K" and (move.to_square == move.from_square + 2):
 			move.notation_san = "O-O"

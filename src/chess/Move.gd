@@ -14,6 +14,8 @@ var prev_ep_target = null
 var prev_halfmove_clock = -1
 var notation_san = null
 
+var piece_type = null
+
 
 func duplicate():
 	var new_move = get_script().new()

@@ -1,0 +1,866 @@
+[gd_scene load_steps=36 format=3 uid="uid://fctovp54ejhp"]
+
+[ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="1"]
+[ext_resource type="Script" path="res://src/CreditsMenu.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://bhyf0nnv2h6je" path="res://assets/orkney/Orkney Bold Italic.otf" id="3"]
+[ext_resource type="FontFile" uid="uid://oaepv3kovg87" path="res://assets/orkney/Orkney Regular.otf" id="4"]
+[ext_resource type="FontFile" uid="uid://d0787hj745m7v" path="res://assets/orkney/Orkney Light Italic.otf" id="5"]
+[ext_resource type="Texture2D" uid="uid://cfyj5dempsrum" path="res://assets/tatiana/wN.svg" id="6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osy0w"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101961, 0.101961, 0.101961, 0.862745)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_6153x"]
+font_size = 32
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3"), ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2kvql"]
+font_size = 22
+
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("5")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_pfayu"]
+font_size = 20
+
+[sub_resource type="FontFile" id="6"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_a2vm0"]
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jxue"]
+font_size = 22
+
+[sub_resource type="FontFile" id="7"]
+fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_t664w"]
+font_size = 22
+
+[sub_resource type="FontFile" id="8"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_kyvkr"]
+font_size = 30
+
+[sub_resource type="FontFile" id="9"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_cko04"]
+line_spacing = -6.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_g372p"]
+font_size = 22
+
+[sub_resource type="FontFile" id="10"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_rv6s7"]
+font_size = 19
+
+[sub_resource type="FontFile" id="11"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_x2g5b"]
+font_size = 22
+
+[sub_resource type="FontFile" id="12"]
+fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_gryco"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_iknai"]
+font_size = 22
+
+[sub_resource type="FontFile" id="13"]
+fallbacks = Array[Font]([ExtResource("4"), ExtResource("4"), ExtResource("4")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fcj8y"]
+font_size = 10
+
+[sub_resource type="FontFile" id="14"]
+fallbacks = Array[Font]([ExtResource("5")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_h3f04"]
+font_size = 12
+
+[node name="CreditsMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.392157)
+script = ExtResource("2")
+
+[node name="M" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="Panel" type="PanelContainer" parent="M"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_osy0w")
+
+[node name="M" type="MarginContainer" parent="M/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ScrollContainer" type="ScrollContainer" parent="M/Panel/M"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="V" type="VBoxContainer" parent="M/Panel/M/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("1")
+text = "Credits"
+label_settings = SubResource("LabelSettings_6153x")
+horizontal_alignment = 1
+
+[node name="GameTitle" type="HBoxContainer" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Name" type="Label" parent="M/Panel/M/ScrollContainer/V/GameTitle"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+text = "#StopWaitingForGodot Chess"
+label_settings = SubResource("LabelSettings_2kvql")
+
+[node name="Version" type="Label" parent="M/Panel/M/ScrollContainer/V/GameTitle"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+text = "v"
+
+[node name="By" type="Label" parent="M/Panel/M/ScrollContainer/V/GameTitle"]
+layout_mode = 2
+text = "by"
+
+[node name="Author" type="Label" parent="M/Panel/M/ScrollContainer/V/GameTitle"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
+text = "Terry Hearst (thearst3rd)"
+label_settings = SubResource("LabelSettings_pfayu")
+
+[node name="Desc" type="Label" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+text = "#StopWaitingForGodot Chess is my entry to Terry Cavanaugh's #StopWaitingForGodot game jam. I had a lot of fun working on this project! I previously attempted to make chess in Godot some months ago but failed miserably. But after participating in the GMTK Game Jam 2021 and using Godot for that, I felt I had a better shot and that I could give it another go. I learned a lot during this project, including how to use the built in drag and drop functionality, groups, singletons, and defining my own object classes! I documented some of the development process in the readme of the GitHub repository, go check it out if you're interested!"
+autowrap_mode = 2
+
+[node name="RepoLinkCenterer" type="Control" parent="M/Panel/M/ScrollContainer/V"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RepoLink" type="LinkButton" parent="M/Panel/M/ScrollContainer/V/RepoLinkCenterer"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -10.0
+offset_right = 221.0
+offset_bottom = 10.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.239216, 0.537255, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.1704, 0.38624, 0.71, 1)
+theme_override_colors/font_hover_color = Color(0.439216, 0.662745, 1, 1)
+text = "https://github.com/thearst3rd/stopwaitingforgodot-chess"
+
+[node name="CreditsInRepo" type="Label" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+text = "Additionally, these credits (with links and more detail) are available in the GitHub repo - in CREDITS.md."
+autowrap_mode = 2
+
+[node name="Spacer" type="Control" parent="M/Panel/M/ScrollContainer/V"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Assets" type="Label" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("1")
+text = "Assets"
+label_settings = SubResource("LabelSettings_6153x")
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 0
+columns = 5
+
+[node name="Control" type="Control" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Name"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Author"
+horizontal_alignment = 1
+
+[node name="License" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "License"
+horizontal_alignment = 1
+
+[node name="TatianaRect" type="TextureRect" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("6")
+expand_mode = 1
+
+[node name="TatianaLabel1" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Piece Graphics"
+horizontal_alignment = 1
+
+[node name="TatianaLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "tatiana"
+label_settings = SubResource("LabelSettings_a2vm0")
+horizontal_alignment = 1
+
+[node name="TatianaLabel3" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "sadsnake1"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="TatianaLabel4" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("7")
+text = "CC BY-NC-SA 4.0"
+label_settings = SubResource("LabelSettings_t664w")
+horizontal_alignment = 1
+
+[node name="OrkneyLabel1" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = SubResource("8")
+text = "Abg"
+label_settings = SubResource("LabelSettings_kyvkr")
+vertical_alignment = 1
+
+[node name="OrkneyLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Font"
+horizontal_alignment = 1
+
+[node name="OrkneyLabel3" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "Orkney"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="OrkneyLabel4" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = SubResource("9")
+text = "Samuel Oakes
+and
+Alfredo Marco Pradil"
+label_settings = SubResource("LabelSettings_cko04")
+horizontal_alignment = 1
+
+[node name="OrkneyLabel5" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = SubResource("7")
+text = "SIL Open Font License
+(OFL, see below)"
+label_settings = SubResource("LabelSettings_g372p")
+horizontal_alignment = 1
+
+[node name="Control3" type="Control" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MoveLabel1" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Move Sound"
+horizontal_alignment = 1
+
+[node name="MoveLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "move.wav"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="MoveLabel3" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "thearst3rd"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="MoveLabel4" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("7")
+text = "CC0"
+label_settings = SubResource("LabelSettings_g372p")
+horizontal_alignment = 1
+
+[node name="Control4" type="Control" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="CaptureLabel1" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Capture Sound"
+horizontal_alignment = 1
+
+[node name="CaptureLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "capture.wav"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="CaptureLabel3" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "thearst3rd"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="CaptureLabel4" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("7")
+text = "CC0"
+label_settings = SubResource("LabelSettings_g372p")
+horizontal_alignment = 1
+
+[node name="Control5" type="Control" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="CheckLabel1" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Check Sound"
+horizontal_alignment = 1
+
+[node name="CheckLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "Notification 1_1"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="CheckLabel3" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "Joao_Janz"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="CheckLabel4" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("7")
+text = "CC BY-NC 3.0"
+label_settings = SubResource("LabelSettings_g372p")
+horizontal_alignment = 1
+
+[node name="Control6" type="Control" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TerminalLabel1" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Terminal Sound"
+horizontal_alignment = 1
+
+[node name="TerminalLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("10")
+text = "Chord Alert Notification"
+label_settings = SubResource("LabelSettings_rv6s7")
+horizontal_alignment = 1
+
+[node name="TerminalLabel3" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+text = "graham_makes"
+label_settings = SubResource("LabelSettings_4jxue")
+horizontal_alignment = 1
+
+[node name="TerminalLabel4" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("7")
+text = "CC BY 3.0"
+label_settings = SubResource("LabelSettings_g372p")
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="M/Panel/M/ScrollContainer/V"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Licenses" type="Label" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("1")
+text = "Licenses"
+label_settings = SubResource("LabelSettings_6153x")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Godot" type="VBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/Godot"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("11")
+text = "Godot Engine"
+label_settings = SubResource("LabelSettings_x2g5b")
+horizontal_alignment = 1
+
+[node name="License Text" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/Godot"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("12")
+text = "This game uses Godot Engine, available under the following license:
+
+Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2021 Godot Engine contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+label_settings = SubResource("LabelSettings_gryco")
+autowrap_mode = 2
+
+[node name="FreeType" type="VBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/FreeType"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("11")
+text = "FreeType"
+label_settings = SubResource("LabelSettings_iknai")
+horizontal_alignment = 1
+
+[node name="License Text" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/FreeType"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("12")
+text = "Portions of this software are copyright © 2021 The FreeType Project (www.freetype.org). All rights reserved."
+label_settings = SubResource("LabelSettings_gryco")
+autowrap_mode = 2
+
+[node name="ENet" type="VBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/ENet"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("11")
+text = "ENet"
+label_settings = SubResource("LabelSettings_iknai")
+horizontal_alignment = 1
+
+[node name="License Text" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/ENet"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("12")
+text = "Copyright (c) 2002-2020 Lee Salzman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+label_settings = SubResource("LabelSettings_gryco")
+autowrap_mode = 2
+
+[node name="MBedTLS" type="VBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/MBedTLS"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("11")
+text = "MBedTLS"
+label_settings = SubResource("LabelSettings_iknai")
+horizontal_alignment = 1
+
+[node name="License Text" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer/MBedTLS"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("12")
+text = "Copyright The Mbed TLS Contributors
+
+Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."
+label_settings = SubResource("LabelSettings_gryco")
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="OFL" type="VBoxContainer" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer2/OFL"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("11")
+text = "Orkney (OFL)"
+label_settings = SubResource("LabelSettings_iknai")
+horizontal_alignment = 1
+
+[node name="License Text" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer2/HBoxContainer/VBoxContainer2/OFL"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("13")
+text = "Copyright (c) 2015, Alfredo Marco Pradil (https://behance.net/pradil), Samuel Oakes (http://oakes.co/), Cristiano Sobral (https://www.behance.net/cssobral20f492), with Reserved Font Name Orkney.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+\"Font Software\" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+\"Reserved Font Name\" refers to any names specified as such after the
+copyright statement(s).
+
+\"Original Version\" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+\"Modified Version\" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+\"Author\" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+"
+label_settings = SubResource("LabelSettings_fcj8y")
+autowrap_mode = 2
+
+[node name="Spacer3" type="Control" parent="M/Panel/M/ScrollContainer/V"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Footer" type="Label" parent="M/Panel/M/ScrollContainer/V"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("14")
+text = "Man I spent way too long making this credits screen, I should've just linked to the GitHub and called it at that. It does look cool at least :)"
+label_settings = SubResource("LabelSettings_h3f04")
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 40.0
+offset_right = 1196.0
+offset_bottom = 66.0
+text = "Back"
+
+[connection signal="pressed" from="M/Panel/M/ScrollContainer/V/RepoLinkCenterer/RepoLink" to="." method="_on_RepoLink_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

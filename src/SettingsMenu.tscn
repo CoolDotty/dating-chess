@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0fhva7v6808"]
+
+[ext_resource type="Script" path="res://src/SettingsMenu.gd" id="2"]
+
+[node name="SettingsMenu" type="Window"]
+title = "Settings"
+position = Vector2i(0, 36)
+size = Vector2i(280, 144)
+transient = true
+exclusive = true
+unresizable = true
+script = ExtResource("2")
+
+[node name="M" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="V" type="VBoxContainer" parent="M"]
+layout_mode = 2
+
+[node name="ShowDestsCheck" type="CheckBox" parent="M/V"]
+layout_mode = 2
+text = "Show Legal Move Destinations"
+
+[node name="ShowHighlightsCheck" type="CheckBox" parent="M/V"]
+layout_mode = 2
+text = "Highlight Last Move/Check"
+
+[node name="SoundsCheck" type="CheckBox" parent="M/V"]
+layout_mode = 2
+text = "Play Sounds"
+
+[node name="M" type="MarginContainer" parent="M/V"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+
+[node name="SoundCheckCheck" type="CheckBox" parent="M/V/M"]
+layout_mode = 2
+text = "Play Sound on Check"
+
+[connection signal="close_requested" from="." to="." method="hide"]
+[connection signal="toggled" from="M/V/ShowDestsCheck" to="." method="_on_ShowDestsCheck_toggled"]
+[connection signal="toggled" from="M/V/ShowHighlightsCheck" to="." method="_on_ShowHighlightsCheck_toggled"]
+[connection signal="toggled" from="M/V/SoundsCheck" to="." method="_on_SoundsCheck_toggled"]
+[connection signal="toggled" from="M/V/M/SoundCheckCheck" to="." method="_on_SoundCheckCheck_toggled"]

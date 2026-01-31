@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://db06obuq4k38h"]
+
+[ext_resource type="Script" path="res://src/Square.gd" id="1"]
+
+[node name="Square" type="ColorRect" groups=["Squares"]]
+custom_minimum_size = Vector2(60, 60)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1")
+
+[node name="CheckIndicator" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(1, 0, 0, 0.392157)
+
+[node name="LastMoveHighlight" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(1, 1, 0, 0.392157)
+
+[node name="Piece" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand_mode = 1
+
+[node name="LegalMoveIndicator" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="LegalMoveIndicator"]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.392157)

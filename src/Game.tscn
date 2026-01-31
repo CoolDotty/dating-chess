@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw1fs4vp0p4tm"]
 
-[ext_resource type="PackedScene" path="res://src/Board.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://b70nlk7m1xki4" path="res://src/Board.tscn" id="1"]
 [ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="2"]
 [ext_resource type="Script" uid="uid://dyuiaxuvry28u" path="res://src/Game.gd" id="3"]
 [ext_resource type="PackedScene" path="res://src/SanDisplay.tscn" id="4"]
@@ -11,6 +11,8 @@
 [ext_resource type="AudioStream" uid="uid://ccu0i2ei68mup" path="res://assets/sound/terminal.wav" id="9"]
 [ext_resource type="PackedScene" uid="uid://fctovp54ejhp" path="res://src/CreditsMenu.tscn" id="10"]
 [ext_resource type="Script" uid="uid://b7ugoehrrxp5r" path="res://src/BotThinkingIndicator.gd" id="11"]
+[ext_resource type="AudioStream" uid="uid://cwb5qngryeu6x" path="res://assets/sound/Music/chess.wav" id="12_at4if"]
+[ext_resource type="Script" uid="uid://cc3mn6tdcx67p" path="res://src/music_sound.gd" id="13_0rf6s"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -160,7 +162,6 @@ wait_time = 5.0
 one_shot = true
 
 [node name="SettingsMenu" parent="." unique_id=1446169887 instance=ExtResource("5")]
-oversampling_override = 1.0
 
 [node name="CreditsMenu" parent="." unique_id=549160077 instance=ExtResource("10")]
 visible = false
@@ -181,6 +182,10 @@ volume_db = -6.0
 [node name="TerminalSound" type="AudioStreamPlayer" parent="." unique_id=1608531396]
 stream = ExtResource("9")
 volume_db = -6.0
+
+[node name="MusicSound" type="AudioStreamPlayer" parent="." unique_id=485771712]
+stream = ExtResource("12_at4if")
+script = ExtResource("13_0rf6s")
 
 [connection signal="pressed" from="C/V/H/RSpacer/H/SettingsButton" to="." method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="C/V/H/RSpacer/H/CreditsButton" to="." method="_on_CreditsButton_pressed"]

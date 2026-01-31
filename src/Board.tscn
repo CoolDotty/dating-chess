@@ -1,14 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene format=3 uid="uid://b70nlk7m1xki4"]
 
-[ext_resource path="res://src/Board.gd" type="Script" id=1]
+[ext_resource type="Script" uid="uid://b5irviod0o32a" path="res://src/Board.gd" id="1"]
 
-[node name="Board" type="GridContainer"]
+[node name="Board" type="GridContainer" unique_id=484600394]
 offset_right = 40.0
 offset_bottom = 40.0
-theme_override_constants/v_separation = 0
 theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 columns = 8
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("1")

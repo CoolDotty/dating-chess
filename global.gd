@@ -1,3 +1,3 @@
 extends Node
 
-signal thing_happened
+signal music_toggled

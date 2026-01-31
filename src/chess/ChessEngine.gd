@@ -9,8 +9,8 @@ const MATE_THRESHOLD := 999_000_000
 
 const INF_SCORE := 0xFFFF_FFFF_FFFF
 
-var search_depth := 3
-var quiescence_depth := 5
+var search_depth := 2
+var quiescence_depth := 1
 
 
 # Simplified Evaluation Function piece tables
@@ -116,7 +116,7 @@ func get_move(chess: Chess) -> Array:
 	num_positions_searched_q = 0
 	num_positions_evaluated = 0
 	var before_time := Time.get_ticks_usec()
-	var r := negamax(chess, search_depth, -INF_SCORE, INF_SCORE)
+	var r := negamax(chess, search_depth, -INF_SCORE / 100, INF_SCORE / 100)
 	search_time = Time.get_ticks_usec() - before_time
 	# We generate the moves without notating them, but we need the final move notated
 	var moves := chess.generate_legal_moves()

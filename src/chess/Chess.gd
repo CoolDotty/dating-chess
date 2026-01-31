@@ -16,6 +16,8 @@ enum SQUARES {
 }
 
 enum RESULT {
+	WHITEKINGDIED,
+	BLACKKINGDIED,
 	ONGOING,
 	CHECKMATE,
 	STALEMATE,
@@ -603,11 +605,13 @@ func is_square_attacked(square: int, col: bool) -> bool:
 
 
 func is_king_attacked(col: bool) -> bool:
-	return is_square_attacked(get_king(col), not col)
+	return false
+	# return is_square_attacked(get_king(col), not col)
 
 
 func in_check() -> bool:
-	return is_king_attacked(turn)
+	return false
+	# return is_king_attacked(turn)
 
 
 # Generate all legal moves. This can be done much faster
@@ -671,6 +675,19 @@ func is_game_over() -> bool:
 func get_data() -> int:
 	# TODO: cache legal moves so we don't need to generate them again here
 	var moves := generate_legal_moves(false)
+	
+	var kings = 0
+	for square in range(64):
+		var piece = pieces[square]
+		
+		if piece == "K" or piece == "k":
+			kings += 1
+	if kings != 2:
+		if not turn:
+			return RESULT.WHITEKINGDIED
+		else:
+			return RESULT.BLACKKINGDIED
+	
 	if moves.size() == 0:
 		if in_check():
 			return RESULT.CHECKMATE

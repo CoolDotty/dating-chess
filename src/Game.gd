@@ -34,6 +34,10 @@ func _ready() -> void:
 	randomize()
 	get_tree().call_group("Squares", "_connect_square_signals", self)
 	update_state()
+	
+func _physics_process(delta: float) -> void:
+	if not bot_thinking:
+		bot_play()
 
 # Thread must be disposed (or "joined"), for portability.
 func _exit_tree() -> void:
@@ -156,6 +160,11 @@ func update_state(after_move := false) -> void:
 	match result:
 		Chess.RESULT.ONGOING:
 			pass
+		Chess.RESULT.WHITEKINGDIED:
+			result_text = "WHITE KING DIED OMG"
+			Dialogic.start('whitekingdied')
+		Chess.RESULT.BLACKKINGDIED:
+			result_text = "BLACK KING DIED OMG"
 		Chess.RESULT.CHECKMATE:
 			result_text = "%s wins by checkmate!" % ("White" if chess.turn else "Black")
 		Chess.RESULT.STALEMATE:

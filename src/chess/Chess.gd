@@ -294,21 +294,28 @@ func get_fen() -> String:
 
 
 # Creates a Move object from these squares. Does not check if the move is legal
-func construct_move(from_square: int, to_square: int, promotion := "q") -> Move:
+# from_piece allows speicfying piece if it's missing from pieces[from_square]
+func construct_move(from_square: int, to_square: int, promotion := "q", from_piece := "") -> Move:
 	var move := Move.new()
 	move.from_square = from_square
 	move.to_square = to_square
 	move.captured_piece = pieces[to_square]
-	move.piece_type = pieces[from_square]
+	#print("construct_move debug ", )
+	move.piece_type = 'p' # pieces[from_square]
+	var from_piece_real = "";
+	if from_piece:
+		from_piece_real = from_piece
+	else:
+		from_piece_real = pieces[from_square].to_lower()
 
-	if pieces[from_square].to_lower() == "p":
+	if from_piece_real == "p":
 		var rank = square_get_rank(to_square)
 		if rank == 1 or rank == 8:
 			move.promotion = promotion.to_lower() if turn else promotion.to_upper()
 		if to_square == ep_target:
 			move.en_passant = true
 
-	if pieces[from_square].to_lower() == "k":
+	if from_piece_real == "k":
 		if turn:
 			if castling[2]: move.lose_castling[2] = true
 			if castling[3]: move.lose_castling[3] = true

@@ -1,2 +1,6 @@
-join Bishop center
-Bishop: yay
+if {bishop_challenge_1}   <   1.0
+	join Bishop center
+	Bishop: For the Lord, for my liege!
+elif {bishop_challenge_1}   >=   1.0
+	join Bishop center
+	Bishop: YES, YES, YES... I will make them bleed! I will make them burn...

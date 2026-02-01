@@ -12,15 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://fctovp54ejhp" path="res://src/CreditsMenu.tscn" id="10"]
 [ext_resource type="Script" uid="uid://b7ugoehrrxp5r" path="res://src/BotThinkingIndicator.gd" id="11"]
 [ext_resource type="AudioStream" uid="uid://cwb5qngryeu6x" path="res://assets/sound/Music/chess.wav" id="12_at4if"]
-[ext_resource type="Script" path="res://src/music_sound.gd" id="13_0rf6s"]
+[ext_resource type="Script" uid="uid://cc3mn6tdcx67p" path="res://src/music_sound.gd" id="13_0rf6s"]
 [ext_resource type="Texture2D" uid="uid://cehncf6qrjq74" path="res://assets/ui/Love meter line art.png" id="14_8c8jm"]
 [ext_resource type="Texture2D" uid="uid://6lah8fp32wc5" path="res://assets/paper.png" id="14_821k0"]
-[ext_resource type="Script" uid="uid://dtgyntc27glnd" path="res://src/love_meter.gd" id="15_goodv"]
-[ext_resource type="Shader" uid="uid://bcdviobdb1vg" path="res://src/reveal.gdshader" id="15_ok2ji"]
+[ext_resource type="Script" path="res://src/love_meter.gd" id="15_goodv"]
+[ext_resource type="Shader" path="res://src/reveal.gdshader" id="15_ok2ji"]
 [ext_resource type="Texture2D" uid="uid://bsf6rpmbd3raf" path="res://assets/ui/Love meter smoke.png" id="16_goodv"]
 [ext_resource type="Texture2D" uid="uid://cjwyg86s3i5cx" path="res://assets/ui/Love meter potion base.png" id="17_821k0"]
 [ext_resource type="Texture2D" uid="uid://iujpasdg03p2" path="res://assets/ui/Love meter hearts.png" id="19_goodv"]
-[ext_resource type="Script" uid="uid://cc3mn6tdcx67p" path="res://src/music_sound.gd" id="13_0rf6s"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2")])

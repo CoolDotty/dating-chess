@@ -1,2 +1,44 @@
-join Pawn center
-Pawn: hi
+if {pawn_love} == 0.0:	
+	join Pawn center
+	Pawn: Eh... What? O-oh sorry your highness... I was just so... sleepy... Do I really have to do this? I... I know I should but... I'm so... so...
+	set {pawn_love} += 1
+elif {pawn_love} == 1.0:
+	join Pawn center
+	Pawn: Wha- Your grace, you're asking for me again? I... Sorry, sorry, got distracted. I can do that... Can I have a break after that though...? Oh! I can?
+	set {pawn_love} += 1
+elif {pawn_love} == 2.0:
+	join Pawn center
+	Pawn: Heh... check out these sweet moves... W-what, oh! My grace I... I just fell asleep standing up haha... Sorry. You're... not mad at me? Oh... You're... you're way too nice to me...
+	set {pawn_love} += 1
+elif {pawn_love} == 3.0:
+	join Pawn center
+	Pawn: C'mon... move... Ah, my liege! Why are you always here spooking me when I'm trying to prepare something? You're picking me...? Ah... alright I guess, I could show you this teamwork we've been working on...
+	set {pawn_love} += 1
+elif {pawn_love} == 4.0:
+	join Pawn center
+	Pawn: Do you think I can be more? I... I try to help wherever I can, but I can't shake this feeling that I can still be more... for you...
+	set {pawn_love} += 1
+	set {pawn_challenge_1} = 1.0
+elif {pawn_love}   ==   5.0 and {pawn_challenge_1}   >=   1.0:
+	join Pawn center
+	Pawn: I... did you see that? I... I knew it! I knew I could be more... and it's all because of you! My liege, I swear from this day on, my life is yours. I will use every part of myself to make sure that we will take victory... whether on the battlefield, or in... your heart...
+	set {pawn_love} += 1
+elif {pawn_love} == 6.0:
+	join Pawn center
+	Pawn: Heh, they never saw that coming. Sometimes... the plan comes together beautifully... just like you my grace... you are truly... ahem...
+	set {pawn_love} += 1
+elif {pawn_love} == 7.0:
+	join Pawn center
+	Pawn: Heh... far too simple a read. How could it be, that their moves are this transparent? It's so easy, unlike your... expressions. Ugh...
+	set {pawn_love} += 1
+	elif {pawn_love} == 8.0:
+	join Pawn center
+	Pawn: Read em and weep! Oh, I didn't mean you my liege! Ah, I may have some wits now but alas... I still need to learn much much more...
+	set {pawn_love} += 1
+elif {pawn_love} == 9.0:
+	join Pawn center
+	Pawn: Aha, did you see that last move? Every second calculated. Oh! But the one thing I did not calculate was your... departure. Can... you stay a moment? 
+	set {pawn_love} += 1
+elif {pawn_love} == 10.0:
+	join Pawn center
+	Pawn: My liege, have you seen the scene? Truly, our victory is afoot; it needs only the finishing touches... Would you do the honours? I would not be here without you my grace... my darling...

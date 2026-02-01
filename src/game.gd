@@ -273,3 +273,23 @@ func bot_finalize(result: Array) -> void:
 	bot_thinking = false
 	bot_timer.stop()
 	update_state(true)
+
+
+func _on_reset_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_flip_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_undo_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_bot_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_bot_check_pressed() -> void:
+	pass # Replace with function body.

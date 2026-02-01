@@ -97,14 +97,15 @@ func _on_Square_piece_grabbed(from_index: int) -> void:
 			if move.from_square == from_index:
 				target_squares.push_back(move.to_square)
 		print(target_squares)
-		for square in get_tree().get_nodes_in_group("Squares"):
-			if square.index in target_squares:
-				var indicator = square.get_node("LegalMoveIndicator/ColorRect")
-				if chess.pieces[square.index] == null:
-					indicator.custom_minimum_size = Vector2(15, 15)
-				else:
-					indicator.custom_minimum_size = Vector2(40, 40)
-				indicator.get_parent().show()
+		board.mark_possible_moves(from_index, target_squares)
+		#for square in get_tree().get_nodes_in_group("Squares"):
+			#if square.index in target_squares:
+				#var indicator = square.get_node("LegalMoveIndicator/ColorRect")
+				#if chess.pieces[square.index] == null:
+					#indicator.custom_minimum_size = Vector2(15, 15)
+				#else:
+					#indicator.custom_minimum_size = Vector2(40, 40)
+				#indicator.get_parent().show()
 
 
 func _on_Square_piece_dropped(from_index: int, to_index: int) -> void:

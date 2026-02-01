@@ -77,9 +77,34 @@ func _on_piece_dropped(from, to):
 func _process(delta: float) -> void:
 	pass
 
-func mark_possible_moves(ids):
-	pass
+func mark_possible_moves(from_idx, ids):
+	# first find out what the previous piece was
+	var oldSprite;
+	for child in get_children():
+		if child.scene_file_path != 'res://piece.tscn': continue
+		var square = child.get_node("Area2D")
+		var sprite = child.get_node("Sprite2D")
+		if square.index == from_idx:
+			oldSprite = sprite;
+	
+	# then mark possible moves using the same piece but of slightly weaker color
+	for child in get_children():
+		if child.scene_file_path != 'res://piece.tscn': continue
+		var square = child.get_node("Area2D")
+		var sprite = child.get_node("Sprite2D")
+		if square.index not in ids:
+			continue
+		#var piece = chess.pieces[square.index]
+		if piece != null:
+			#var col := "w" #"b" if Chess.piece_color(piece) else "w"
+			#var piece = "Q"
+			#piece = piece.to_upper()
+			sprite.texture = oldSprite.texture #load("res://assets/tatiana/" + col + piece + ".svg")
+			sprite.modulate = Color.YELLOW_GREEN
+		else:
+			sprite.texture = null
 
+# TODO: ^ mark_possible moves would look sorta like setup_board
 func setup_board(chess: Chess) -> void:
 	for child in get_children():
 		if child.scene_file_path != 'res://piece.tscn': continue

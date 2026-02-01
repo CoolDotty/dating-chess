@@ -14,7 +14,7 @@ func new_piece(file, rank):
 
 	var side = 47
 	var x0 = side*x_i
-	var y0 = side*y_i
+	var y0 = side*(7 - y_i)
 	var x = x0*1.0 - 0.22*y0
 	var y = x0*0.1 + 0.92*y0
 	var z = -x0*0.0000 - 0.00087*y0 + 1
@@ -45,10 +45,12 @@ func new_piece(file, rank):
 func _ready() -> void:
 	#for y_i in range(8):
 	#	for x_i in range(8):
-	#for rank in range(8, 0, -1):
-	for rank in range(1, 9):
-		for file in range(1, 9):
-		#for file in range(8, 0, -1):
+	# draw order 1
+	for rank in range(8, 0, -1):
+		for file in range(8, 0, -1):
+	# draw order 2
+	#for rank in range(1, 9):
+	#	for file in range(1, 9):
 			var area2d = new_piece(file, rank)
 			area2d.index = Chess.square_index(file, rank)
 			print(area2d.index)

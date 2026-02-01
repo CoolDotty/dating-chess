@@ -67,6 +67,7 @@ func update_alive_checks(chess: Chess):
 
 
 func move_character_effects(move: Move, moves: Array, chess: Chess):
+	print("move ", move.whos_turn, " ", move.did_capture, " ", move.piece_type)
 	if move.whos_turn == "black":
 		if not move.did_capture:
 			return
@@ -84,7 +85,7 @@ func move_character_effects(move: Move, moves: Array, chess: Chess):
 			"P":
 				Dialogic.start('Pawn_on_death')
 		return
-	var played_piece = move.piece_type
+	var played_piece = move.piece_type.capitalize()
 	if move.did_capture:
 		match played_piece:
 			"K":

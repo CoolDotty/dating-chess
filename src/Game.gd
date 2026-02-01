@@ -36,8 +36,9 @@ func _ready() -> void:
 	update_state()
 	
 func _physics_process(delta: float) -> void:
-	if not bot_thinking:
-		bot_play()
+	pass
+	#if not bot_thinking:
+		#bot_play()
 
 # Thread must be disposed (or "joined"), for portability.
 func _exit_tree() -> void:
@@ -152,6 +153,9 @@ func update_state(after_move := false) -> void:
 	var last_move = null
 	if chess.move_stack.size() > 0:
 		last_move = chess.move_stack[-1]
+	
+	if last_move and after_move:
+		Global.advance_challenges(last_move, chess.move_stack, chess)
 
 	var result := chess.get_data()
 	var game_over: bool = result != Chess.RESULT.ONGOING
@@ -162,7 +166,6 @@ func update_state(after_move := false) -> void:
 			pass
 		Chess.RESULT.WHITEKINGDIED:
 			result_text = "WHITE KING DIED OMG"
-			Dialogic.start('whitekingdied')
 		Chess.RESULT.BLACKKINGDIED:
 			result_text = "BLACK KING DIED OMG"
 		Chess.RESULT.CHECKMATE:
@@ -205,12 +208,14 @@ func update_state(after_move := false) -> void:
 	undo_button.disabled = bot_thinking
 
 	if after_move and last_move:
+		#if (last_move.did_capture):
+		#	print(last_move.did_capture)
+			
 		if Settings.sounds and OS.has_feature("threads"):
 			if last_move.en_passant or last_move.captured_piece:
 				capture_sound.play()
 			else:
 				move_sound.play()
-				print(last_move.piece_type)
 
 			if result != Chess.RESULT.ONGOING:
 				terminal_sound.play()
@@ -244,9 +249,9 @@ func bot_finalize(result: Array) -> void:
 	if OS.has_feature("threads"):
 		bot_thinking_thread.wait_to_finish()
 		bot_thinking_thread = null
-	print("%s  score: %d  searched: %d %d  eval: %d  time: %dms" % [result[1].notation_san, result[0],
-			engine.num_positions_searched, engine.num_positions_searched_q, engine.num_positions_evaluated,
-			engine.search_time / 1000.0])
+	#print("%s  score: %d  searched: %d %d  eval: %d  time: %dms" % [result[1].notation_san, result[0],
+	#		engine.num_positions_searched, engine.num_positions_searched_q, engine.num_positions_evaluated,
+	#		engine.search_time / 1000.0])
 	chess.play_move(result[1])
 	bot_thinking = false
 	bot_timer.stop()

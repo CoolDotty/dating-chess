@@ -14,7 +14,10 @@ var prev_ep_target = null
 var prev_halfmove_clock = -1
 var notation_san = null
 
-var piece_type = null
+var piece_type: String = ""
+var is_check: bool = false
+var did_capture: String = "" 
+var whos_turn: String = ""
 
 
 func duplicate():

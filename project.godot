@@ -19,6 +19,10 @@ run/main_scene="res://src/Game.tscn"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.png"
 
+[audio]
+
+buses/default_bus_layout="uid://cfwn87irr33qd"
+
 [autoload]
 
 Settings="*res://src/Settings.gd"
@@ -29,16 +33,72 @@ Global="*uid://bwq1ano4tn5gg"
 
 directories/dch_directory={
 "Bishop": "res://dialogic/characters/Bishop.dch",
-"King": "res://King.dch",
+"King": "res://dialogic/characters/King.dch",
 "Knight": "res://dialogic/characters/Knight.dch",
 "Pawn": "res://dialogic/characters/Pawn.dch",
 "Queen": "res://dialogic/characters/Queen.dch",
 "Rook": "res://dialogic/characters/Rook.dch"
 }
 directories/dtl_directory={
-"whitekingdied": "res://dialogic/whitekingdied.dtl"
+"King": "res://dialogic/timelines/King.dtl"
 }
 layout/style_directory={}
+glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style="Default"
+variables={
+"bishop_challenge_1": 0,
+"bishop_challenge_2": 0,
+"bishop_love": 0,
+"king_challenge_1": 0,
+"king_challenge_2": 0,
+"king_love": 0,
+"knight_challenge_1": 0,
+"knight_challenge_2": 0,
+"knight_love": 0,
+"pawn_challenge_1": 0,
+"pawn_challenge_2": 0,
+"pawn_love": 0,
+"queen_challenge_1": 0,
+"queen_challenge_2": 0,
+"queen_love": 0,
+"rook_challenge_1": 0,
+"rook_challenge_2": 0,
+"rook_love": 0
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [display]
 

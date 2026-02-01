@@ -299,6 +299,7 @@ func construct_move(from_square: int, to_square: int, promotion := "q") -> Move:
 	move.from_square = from_square
 	move.to_square = to_square
 	move.captured_piece = pieces[to_square]
+	move.piece_type = pieces[from_square]
 
 	if pieces[from_square].to_lower() == "p":
 		var rank = square_get_rank(to_square)
@@ -878,7 +879,6 @@ func notate_moves(moves: Array) -> void:
 	# Second pass, actually generate SAN
 	for move in moves:
 		var piece_type = pieces[move.from_square].to_upper()
-		move.piece_type = piece_type
 
 		if piece_type == "K" and (move.to_square == move.from_square + 2):
 			move.notation_san = "O-O"
@@ -918,6 +918,7 @@ func notate_moves(moves: Array) -> void:
 
 			if capture:
 				move.notation_san += "x"
+				move.did_capture = pieces[move.to_square]
 
 			move.notation_san += square_get_name(move.to_square)
 
@@ -925,6 +926,8 @@ func notate_moves(moves: Array) -> void:
 				move.notation_san += "=%s" % move.promotion.to_upper()
 
 		# Handle check/checkmate
+		var piece = pieces[move.from_square]
+		move.whos_turn = "white" if piece == piece.to_upper() else "black"
 		play_move(move)
 		if in_check():
 			var test_checkmate_moves = generate_legal_moves(false)
@@ -932,4 +935,5 @@ func notate_moves(moves: Array) -> void:
 				move.notation_san += "#"
 			else:
 				move.notation_san += "+"
+				move.is_check = true
 		undo()

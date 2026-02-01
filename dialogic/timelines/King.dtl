@@ -1,0 +1,21 @@
+if {king_love} == 0.0:
+	join King center
+	audio -
+	King: U smell
+	set {Global} += 1.0
+elif {king_love} == 1.0:
+	join King center
+	King: U ok
+	set {king_love} += 1.0
+elif {king_love} == 2.0:
+	join King center
+	King: U rock
+	set {king_love} += 1.0
+elif {king_love} == 3.0:
+	join King center
+	King: U the best
+	set {king_love} += 1.0
+elif {king_love} == 4.0:
+	join King center
+	King: I love you
+	set {king_love} += 1.0

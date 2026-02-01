@@ -1,12 +1,18 @@
 extends Node
 
 signal music_toggled(is_playing : bool)
+signal bot_turn()
 
 var pawn_loves_you := false
 var knight_loves_you := false
 var bishop_loves_you := false
 var rook_loves_you := false
 var queen_loves_you := false
+
+var bot_enabled := false
+func bot_play_if_turn():
+	if bot_enabled:
+		bot_turn.emit()
 
 
 func is_distance_6_or_more(from_square: int, to_square: int) -> bool:

@@ -2,6 +2,13 @@ extends Node
 
 signal music_toggled(is_playing : bool)
 
+var pawn_loves_you := false
+var knight_loves_you := false
+var bishop_loves_you := false
+var rook_loves_you := false
+var queen_loves_you := false
+
+
 func is_distance_6_or_more(from_square: int, to_square: int) -> bool:
 	var rank_diff = abs(from_square / 8 - to_square / 8)
 	var file_diff = abs(from_square % 8 - to_square % 8)

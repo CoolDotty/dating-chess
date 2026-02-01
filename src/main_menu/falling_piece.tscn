@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bajocrxa711er"]
+
+[ext_resource type="Script" uid="uid://bn5mxuknw1xpb" path="res://src/main_menu/falling_piece.gd" id="1_ndccc"]
+[ext_resource type="Material" uid="uid://down4o71bhsf" path="res://squigglevision_mat.tres" id="2_17clq"]
+[ext_resource type="Texture2D" uid="uid://s0dbc5tfm117" path="res://src/main_menu/Pieces/Bishop piece.png" id="2_tj06n"]
+[ext_resource type="Texture2D" uid="uid://rmuecso61w3h" path="res://src/main_menu/Pieces/King piece.png" id="3_17clq"]
+[ext_resource type="Texture2D" uid="uid://lbd5txmkq36r" path="res://src/main_menu/Pieces/Knight piece.png" id="4_tis5a"]
+[ext_resource type="Texture2D" uid="uid://diclbgedmttnr" path="res://src/main_menu/Pieces/Pawn peice.png" id="5_vexnj"]
+[ext_resource type="Texture2D" uid="uid://bsod0bbotpnk0" path="res://src/main_menu/Pieces/Queen piece.png" id="6_wrjfj"]
+[ext_resource type="Texture2D" uid="uid://cpmpu4nofraq1" path="res://src/main_menu/Pieces/Rook peice.png" id="7_5q2co"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1qdm"]
+radius = 28.62
+height = 131.71
+
+[node name="FallingPiece" type="RigidBody2D" unique_id=127781919]
+z_index = -10
+gravity_scale = 0.1
+script = ExtResource("1_ndccc")
+
+[node name="BishopPiece" type="Sprite2D" parent="." unique_id=2096172530]
+visible = false
+material = ExtResource("2_17clq")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_tj06n")
+
+[node name="KingPiece" type="Sprite2D" parent="." unique_id=1546086474]
+visible = false
+material = ExtResource("2_17clq")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_17clq")
+
+[node name="KnightPiece" type="Sprite2D" parent="." unique_id=185963092]
+visible = false
+material = ExtResource("2_17clq")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_tis5a")
+
+[node name="PawnPeice" type="Sprite2D" parent="." unique_id=611132767]
+visible = false
+material = ExtResource("2_17clq")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_vexnj")
+
+[node name="QueenPiece" type="Sprite2D" parent="." unique_id=1970961705]
+visible = false
+material = ExtResource("2_17clq")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_wrjfj")
+
+[node name="RookPeice" type="Sprite2D" parent="." unique_id=3677742]
+visible = false
+material = ExtResource("2_17clq")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_5q2co")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2115983392]
+shape = SubResource("CapsuleShape2D_s1qdm")
+disabled = true

@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="stopwaitingforgodot-chess"
-run/main_scene="res://src/Game.tscn"
+run/main_scene="uid://2cu31cllyuc2"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.png"
 

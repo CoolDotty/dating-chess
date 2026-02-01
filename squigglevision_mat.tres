@@ -10,7 +10,7 @@ seamless = true
 
 [resource]
 shader = ExtResource("1_skelk")
-shader_parameter/scale = Vector2(0.1, 0.1)
-shader_parameter/strength = 0.1
+shader_parameter/scale = Vector2(0.15, 0.15)
+shader_parameter/strength = 0.15
 shader_parameter/fps = 6.0
 shader_parameter/noise = SubResource("NoiseTexture2D_hb6h3")

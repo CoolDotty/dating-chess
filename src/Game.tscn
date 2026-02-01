@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b70nlk7m1xki4" path="res://src/Board.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://dc17niwfpgsco" path="res://assets/background2.png" id="1_8c8jm"]
+[ext_resource type="Script" uid="uid://bnh5boial1cj" path="res://src/game.gd" id="1_ok2ji"]
 [ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="2"]
-[ext_resource type="Script" uid="uid://dyuiaxuvry28u" path="res://src/Game.gd" id="3"]
 [ext_resource type="Script" uid="uid://cn686bikpxokt" path="res://src/board.gd" id="3_5q0ih"]
 [ext_resource type="Texture2D" uid="uid://b4m0hi6q6qyv1" path="res://assets/chess_board.png" id="3_lva8y"]
 [ext_resource type="PackedScene" path="res://src/SanDisplay.tscn" id="4"]
@@ -60,6 +60,7 @@ shader_parameter/fill_percentage = 1.0
 
 
 [node name="RealChess" type="Node2D" unique_id=288714756]
+script = ExtResource("1_ok2ji")
 
 [node name="background" type="Sprite2D" parent="." unique_id=711312697]
 position = Vector2(503.35822, 412.99988)
@@ -86,7 +87,6 @@ offset_right = 761.0
 offset_bottom = 362.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3")
 
 [node name="C" type="CenterContainer" parent="Game" unique_id=1703768777]
 layout_mode = 1

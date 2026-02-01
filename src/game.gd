@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-extends Control
+extends Node2D
 class_name ChessGame
 
 
@@ -10,25 +9,27 @@ var legal_moves = null
 var bot_thinking := false
 var bot_thinking_thread: Thread = null
 
-@onready var board := $C/V/C/V/H/Board as GridContainer
-@onready var title_label := $C/V/H/Title as Label
+#@export  var board: ;
+@onready var board := $Board as Node2D
+#@onready var board = $C/V/C/V/H/Board as GridContainer
+@onready var title_label := $Game/C/V/H/Title as Label
 @onready var title_text := title_label.text
-@onready var bot_timer := $C/V/C/V/H2/BotTimer as Timer
-@onready var bot_check := $C/V/C/V/H2/BotCheck as CheckBox
+@onready var bot_timer := $Game/C/V/C/V/H2/BotTimer as Timer
+@onready var bot_check := $Game/C/V/C/V/H2/BotCheck as CheckBox
 
-@onready var reset_button := $C/V/C/V/H2/ResetButton as Button
-@onready var undo_button := $C/V/C/V/H2/UndoButton as Button
-@onready var bot_button := $C/V/C/V/H2/BotButton as Button
-@onready var fen_text := $C/V/H2/FenText as LineEdit
-@onready var invalid_fen := $C/V/H2/InvalidFen as Label
-@onready var invalid_fen_timer := $C/V/H2/InvalidFenTimer as Timer
+@onready var reset_button := $Game/C/V/C/V/H2/ResetButton as Button
+@onready var undo_button := $Game/C/V/C/V/H2/UndoButton as Button
+@onready var bot_button := $Game/C/V/C/V/H2/BotButton as Button
+@onready var fen_text := $Game/C/V/H2/FenText as LineEdit
+@onready var invalid_fen := $Game/C/V/H2/InvalidFen as Label
+@onready var invalid_fen_timer := $Game/C/V/H2/InvalidFenTimer as Timer
 
-@onready var san_display := $C/V/C/V/H/SanDisplay as ColorRect
+@onready var san_display := $Game/C/V/C/V/H/SanDisplay as ColorRect
 
-@onready var move_sound := $MoveSound as AudioStreamPlayer
-@onready var capture_sound := $CaptureSound as AudioStreamPlayer
-@onready var check_sound := $CheckSound as AudioStreamPlayer
-@onready var terminal_sound := $TerminalSound as AudioStreamPlayer
+@onready var move_sound := $Game/MoveSound as AudioStreamPlayer
+@onready var capture_sound := $Game/CaptureSound as AudioStreamPlayer
+@onready var check_sound := $Game/CheckSound as AudioStreamPlayer
+@onready var terminal_sound := $Game/TerminalSound as AudioStreamPlayer
 
 
 func _ready() -> void:
@@ -119,7 +120,7 @@ func _on_InvalidFenTimer_timeout() -> void:
 
 
 func _on_SettingsButton_pressed() -> void:
-	$SettingsMenu.popup_centered()
+	$Game/SettingsMenu.popup_centered()
 
 
 func _on_SettingsMenu_settings_changed() -> void:
@@ -128,7 +129,7 @@ func _on_SettingsMenu_settings_changed() -> void:
 
 
 func _on_CreditsButton_pressed() -> void:
-	$CreditsMenu.show()
+	$Game/CreditsMenu.show()
 
 
 func _on_BotButton_pressed() -> void:
@@ -155,7 +156,6 @@ func update_state(after_move := false) -> void:
 		last_move = chess.move_stack[-1]
 	
 	if last_move and after_move:
-		Global.update_alive_checks(chess)
 		Global.advance_challenges(last_move, chess.move_stack, chess)
 		if Dialogic.current_timeline != null:
 			await Dialogic.timeline_ended
@@ -269,5 +269,3 @@ func bot_finalize(result: Array) -> void:
 	bot_thinking = false
 	bot_timer.stop()
 	update_state(true)
-=======
->>>>>>> a5e053d (can select classic chess)

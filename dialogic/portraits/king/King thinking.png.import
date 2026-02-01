@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oalci6bve7qq"
-path="res://.godot/imported/King thinking.png-dee0e143e80c1fd3ad56e51982d8a0b1.ctex"
+path="res://.godot/imported/King thinking.png-a8b97505b68fcfde4ab652520128a767.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogic/portraits/king/King thinking.png"
-dest_files=["res://.godot/imported/King thinking.png-dee0e143e80c1fd3ad56e51982d8a0b1.ctex"]
+source_file="res://dialogic/portraits/King/King thinking.png"
+dest_files=["res://.godot/imported/King thinking.png-a8b97505b68fcfde4ab652520128a767.ctex"]
 
 [params]
 

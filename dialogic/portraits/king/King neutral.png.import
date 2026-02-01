@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lsmy8lbnl00u"
-path="res://.godot/imported/King neutral.png-4cc6a748d5fe874e204484c890829c1f.ctex"
+path="res://.godot/imported/King neutral.png-f0e86d65453dc1bf46a16f7b201994d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogic/portraits/king/King neutral.png"
-dest_files=["res://.godot/imported/King neutral.png-4cc6a748d5fe874e204484c890829c1f.ctex"]
+source_file="res://dialogic/portraits/King/King neutral.png"
+dest_files=["res://.godot/imported/King neutral.png-f0e86d65453dc1bf46a16f7b201994d8.ctex"]
 
 [params]
 

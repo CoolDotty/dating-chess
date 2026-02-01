@@ -5,9 +5,9 @@ if {rook_alive} == true:
 		join Rook_mask leftmost
 if {knight_alive} == true:
 	if {knight_love} > 5.0:
-		join Knight  left
+		join Knight left
 	else:
-		join Knight_mask  left
+		join Knight_mask left
 if {queen_alive} == true:
 	if {queen_love} > 5.0:
 		join Queen center
@@ -22,7 +22,7 @@ if {pawn_alive} == true:
 	if {pawn_love} > 5.0:
 		join Pawn rightmost [mirrored="true"]
 	else:
-		join Pawn_mask  rightmost [mirrored="true"]
+		join Pawn_mask rightmost [mirrored="true"]
 King: Hmmmm
 King: Hmmm, who do I love the mostest?
 - Rook | [if {rook_alive} == true]

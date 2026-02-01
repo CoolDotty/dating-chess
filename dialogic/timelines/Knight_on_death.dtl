@@ -1,2 +1,6 @@
-join Knight center
-Knight: Neiiiiiiiiiigghhhhhh! (Naauuurrrrrr)
+if {knight_challenge_1} < 4.0:
+	join Knight_mask (Angry Base) center
+	Knight: NEEEIGHHHHHH (Let me go, let me be free!)
+elif {knight_challenge_1}   >=   4.0:
+	join Knight (Sad Base) center
+	Knight: RAWEHHHHHHHH (My... my Canadian heritage will go on!)

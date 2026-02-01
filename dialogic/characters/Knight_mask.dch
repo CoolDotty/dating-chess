@@ -19,7 +19,7 @@
 &"portraits": {
 "Angry Base": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Angry base.png\""
+"image": "\"res://dialogic/portraits/Knight/Mask/Angry base.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -28,16 +28,7 @@
 },
 "Happy Base": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Happy base.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"Love Base": {
-"export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Love base.png\""
+"image": "\"res://dialogic/portraits/Knight/Mask/Happy base.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -46,7 +37,7 @@
 },
 "Neutral Base": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Neutral base.png\""
+"image": "\"res://dialogic/portraits/Knight/Mask/Neutral base.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -55,7 +46,7 @@
 },
 "Sad Base": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Sad base.png\""
+"image": "\"res://dialogic/portraits/Knight/Mask/Sad base.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -64,7 +55,7 @@
 },
 "Thinking Base": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Thinking base.png\""
+"image": "\"res://dialogic/portraits/Knight/Mask/Thinking base.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

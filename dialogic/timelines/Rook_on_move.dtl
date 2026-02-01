@@ -23,13 +23,13 @@ elif {rook_love} == 3.0:
 elif {rook_love} == 4.0:
 	join Rook_mask (Ook Sad) center
 	Rook: Hey uh... Uhm. Well, your grace, I was wondering... Could... You hold me for a moment? Not like, in a weird way of course, like... I'm not like THAT, but... You are my trustworthy liege... Just. Shut up, and hold me ok!?
-	[Use a rook to defeat 3 pieces]
+	[Use a rook to defeat 1 piece]
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 	set {rook_challenge_1} = 1.0
-elif {rook_love}   ==   5.0 and {rook_challenge_1}   <   4.0:
+elif {rook_love}   ==   5.0 and {rook_challenge_1}   <   2.0:
 	[end_timeline]
-elif {rook_love}   ==   5.0 and {rook_challenge_1}   >=   4.0:
+elif {rook_love}   ==   5.0 and {rook_challenge_1}   >=   2.0:
 	join Rook_mask (Ook Neutral) center
 	Rook: So... warm... So... soft... I... I need to tell you something...
 	update Rook_mask (Ook Thinking)

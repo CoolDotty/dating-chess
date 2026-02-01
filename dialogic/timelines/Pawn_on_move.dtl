@@ -1,25 +1,29 @@
 if {pawn_love} == 0.0:
 	join Pawn_mask (Thinking) center
-	Pawn: Eh... What? O-oh sorry your highness... I was just so... sleepy... Do I really have to do this? I... I know I should but... I'm so... so...
+	Pawn: Eh... What? O-oh sorry your highness... I was just so... sleepy... Do I really have to do this?
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 1.0:
-	join Pawn_mask center
-	Pawn: Wha- Your grace, you're asking for me again? I... Sorry, sorry, got distracted. I can do that... Can I have a break after that though...? Oh! I can?
+	join Pawn_mask (Sad) center
+	Pawn: Wha- Your grace, you're asking for me again? I... got distracted. I can do that... Can I have a break after that though...?
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 2.0:
-	join Pawn_mask center
-	Pawn: Heh... check out these sweet moves... W-what, oh! My grace I... I just fell asleep standing up haha... Sorry. You're... not mad at me? Oh... You're... you're way too nice to me...
+	join Pawn_mask (Sad) center
+	Pawn: Heh... check out these sweet moves... W-what, oh! My grace I... I just fell asleep standing up haha... Sorry.
+	update Pawn_mask (Happy)
+	Pawn: Oh... You're... you're way too nice to me...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 3.0:
-	join Pawn_mask center
-	Pawn: C'mon... move... Ah, my liege! Why are you always here spooking me when I'm trying to prepare something? You're picking me...? Ah... alright I guess, I could show you this teamwork we've been working on...
+	join Pawn_mask (Sad) center
+	Pawn: C'mon... move... Ah, my liege! Why are you always here spooking me when I'm trying to prepare something?
+	update Pawn_mask (Neutral)
+	Pawn_mask: You're picking me...? Ah... alright I guess...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 4.0:
-	join Pawn_mask center
+	join Pawn_mask (Sad) center
 	Pawn: Do you think I can be more? I... I try to help wherever I can, but I can't shake this feeling that I can still be more... for you...
 	[Take two pieces with any Pawn]
 	set {pawn_love} += 1.0
@@ -28,37 +32,48 @@ elif {pawn_love} == 4.0:
 elif {pawn_love}   ==   5.0 and {pawn_challenge_1}   <   3.0:
 	[end_timeline]
 elif {pawn_love}   ==   5.0 and {pawn_challenge_1}   >=   3.0:
-	join Pawn_mask center
+	join Pawn_mask (Neutral) center
 	Pawn: I... did you see that?
+	update Pawn_mask (Happy)
 	Pawn: I... I knew it! I knew I could be more...
 	Pawn: and it's all because of you! My liege, I swear from this day on, my life is yours.
+	leave Pawn_mask
+	join Pawn (Love) center
 	Pawn: I will use every part of myself to make sure that we will take victory...
 	Pawn: whether on the battlefield, or in... your heart...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 6.0:
-	join Pawn_mask center
+	join Pawn (Happy) center
 	Pawn: Heh, they never saw that coming. Sometimes... the plan comes together beautifully... just like you my grace... you are truly... ahem...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 7.0:
-	join Pawn_mask center
-	Pawn: Heh... far too simple a read. How could it be, that their moves are this transparent? It's so easy, unlike your... expressions. Ugh...
+	join Pawn (Happy) center
+	Pawn: Heh... far too simple a read. How could it be, that their moves are this transparent? It's so easy...
+	update Pawn (Thinking)
+	Pawn: Unlike your... expressions. Ugh...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 8.0:
-	join Pawn center
-	Pawn_mask: Read em and weep! Oh, I didn't mean you my liege! Ah, I may have some wits now but alas... I still need to learn much much more...
+	join Pawn (Happy) center
+	Pawn_mask: Read em and weep!
+	update Pawn (Love)
+	Pawn: Oh, I didn't mean you my liege! Ah, I may have some wits now but alas... I still need to learn much much more...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 9.0:
-	join Pawn_mask center
-	Pawn_mask: Aha, did you see that last move? Every second calculated. Oh! But the one thing I did not calculate was your... departure. Can... you stay a moment?
+	join Pawn (Happy) center
+	Pawn_mask: Aha, did you see that last move? Every second calculated. Oh! But the one thing I did not calculate was your... departure.
+	update Pawn (Sad)
+	Can... you stay a moment?
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {pawn_love} == 10.0:
-	join Pawn_mask center
-	Pawn_mask: My liege, have you seen the scene? Truly, our victory is afoot; it needs only the finishing touches... Would you do the honours? I would not be here without you my grace... my darling...
+	join Pawn (Happy) center
+	Pawn_mask: My liege, have you seen the scene? Truly, our victory is afoot; it needs only the finishing touches... Would you do the honours?
+	update Pawn (Love)
+	Pawn:  I would not be here without you my grace... my darling...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 	[Something awaits if you can win with a pawn on the board]

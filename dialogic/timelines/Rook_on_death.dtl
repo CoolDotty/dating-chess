@@ -1,2 +1,6 @@
-join Bishop_mask center
-Rook: Bruh
+if {rook_challenge_1}   <   2.0:
+	join Rook_mask (Rook Angry) center
+	Rook: I cannot be defeated! I... how did this happen...
+elif {rook_challenge_1}   >=   2.0:
+	join Rook (Sad) center
+	Rook: I cannot... I'm sorry your grace... someone else needs to protect you now.

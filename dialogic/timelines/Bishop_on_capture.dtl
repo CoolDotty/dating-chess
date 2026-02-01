@@ -1,6 +1,30 @@
-if {bishop_challenge_1}   <   1.0:
-	join Bishop_mask center
-	Bishop: For the Lord, for my liege!
-elif {bishop_challenge_1}   >=   1.0:
-	join Bishop_mask center
-	Bishop: YES, YES, YES... I will make them bleed! I will make them burn...
+if {bishop_challenge_1} < 2.0:
+	join Bishop_mask (Angry) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Bishop: For the Lord!
+	elif {rand} == 2:
+		Bishop: Smited!
+	elif {rand} == 3:
+		Bishop: The wicked fall!
+	elif {rand} == 4:
+		Bishop: Feel his wrath!
+	elif {rand} == 5:
+		Bishop: the light befall you!
+	leave Bishop_mask [animation="Instant Out" wait="true"]
+	do Dialogic.start("Bishop_on_move")
+elif {bishop_challenge_1}   >=   2.0:
+	join Bishop (Love) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Bishop: Delicious...
+	elif {rand} == 2:
+		Bishop: Another sacrifice!
+	elif {rand} == 3:
+		Bishop: Red... so much red...
+	elif {rand} == 4:
+		Bishop: Again, again, we need to go again!
+	elif {rand} == 5:
+		Bishop: Please, no, stay a little longer... I want to hear you whimper...
+	leave Bishop [animation="Instant Out" wait="true"]
+	do Dialogic.start("Bishop_on_move")

@@ -5,26 +5,25 @@ extends Node2D
 signal piece_grabbed(from_square);
 signal piece_dropped(from_square, to_square);
 
-func xy2pos(x_i, y_i):
+func new_piece(file, rank):
+	var y_i = rank - 1
+	var x_i = file - 1
+	var p1 = piece.instantiate()
+
 	var side = 47
 	var x0 = side*x_i
 	var y0 = side*y_i
 	var x = x0*1.0 - 0.22*y0
 	var y = x0*0.1 + 0.92*y0
 	var z = -x0*0.0000 - 0.00087*y0 + 1
-	return Vector2(360+1.1*x/z, 100+0.8*y/z - 10)
-
-func new_piece(file, rank):
-	var y_i = rank - 1
-	var x_i = file - 1
-	var p1 = piece.instantiate()
-
-	p1.position = xy2pos(x_i, y_i)
+	p1.position = Vector2(355+1.1*x/z, 100+0.8*y/z - 10)
+	
 	#p1.modulate = Color(x_i/8.0, y_i/8.0, 1)
 	#p1.scale = Vector2(4,4)
 	# only for classic chess pieces provided
 	#p1.get_node("Sprite2D").scale = Vector2(0.15,0.15)
-	p1.get_node("Sprite2D").scale = Vector2(0.08,0.08)
+	p1.get_node("Sprite2D").scale = Vector2(0.08,0.08)/z*0.8
+	print(z)
 	var area2d = p1.get_node("Area2D")
 	area2d.x_i = x_i
 	area2d.y_i = y_i

@@ -6,7 +6,7 @@ const ARC_ANGLE = 3 * PI / 2
 
 var offset := 0.0
 
-@onready var game := find_parent("Game") as Control
+@onready var game := find_parent("RealChess") as Node2D
 
 
 func _process(delta) -> void:

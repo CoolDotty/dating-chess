@@ -14,8 +14,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func _on_music_toggled():
-	if Settings.sound_music:
+func _on_music_toggled(playing : bool) -> void:
+	if playing:
 		play()
 	else:
 		stop()

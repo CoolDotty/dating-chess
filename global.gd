@@ -1,3 +1,3 @@
 extends Node
 
-signal music_toggled
+signal music_toggled(is_playing : bool)

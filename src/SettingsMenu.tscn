@@ -6,7 +6,7 @@
 oversampling_override = 1.0
 title = "Settings"
 position = Vector2i(0, 36)
-size = Vector2i(280, 176)
+size = Vector2i(280, 208)
 transient = true
 exclusive = true
 unresizable = true
@@ -59,9 +59,28 @@ text = "Play Sound on Check"
 layout_mode = 2
 text = "Play Music"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="M/V" unique_id=127079958]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="M/V/VBoxContainer" unique_id=470561633]
+layout_mode = 2
+text = "Bot Difficulty"
+
+[node name="OptionButton" type="OptionButton" parent="M/V/VBoxContainer" unique_id=953077258]
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Easy"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Hard"
+popup/item_2/id = 2
+
 [connection signal="close_requested" from="." to="." method="hide"]
 [connection signal="toggled" from="M/V/ShowDestsCheck" to="." method="_on_ShowDestsCheck_toggled"]
 [connection signal="toggled" from="M/V/ShowHighlightsCheck" to="." method="_on_ShowHighlightsCheck_toggled"]
 [connection signal="toggled" from="M/V/SoundsCheck" to="." method="_on_SoundsCheck_toggled"]
 [connection signal="toggled" from="M/V/M/V/SoundCheckCheck" to="." method="_on_SoundCheckCheck_toggled"]
 [connection signal="toggled" from="M/V/M/V/SoundMusicCheck" to="." method="_on_SoundMusicCheck_toggled"]
+[connection signal="item_selected" from="M/V/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

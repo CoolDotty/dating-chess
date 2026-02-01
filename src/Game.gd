@@ -35,9 +35,9 @@ func _ready() -> void:
 	get_tree().call_group("Squares", "_connect_square_signals", self)
 	update_state()
 	
-func _physics_process(delta: float) -> void:
-	if not bot_thinking:
-		bot_play()
+#func _physics_process(delta: float) -> void:
+	#if not bot_thinking:
+		#bot_play()
 
 # Thread must be disposed (or "joined"), for portability.
 func _exit_tree() -> void:

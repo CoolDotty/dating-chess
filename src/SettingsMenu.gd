@@ -42,4 +42,8 @@ func _on_SoundCheckCheck_toggled(button_pressed: bool) -> void:
 
 func _on_SoundMusicCheck_toggled(button_pressed: bool) -> void:
 	Settings.sound_music = button_pressed
-	Global.music_toggled.emit()
+	Global.music_toggled.emit(button_pressed)
+
+
+func _on_option_button_item_selected(index: int) -> void:
+	Settings.bot_difficulty = 1 + index

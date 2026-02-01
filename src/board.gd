@@ -5,6 +5,15 @@ extends Node2D
 signal piece_grabbed(from_square);
 signal piece_dropped(from_square, to_square);
 
+func xy2pos(x_i, y_i):
+	var side = 47
+	var x0 = side*x_i
+	var y0 = side*y_i
+	var x = x0*1.0 - 0.22*y0
+	var y = x0*0.1 + 0.92*y0
+	var z = x0*0.0 - 0.0009*y0 + 1
+	return Vector2(360+1.08*x/z, 100+0.85*y/z - 10)
+
 # TODO: piece is actually a square that might have a piece (this allows selecting empty squares to move to)
 @export var piece: PackedScene
 # Called when the node enters the scene tree for the first time.
@@ -17,13 +26,7 @@ func _ready() -> void:
 			var x_i = file - 1
 			var p1 = piece.instantiate()
 
-			var side = 47
-			var x0 = side*x_i
-			var y0 = side*y_i
-			var x = x0*1.0 - 0.22*y0
-			var y = x0*0.1 + 0.92*y0
-			var z = x0*0.0 - 0.0009*y0 + 1
-			p1.position = Vector2(360+1.08*x/z, 100+0.85*y/z - 10)
+			p1.position = xy2pos(x_i, y_i)
 			p1.modulate = Color(x_i/8.0, y_i/8.0, 1)
 			#p1.scale = Vector2(4,4)
 			# only for classic chess pieces provided

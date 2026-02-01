@@ -12,6 +12,7 @@ var index;
 var san_name;
 var selected;
 var target_selector = false # is this a dummy node used for selecting the targets?
+var target_selector_from = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,11 +42,16 @@ func _on_mouse_exited():
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
-		selected = true
-		piece_selected.emit(x_i, y_i)
-		piece_grabbed.emit(index)
-		get_parent().modulate = selected_color
-		#print(viewport, event, shape_idx)
+		if not target_selector:
+			selected = true
+			piece_selected.emit(x_i, y_i)
+			piece_grabbed.emit(index)
+			get_parent().modulate = selected_color
+			#print(viewport, event, shape_idx)
+		else:
+			print("move ", target_selector_from, " ", index)
+			target_selector = false;
+			piece_dropped.emit(target_selector_from, index);
 		
 func unselect():
 	selected = false

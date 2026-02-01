@@ -60,7 +60,9 @@ shader = ExtResource("15_ok2ji")
 shader_parameter/fill_percentage = 1.0
 
 
-[node name="RealChess" type="Node2D" unique_id=288714756]
+[node name="RealChess" type="Control" unique_id=909272398]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ok2ji")
 
 [node name="background" type="Sprite2D" parent="." unique_id=711312697]
@@ -78,7 +80,7 @@ scale = Vector2(0.41909626, 0.41909647)
 texture = ExtResource("3_lva8y")
 
 [node name="Game" type="Control" parent="." unique_id=1607607920]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

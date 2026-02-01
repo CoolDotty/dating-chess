@@ -162,6 +162,7 @@ func setup_board(chess: Chess) -> void:
 			sprite.texture = null
 
 
+# TODO: flipping doesn't work (try simply reversing y coordinate!)
 func flip_board() -> void:
 	var squares_flipped := []
 	for child in get_children():

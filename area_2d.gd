@@ -11,6 +11,7 @@ var rank;
 var index;
 var san_name;
 var selected;
+var target_selector = false # is this a dummy node used for selecting the targets?
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

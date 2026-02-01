@@ -20,10 +20,11 @@ func new_piece(file, rank):
 	var p1 = piece.instantiate()
 
 	p1.position = xy2pos(x_i, y_i)
-	p1.modulate = Color(x_i/8.0, y_i/8.0, 1)
+	#p1.modulate = Color(x_i/8.0, y_i/8.0, 1)
 	#p1.scale = Vector2(4,4)
 	# only for classic chess pieces provided
-	p1.get_node("Sprite2D").scale = Vector2(0.15,0.15)
+	#p1.get_node("Sprite2D").scale = Vector2(0.15,0.15)
+	p1.get_node("Sprite2D").scale = Vector2(0.08,0.08)
 	var area2d = p1.get_node("Area2D")
 	area2d.x_i = x_i
 	area2d.y_i = y_i
@@ -43,8 +44,10 @@ func new_piece(file, rank):
 func _ready() -> void:
 	#for y_i in range(8):
 	#	for x_i in range(8):
-	for rank in range(8, 0, -1):
+	#for rank in range(8, 0, -1):
+	for rank in range(1, 9):
 		for file in range(1, 9):
+		#for file in range(8, 0, -1):
 			var area2d = new_piece(file, rank)
 			area2d.index = Chess.square_index(file, rank)
 			print(area2d.index)
@@ -139,7 +142,12 @@ func setup_board(chess: Chess) -> void:
 		if piece != null:
 			var col := "b" if Chess.piece_color(piece) else "w"
 			piece = piece.to_upper()
-			sprite.texture = load("res://assets/tatiana/" + col + piece + ".svg")
+			#sprite.texture = load("res://assets/tatiana/" + col + piece + ".svg")
+			sprite.texture = load("res://assets/cool_pieces/" + piece + ".png")
+			#sprite.scale = Vector2(0.1,0.1)
+			# TODO: col as effect
+			if col == "b":
+				sprite.modulate = Color(0.2,0.23,0.25)
 		else:
 			sprite.texture = null
 

@@ -27,7 +27,9 @@ func setup_board(chess: Chess) -> void:
 		if piece != null:
 			var col := "b" if Chess.piece_color(piece) else "w"
 			piece = piece.to_upper()
-			square.get_node("Piece").texture = load("res://assets/tatiana/" + col + piece + ".svg")
+			#square.get_node("Piece").texture = load("res://assets/tatiana/" + col + piece + ".svg")
+			square.get_node("Piece").texture = load("res://assets/cool_pieces/" + piece + ".png")
+			# TODO: col as effect
 		else:
 			square.get_node("Piece").texture = null
 

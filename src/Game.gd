@@ -34,7 +34,9 @@ func _ready() -> void:
 	randomize()
 	get_tree().call_group("Squares", "_connect_square_signals", self)
 	update_state()
-	
+	var globalSignal = get_node("/root/Global")
+	globalSignal.bot_turn.connect(_on_Bot_turn)
+
 #func _physics_process(delta: float) -> void:
 	#if not bot_thinking:
 		#bot_play()
@@ -43,7 +45,6 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	if bot_thinking_thread != null:
 		bot_thinking_thread.wait_to_finish()
-
 
 func _on_ResetButton_pressed() -> void:
 	bot_thinking = false
@@ -135,11 +136,14 @@ func _on_BotButton_pressed() -> void:
 
 
 func _on_BotCheck_pressed() -> void:
-	# Nothing to do?
-	pass
+	Global.bot_enabled = true
 
 
 func _on_BotTimer_timeout() -> void:
+	#bot_play()
+	pass # I think this is replaced by signal?
+
+func _on_Bot_turn():
 	bot_play()
 
 

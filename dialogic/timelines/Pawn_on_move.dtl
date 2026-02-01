@@ -1,4 +1,4 @@
-if {pawn_love} == 0.0:	
+if {pawn_love} == 0.0:
 	join Pawn center
 	Pawn: Eh... What? O-oh sorry your highness... I was just so... sleepy... Do I really have to do this? I... I know I should but... I'm so... so...
 	set {pawn_love} += 1
@@ -37,8 +37,9 @@ elif {pawn_love} == 7.0:
 	set {pawn_love} += 1
 elif {pawn_love} == 9.0:
 	join Pawn center
-	Pawn: Aha, did you see that last move? Every second calculated. Oh! But the one thing I did not calculate was your... departure. Can... you stay a moment? 
+	Pawn: Aha, did you see that last move? Every second calculated. Oh! But the one thing I did not calculate was your... departure. Can... you stay a moment?
 	set {pawn_love} += 1
 elif {pawn_love} == 10.0:
 	join Pawn center
 	Pawn: My liege, have you seen the scene? Truly, our victory is afoot; it needs only the finishing touches... Would you do the honours? I would not be here without you my grace... my darling...
+do Global.bot_play_if_turn()

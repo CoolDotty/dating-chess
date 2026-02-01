@@ -119,11 +119,11 @@ func advance_challenges(move: Move, moves: Array, chess: Chess):
 		return
 	var played_piece = move.piece_type
 	
-	# use a rook to defeat 3 pieces
+	# use a rook to defeat 1 pieces
 	if Dialogic.VAR.rook_challenge_1 >= 1:
 		if move.piece_type == "R" and move.captured_piece:
 			Dialogic.VAR.rook_challenge_1 += 1
-		if Dialogic.VAR.rook_challenge_1 >= 3:
+		if Dialogic.VAR.rook_challenge_1 >= 2:
 			pass
 	
 	# Move king adjacent to rook

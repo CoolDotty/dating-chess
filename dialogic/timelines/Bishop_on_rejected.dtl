@@ -1,6 +1,6 @@
 join Bishop_mask left
 join King (Happy) right [mirrored="true"]
-Bishop: Ew no
+Bishop: I apologize my liege, but the Lord will forbid this union. This... this is too much, I'm sorry.
 leave Bishop_mask
 update King (Sad) center
 [BAD END]

@@ -1,34 +1,35 @@
 if {rook_love} == 0.0:
-	join Rook_mask center
+	join Rook_mask (Ook Happy) center
 	Rook: Ah, my brother, your highness, how are you? Those weaklings on the other side won't know what hit 'em.
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {rook_love} == 1.0:
-	join Rook_mask center
+	join Rook_mask (Rook Angry) center
 	Rook: Out of my way! What, you wanted to talk to me? Can't you see I'm busy? Ask the Queen or Pawn to do it! I can't be bothered with these womanly things...
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {rook_love} == 2.0:
-	join Rook_mask center
-	Rook: Hey! Excuse me, you can't just take that weight away... I wasn't done with it yet! You... did seem to lift it with relative ease... Hm, maybe you may be my match.
+	join Rook_mask (Rook Angry) center
+	Rook: Hey! Excuse me, you can't just take that weight away... I wasn't done with it yet!
+	update Rook_mask (Ook Neutral)
+	Rook_mask: You... did seem to lift it with relative ease... Hm, maybe you may be my match.
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {rook_love} == 3.0:
-	join Rook_mask center
-	Rook: What's up? Oh! You wanted to know what happened to those Rooks last week? Well, nothing... No, I didn't get these from them, I just... tripped! Why do you want to know so much anyway?
+	join Rook_mask (Ook Sad) center
+	Rook: What's up? Oh! You wanted to know what happened to those Bishops last week? Well, nothing... No, I didn't get these from them, I just... tripped! Why do you want to know so much anyway?
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {rook_love} == 4.0:
-	join Rook_mask center
+	join Rook_mask (Ook Sad) center
 	Rook: Hey uh... Uhm. Well, your grace, I was wondering... Could... You hold me for a moment? Not like, in a weird way of course, like... I'm not like THAT, but... You are my trustworthy liege... Just. Shut up, and hold me ok!?
-	[Use a rook to defeat 3 pieces]
+	[Use a rook to defeat 1 piece]
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 	set {rook_challenge_1} = 1.0
-elif {rook_love}   ==   5.0 and {rook_challenge_1}   <   4.0:
+elif {rook_love}   ==   5.0 and {rook_challenge_1}   <   2.0:
 	[end_timeline]
-
-elif {rook_love}   ==   5.0 and {rook_challenge_1}   >=   4.0:
+elif {rook_love}   ==   5.0 and {rook_challenge_1}   >=   2.0:
 	join Rook_mask (Ook Neutral) center
 	Rook: So... warm... So... soft... I... I need to tell you something...
 	update Rook_mask (Ook Thinking)
@@ -46,16 +47,32 @@ elif {rook_love}   ==   5.0 and {rook_challenge_1}   >=   4.0:
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {rook_love} == 6.0:
-	join Rook center
+	join Rook (Happy) center
 	Rook: What, just because I came out it means I gotta stop hitting the gym? Goddamn dude, instead of flapping your mouth, why don't you try keeping up with me instead? Heh, I guess it's nice you are trying your best... How about another hug instead...?
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {rook_love} == 7.0:
-	join Rook center
+	join Rook (Happy) center
 	Rook: Hey, you aren't trying to keep me safe or something are you? Cmon, I know you're a sap, but it doesn't mean you should try and protect me like this! Cmon... you know that I'm here to protect you...
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {rook_love} == 8.0:
-	join Rook (Happy) center
-	Rook: Eheh, you really worry too much! Cmon, lemme squish your cheek! You're royalty, but you worry way too much about me! C'mon, I'm just a girl, not a vase, I can still cut through your enemies like it's nothing\: that will never change. That... and my feelings for... you...
+	join Rook (Neutral) center
+	Rook: What's the matter ya sap? Worried about those bishops again? Nah, they've stopped bothering me... Dropping your name certainly helped a bit... What, you want a thank you or something?
+	update Rook (Love)
+	Rook: Well, thank you. Heh, I can show appreciation too, silly...
+	set {rook_love} += 1
+	audio "res://assets/sound/Emotes/heart.wav"
+elif {rook_love} == 9.0:
+	join Rook (Neutral) center
+	Rook: Stupid... Hey, you wouldn't know a thing or two about tying your hair up do ya? Heh, thanks... You're so reliable, you know that?
+	set {rook_love} += 1
+	audio "res://assets/sound/Emotes/heart.wav"
+elif {rook_love} == 10.0:
+	join Rook (Angry) center
+	Rook: Eheh, you really worry too much! Cmon, lemme squish your cheek! You're royalty, but you worry way too much about me! C'mon, I'm just a girl, not a vase, I can still cut through your enemies like it's nothing\: that will never change.
+	update Rook (Love)
+	Rook: That... and my feelings for... you...
+	set {rook_love} += 1
+	audio "res://assets/sound/Emotes/heart.wav"
 	[Something awaits if you can win with the rook on the board]

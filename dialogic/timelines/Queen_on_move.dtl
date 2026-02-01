@@ -1,26 +1,30 @@
 if {queen_love} == 0.0:
-	join Queen_mask center
+	join Queen_mask (Neutral) center
 	Queen: My... highness. What are you doing here? I... have little use for you at this time. Nobody can even get close to me... watch me fly!
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {queen_love} == 1.0:
-	join Queen_mask center
-	Queen: Eh, what? Oh! You wish for a race? I... I suppose I can spare a moment for you\: just try to run, I'll always catch up to you no matter the size of your head start! Something so... fun about the chase, don't you agree?
+	join Queen_mask (Neutral) center
+	Queen: Eh, what? Oh! You wish for a race? I... I suppose I can spare a moment for you\: just try to run, I'll always catch up to you no matter the size of your head start!
+	update Queen_mask (Happy)
+	Queen: Something so... fun about the chase, don't you agree?
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {queen_love} == 2.0:
-	join Queen_mask center
+	join Queen_mask (Neutral) center
 	Queen: Eenie Meenie Miney Mo. Which way does your Queenie go? Pick your poison then you'll know. Queenie takes a shot at foes!
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {queen_love} == 3.0:
-	join Queen_mask center
-	Queen: Couldn't get enough could you? I know, I'm the pinacle of elegance, perfection and more. Well just know that I'm here and you can rely on me. Throw me anywhere you want, I'm with you...
+	join Queen_mask (Neutral) center
+	Queen: Couldn't get enough could you? I know, I'm the pinacle of elegance, perfection and more. Well just know that I'm here and you can rely on me.
+	update Queen_mask (Happy)
+	Queen: Throw me anywhere you want, I'm with you...
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {queen_love} == 4.0:
-	join Queen_mask center
-	Queen: I want to show off to you, Watch how far I can fly. I need you to clear a path. I trust that should be easy no?
+	join Queen_mask (Neutral) center
+	Queen: Do truly believe in me? Can I rely on you?  I need you to clear a path. I trust that should be easy no?
 	[Move the Queen 6 spaces or more in one turn]
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
@@ -28,18 +32,46 @@ elif {queen_love} == 4.0:
 elif {queen_love}   ==   5.0 and {queen_challenge_1}   <   2.0:
 	[end_timeline]
 elif {queen_love}   ==   5.0 and {queen_challenge_1}   >=   2.0:
-	join Queen_mask center
-	Queen: You know I'm always the one doing the running, just got to keep running, I have to. Everyone needs me. You still need me too... heh.
+	join Queen_mask (Love) center
+	Queen: You know I'm always the one doing the running, just got to keep running, I have to. Everyone needs me.
+	leave Queen_mask
+	join Queen (Love) center
+	Queen: You still need me too... heh. Maybe you can be the one exception...
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {queen_love} == 6.0:
-	join Queen_mask center
-	Queen: Every time I move I'm scared. Scared of the backlash. Scared of the future. Scared of disappointing people... I keep telling myself to be strong but it's harder than anyone can imagine... Except you I suppose... heh
+	join Queen (Sad) center
+	Queen: Every time I move I'm scared. Scared of the backlash. Scared of the future. Scared of disappointing people... I keep telling myself to be strong but it's harder than anyone can imagine...
+	update Queen (Happy)
+	Queen: Except you I suppose... heh
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {queen_love} == 7.0:
-	join Queen_mask center
-	Queen: I don't ever want to look back but sometimes it's the only place that truly feels safe... With you. Thank you for leading us through it. We... I could not have done it without you. With you I feel seen. Thank you my liege. I'm with you. till death do us part...
-	[Something awaits if you can win with the queen on the board]
+	join Queen (Sad) center
+	Queen: Alas, you keep catching me at moments of weakness...
+	update Queen (Love)
+	But perhaps that's no coincidence. Perhaps the only time I can be weak, is around you.
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
+elif {queen_love} == 8.0:
+	join Queen (Neutral) center
+	Queen: The court has been rather dull this day; have you a moment to stay with me?
+	update Queen (Happy)
+	Queen: I would like to have you company here, if only for a moment...
+	set {queen_love} += 1
+	audio "res://assets/sound/Emotes/heart.wav"
+elif {queen_love} == 9.0:
+	join Queen (Angry) center
+	Queen: Queen do this, queen do that... When will there come a day when I can demand someone care for me?
+	update Queen (Love)
+	Queen: O-oh... I suppose you are right..
+set {queen_love} += 1set {queen_love} += 1
+audio "res://assets/sound/Emotes/heart.wav"
+elif {queen_love} == 10.0:
+	join Queen (Happy) center
+	Queen: I don't ever want to look back but sometimes it's the only place that truly feels safe... With you. Thank you for leading us through it. We... I could not have done it without you. With you I feel seen.
+	update Queen (Love)
+	Queen: Thank you my liege. I'm with you. till death do us part...
+	[Something awaits if you can win with the queen on the board]
+set {queen_love} += 1
+audio "res://assets/sound/Emotes/heart.wav"

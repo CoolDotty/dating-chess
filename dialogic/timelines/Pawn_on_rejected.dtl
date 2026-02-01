@@ -1,6 +1,6 @@
 join Pawn_mask left
 join King (Happy) right [mirrored="true"]
-Pawn: Ew no
+Pawn: I... Sorry, I can't. This feels... like a gross abuse of your power over me. No...
 leave Pawn_mask
 update King (Sad) center
 [BAD END]

@@ -1,0 +1,14 @@
+join King center
+set {rand} = range(1,5).pick_random()
+if {rand} == 1:
+	King: Hm.
+elif {rand} == 2:
+	King: Why yes.
+elif {rand} == 3:
+	King: Another.
+elif {rand} == 4:
+	King: thinking...
+elif {rand} == 5:
+	King: Very well...
+leave King [animation="Instant Out" wait="true"]
+do Dialogic.start("King_on_move")

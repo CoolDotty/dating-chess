@@ -5,6 +5,8 @@ extends Node2D
 signal piece_grabbed(from_square);
 signal piece_dropped(from_square, to_square);
 
+var black_color = Color(0.2,0.23,0.25);
+
 func new_piece(file, rank):
 	var y_i = rank - 1
 	var x_i = file - 1
@@ -93,6 +95,9 @@ func unmark_moves():
 				if square.target_selector:
 					sprite.texture = oldTexture
 
+			if square.black:
+				sprite.modulate = black_color
+			else:
 				sprite.modulate = Color.WHITE
 		#if square.index in movesMarked:
 			#sprite.texture
@@ -103,12 +108,14 @@ func mark_possible_moves(from_idx, ids):
 	
 	# first find out what the previous piece was
 	var oldSprite;
+	var oldSquare;
 	for child in get_children():
 		if child.scene_file_path != 'res://piece.tscn': continue
 		var square = child.get_node("Area2D")
 		var sprite = child.get_node("Sprite2D")
 		if square.index == from_idx:
 			oldSprite = sprite;
+			oldSquare = square;
 			square.target_selector = false;
 
 	# then mark possible moves using the same piece but of slightly weaker color
@@ -128,6 +135,7 @@ func mark_possible_moves(from_idx, ids):
 			sprite.modulate = Color.YELLOW_GREEN
 			square.target_selector = true;
 			square.target_selector_from = from_idx;
+			square.black = oldSquare.black
 		else:
 			sprite.texture = null
 
@@ -146,7 +154,10 @@ func setup_board(chess: Chess) -> void:
 			#sprite.scale = Vector2(0.1,0.1)
 			# TODO: col as effect
 			if col == "b":
-				sprite.modulate = Color(0.2,0.23,0.25)
+				square.black = true
+				sprite.modulate = black_color;
+			else:
+				square.black = false
 		else:
 			sprite.texture = null
 

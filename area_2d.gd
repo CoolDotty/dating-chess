@@ -13,6 +13,7 @@ var san_name;
 var selected;
 var target_selector = false # is this a dummy node used for selecting the targets?
 var target_selector_from = 0;
+var black = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cw1fs4vp0p4tm"]
 
 [ext_resource type="Texture2D" uid="uid://dc17niwfpgsco" path="res://assets/background2.png" id="1_8c8jm"]
-[ext_resource type="Script" uid="uid://bnh5boial1cj" path="res://src/game.gd" id="1_ok2ji"]
+[ext_resource type="Script" uid="uid://bnh5boial1cj" path="res://src/Game.gd" id="1_ok2ji"]
 [ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="2"]
-[ext_resource type="Script" uid="uid://cn686bikpxokt" path="res://src/board.gd" id="3_5q0ih"]
+[ext_resource type="Script" uid="uid://cn686bikpxokt" path="res://src/Board.gd" id="3_5q0ih"]
 [ext_resource type="Texture2D" uid="uid://b4m0hi6q6qyv1" path="res://assets/chess_board.png" id="3_lva8y"]
 [ext_resource type="PackedScene" path="res://src/SanDisplay.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://bs3dpx25leirq" path="res://piece.tscn" id="4_8c8jm"]

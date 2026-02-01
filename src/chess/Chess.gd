@@ -301,7 +301,7 @@ func construct_move(from_square: int, to_square: int, promotion := "q", from_pie
 	move.to_square = to_square
 	move.captured_piece = pieces[to_square]
 	#print("construct_move debug ", )
-	move.piece_type = 'p' # pieces[from_square]
+	move.piece_type = pieces[from_square]
 	var from_piece_real = "";
 	if from_piece:
 		from_piece_real = from_piece

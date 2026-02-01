@@ -38,17 +38,17 @@ func _process(float) -> void:
 	var piece = Dialogic.current_timeline_name.get_slice("_", 0)
 	match piece:
 		"King":
-			fill_amount = lerp(fill_amount, pow(Dialogic.VAR.king_love / 10.0, 0.75), weight)
+			fill_amount = lerp(fill_amount, pow((Dialogic.VAR.king_love + 1) / 10.0, 0.75), weight)
 		"Bishop":
-			fill_amount = lerp(fill_amount, pow(Dialogic.VAR.bishop_love / 10.0, 0.75), weight)
+			fill_amount = lerp(fill_amount, pow((Dialogic.VAR.bishop_love + 1) / 10.0, 0.75), weight)
 		"Knight":
-			fill_amount = lerp(fill_amount, pow(Dialogic.VAR.knight_love / 10.0, 0.75), weight)
+			fill_amount = lerp(fill_amount, pow((Dialogic.VAR.knight_love + 1) / 10.0, 0.75), weight)
 		"Pawn":
-			fill_amount = lerp(fill_amount, pow(Dialogic.VAR.pawn_love / 10.0, 0.75), weight)
+			fill_amount = lerp(fill_amount, pow((Dialogic.VAR.pawn_love + 1) / 10.0, 0.75), weight)
 		"Rook":
-			fill_amount = lerp(fill_amount, pow(Dialogic.VAR.rook_love / 10.0, 0.75), weight)
+			fill_amount = lerp(fill_amount, pow((Dialogic.VAR.rook_love + 1) / 10.0, 0.75), weight)
 		"Queen":
-			fill_amount = lerp(fill_amount, pow(Dialogic.VAR.queen_love / 10.0, 0.75), weight)
+			fill_amount = lerp(fill_amount, pow((Dialogic.VAR.queen_love + 1) / 10.0, 0.75), weight)
 
 
 func _on_timeline_started():

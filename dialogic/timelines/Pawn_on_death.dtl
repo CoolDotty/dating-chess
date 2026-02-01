@@ -1,2 +1,13 @@
-join Pawn (Sad Base) center
-Pawn: ouch how could you do this to me I'm literally a baby please feed me waaaaa
+join Pawn_mask center
+set {rand} = range(1,5).pick_random()
+if {rand} == 1:
+	Pawn: ouch how could you do this to me I'm literally a baby please feed me waaaaa
+elif {rand} == 2:
+	Pawn: Well that just butters me the wrong way!
+elif {rand} == 3:
+	Pawn: I got them! No wait, they got me ... dang
+elif {rand} == 4:
+	Pawn: Do I get severence for this?
+elif {rand} == 5:
+	Pawn: I was so close to retirement though ...
+leave Pawn_mask [animation="Fade Out Up"]

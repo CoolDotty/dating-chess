@@ -33,11 +33,16 @@ Global="*uid://bwq1ano4tn5gg"
 
 directories/dch_directory={
 "Bishop": "res://dialogic/characters/Bishop.dch",
+"Bishop_mask": "res://dialogic/characters/Bishop_mask.dch",
 "King": "res://dialogic/characters/King.dch",
 "Knight": "res://dialogic/characters/Knight.dch",
+"Knight_mask": "res://dialogic/characters/Knight_mask.dch",
 "Pawn": "res://dialogic/characters/Pawn.dch",
+"Pawn_mask": "res://dialogic/characters/Pawn_mask.dch",
 "Queen": "res://dialogic/characters/Queen.dch",
-"Rook": "res://dialogic/characters/Rook.dch"
+"Queen_mask": "res://dialogic/characters/Queen_mask.dch",
+"Rook": "res://dialogic/characters/Rook.dch",
+"Rook_mask": "res://dialogic/characters/Rook_mask.dch"
 }
 directories/dtl_directory={
 "Bishop_on_capture": "res://dialogic/timelines/Bishop_on_capture.dtl",
@@ -75,21 +80,27 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic/style.tres"]
 layout/default_style="res://dialogic/style.tres"
 variables={
+"bishop_alive": true,
 "bishop_challenge_1": 0,
 "bishop_challenge_2": 0,
 "bishop_love": 0,
 "king_challenge_1": 0,
 "king_challenge_2": 0,
 "king_love": 0,
+"knight_alive": true,
 "knight_challenge_1": 0,
 "knight_challenge_2": 0,
 "knight_love": 0,
+"pawn_alive": true,
 "pawn_challenge_1": 0,
 "pawn_challenge_2": 0,
 "pawn_love": 0,
+"queen_alive": true,
 "queen_challenge_1": 0,
 "queen_challenge_2": 0,
 "queen_love": 0,
+"rand": "",
+"rook_alive": true,
 "rook_challenge_1": 0,
 "rook_challenge_2": 0,
 "rook_love": 0

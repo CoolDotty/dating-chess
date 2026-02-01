@@ -16,6 +16,18 @@ void fragment() {
     if (UV.y < cutoff) {
         COLOR = vec4(original_color.rgb, 0.0);
     } else {
-        COLOR = original_color;
+        // Calculate red blend factor with exponential curve starting at 0.5
+        float red_factor = 0.0;
+        if (fill_percentage > 0.5) {
+            // Remap fill_percentage from [0.5, 1.0] to [0.0, 1.0]
+            float normalized = (fill_percentage - 0.5) / 0.5;
+            // Apply exponential curve (adjust exponent for steepness)
+            red_factor = pow(normalized, 2.0);
+        }
+        
+        // Blend original color with red based on red_factor
+        vec3 red = vec3(1.0, 0.0, 0.0);
+        vec3 blended_color = mix(original_color.rgb, red, red_factor);
+        COLOR = vec4(blended_color, original_color.a);
     }
 }

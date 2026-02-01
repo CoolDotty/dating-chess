@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://down4o71bhsf"]
+
+[ext_resource type="Shader" uid="uid://c6s7vnc6t3e4" path="res://addons/dialogic/Modules/Character/squigglevision.gdshader" id="1_skelk"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hb6h3"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hb6h3"]
+noise = SubResource("FastNoiseLite_hb6h3")
+seamless = true
+
+[resource]
+shader = ExtResource("1_skelk")
+shader_parameter/scale = Vector2(0.1, 0.1)
+shader_parameter/strength = 0.1
+shader_parameter/fps = 6.0
+shader_parameter/noise = SubResource("NoiseTexture2D_hb6h3")

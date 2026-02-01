@@ -154,6 +154,7 @@ func update_state(after_move := false) -> void:
 		last_move = chess.move_stack[-1]
 	
 	if last_move and after_move:
+		Global.update_alive_checks(chess)
 		Global.advance_challenges(last_move, chess.move_stack, chess)
 		if Dialogic.current_timeline != null:
 			await Dialogic.timeline_ended

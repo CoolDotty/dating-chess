@@ -288,18 +288,6 @@ color = Color(1, 1, 1, 0)
 script = ExtResource("22_aom5e")
 start_black = true
 
-[connection signal="pressed" from="C/V/H/RSpacer/H/SettingsButton" to="." method="_on_SettingsButton_pressed"]
-[connection signal="pressed" from="C/V/H/RSpacer/H/CreditsButton" to="." method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/ResetButton" to="." method="_on_ResetButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/FlipButton" to="." method="_on_FlipButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/UndoButton" to="." method="_on_UndoButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/BotButton" to="." method="_on_BotButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/BotCheck" to="." method="_on_BotCheck_pressed"]
-[connection signal="timeout" from="C/V/C/V/H2/BotTimer" to="." method="_on_BotTimer_timeout"]
-[connection signal="text_submitted" from="C/V/H2/FenText" to="." method="_on_FenText_text_entered"]
-[connection signal="pressed" from="C/V/H2/SetFen" to="." method="_on_SetFen_pressed"]
-[connection signal="timeout" from="C/V/H2/InvalidFenTimer" to="." method="_on_InvalidFenTimer_timeout"]
-[connection signal="changed" from="SettingsMenu" to="." method="_on_SettingsMenu_settings_changed"]
 [connection signal="piece_dropped" from="Board" to="." method="_on_Square_piece_dropped"]
 [connection signal="piece_grabbed" from="Board" to="." method="_on_Square_piece_grabbed"]
 [connection signal="pressed" from="Game/C/V/H/RSpacer/H/SettingsButton" to="Game" method="_on_SettingsButton_pressed"]

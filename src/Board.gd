@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var game := $RealChess as Control
+#@onready var game := $RealChess as Control
+@onready var game: ChessGame = $".."
 
 signal piece_grabbed(from_square);
 signal piece_dropped(from_square, to_square);
@@ -25,7 +26,6 @@ func new_piece(file, rank):
 	# only for classic chess pieces provided
 	#p1.get_node("Sprite2D").scale = Vector2(0.15,0.15)
 	p1.get_node("Sprite2D").scale = Vector2(0.08,0.08)/z*0.8
-	print(z)
 	var area2d = p1.get_node("Area2D")
 	area2d.x_i = x_i
 	area2d.y_i = y_i
@@ -53,7 +53,6 @@ func _ready() -> void:
 	#	for file in range(1, 9):
 			var area2d = new_piece(file, rank)
 			area2d.index = Chess.square_index(file, rank)
-			print(area2d.index)
 			area2d.san_name = Chess.square_get_name(area2d.index)
 
 # NO YOU DONT! We have a board already filled with pieces, so you just gotta
@@ -65,8 +64,9 @@ func _ready() -> void:
 	#var area2d = new_piece(file, rank)
 
 func _on_piece_selected(x_i, y_i):
-	print(x_i, y_i)
 	for child in get_children():
+		if child.name == "Sprite2D":
+			continue
 		var area2d = child.get_node("Area2D")
 		if area2d and (area2d.x_i != x_i or area2d.y_i != y_i):
 			area2d.unselect()

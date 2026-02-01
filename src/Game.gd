@@ -175,6 +175,12 @@ func update_state(after_move := false) -> void:
 			result_text = "BLACK KING DIED OMG"
 		Chess.RESULT.CHECKMATE:
 			result_text = "%s wins by checkmate!" % ("White" if chess.turn else "Black")
+			await Dialogic.timeline_ended
+			if chess.turn:
+				# White wins
+				Dialogic.start("ending_pick")
+			else:
+				Dialogic.start("ending_bad")
 		Chess.RESULT.STALEMATE:
 			result_text = "Draw by stalemate"
 		Chess.RESULT.INSUFFICIENT:

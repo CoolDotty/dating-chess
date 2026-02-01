@@ -63,7 +63,9 @@ directories/dtl_directory={
 "Rook_on_capture": "res://dialogic/timelines/Rook_on_capture.dtl",
 "Rook_on_death": "res://dialogic/timelines/Rook_on_death.dtl",
 "Rook_on_ending": "res://dialogic/timelines/Rook_on_ending.dtl",
-"Rook_on_move": "res://dialogic/timelines/Rook_on_move.dtl"
+"Rook_on_move": "res://dialogic/timelines/Rook_on_move.dtl",
+"ending_bad": "res://dialogic/timelines/ending_bad.dtl",
+"ending_pick": "res://dialogic/timelines/ending_pick.dtl"
 }
 layout/style_directory={
 "": "res://dialogic/style.tres",

@@ -606,13 +606,13 @@ func is_square_attacked(square: int, col: bool) -> bool:
 
 
 func is_king_attacked(col: bool) -> bool:
-	return false
-	# return is_square_attacked(get_king(col), not col)
+	#return false
+	return is_square_attacked(get_king(col), not col)
 
 
 func in_check() -> bool:
-	return false
-	# return is_king_attacked(turn)
+	#return false
+	return is_king_attacked(turn)
 
 
 # Generate all legal moves. This can be done much faster

@@ -4,8 +4,12 @@ extends Node2D
 @export var piece: PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for y_i in range(8):
-		for x_i in range(8):
+	#for y_i in range(8):
+	#	for x_i in range(8):
+	for rank in range(8, 0, -1):
+		for file in range(1, 9):
+			var y_i = rank - 1
+			var x_i = file - 1
 			var p1 = piece.instantiate()
 
 			var side = 47
@@ -16,10 +20,26 @@ func _ready() -> void:
 			var z = x0*0.0 - 0.0009*y0 + 1
 			p1.position = Vector2(360+1.08*x/z, 100+0.85*y/z - 10)
 			p1.modulate = Color(x_i/8.0, y_i/8.0, 1)
+			#p1.scale = Vector2(4,4)
+			# only for classic chess pieces provided
+			p1.get_node("Sprite2D").scale = Vector2(0.15,0.15)
 			var area2d = p1.get_node("Area2D")
 			area2d.x_i = x_i
 			area2d.y_i = y_i
 			area2d.piece_selected.connect(_on_piece_selected)
+			
+			# for rank in range(8, 0, -1):
+			#   for file in range(1, 9):
+			#
+			#var file = x_i  # ???
+			#var rank = y_i # ???
+			#area2d.index = y_i * 8 + x_i # ???
+			area2d.file = file
+			area2d.rank = rank
+			area2d.index = Chess.square_index(file, rank)
+			print(area2d.index)
+			area2d.san_name = Chess.square_get_name(area2d.index)
+			
 			add_child(p1)
 
 func _on_piece_selected(x_i, y_i):
@@ -32,3 +52,33 @@ func _on_piece_selected(x_i, y_i):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func setup_board(chess: Chess) -> void:
+	#print(chess.pieces)
+	for child in get_children():
+		#print(child.scene_file_path == 'res://piece.tscn')
+		if child.scene_file_path != 'res://piece.tscn': continue
+		var piece_node = child
+		if not piece_node: continue
+		var square = piece_node.get_node("Area2D")
+		var sprite = piece_node.get_node("Sprite2D")
+		var piece = chess.pieces[square.index]
+		if piece != null:
+			var col := "b" if Chess.piece_color(piece) else "w"
+			piece = piece.to_upper()
+			sprite.texture = load("res://assets/tatiana/" + col + piece + ".svg")
+		else:
+			sprite.texture = null
+
+
+func flip_board() -> void:
+	var squares_flipped := []
+	for child in get_children():
+		var square = child.get_node("Area2D")
+		if not square: continue
+		squares_flipped.push_front(child)
+		remove_child(child)
+
+	for child in squares_flipped:
+		add_child(child)

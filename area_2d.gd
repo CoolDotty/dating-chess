@@ -4,7 +4,10 @@ signal piece_selected(x_i, y_i);
 
 var x_i;
 var y_i;
-
+var file;
+var rank;
+var index;
+var san_name;
 var selected;
 
 # Called when the node enters the scene tree for the first time.

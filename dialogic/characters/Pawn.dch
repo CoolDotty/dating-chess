@@ -10,61 +10,61 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Neutral Base",
+&"default_portrait": "Neutral",
 &"description": "",
 &"display_name": "Pawn",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Angry Base": {
+"Angry": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Angry base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn angry.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Happy Base": {
+"Happy": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Happy base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn happy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Love Base": {
+"Love": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Love base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn love.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Neutral Base": {
+"Neutral": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Neutral base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn neutral.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Sad Base": {
+"Sad": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Sad base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Thinking Base": {
+"Thinking": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Thinking base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn thinking.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

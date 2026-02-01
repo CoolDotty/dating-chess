@@ -35,9 +35,27 @@
 "scale": 1,
 "scene": ""
 },
+"Love": {
+"export_overrides": {
+"image": "\"res://dialogic/portraits/Bishop/Bishop love.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Neutral": {
 "export_overrides": {
 "image": "\"res://dialogic/portraits/Bishop/Bishop neutral.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad": {
+"export_overrides": {
+"image": "\"res://dialogic/portraits/Bishop/Bishop sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

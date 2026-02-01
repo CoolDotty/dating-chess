@@ -27,6 +27,7 @@ enum ClearFlags {
 
 ## Reference to the currently executed timeline.
 var current_timeline: DialogicTimeline = null
+var current_timeline_name: String = ""
 ## Copy of the [member current_timeline]'s events.
 var current_timeline_events: Array = []
 
@@ -210,6 +211,7 @@ func start(timeline:Variant, label_or_idx:Variant="") -> Node:
 func start_timeline(timeline:Variant, label_or_idx:Variant = "") -> void:
 	# load the resource if only the path is given
 	if typeof(timeline) in [TYPE_STRING, TYPE_STRING_NAME]:
+		current_timeline_name = timeline as String
 		#check the lookup table if it's not a full file name
 		if "://" in timeline:
 			timeline = load(timeline)

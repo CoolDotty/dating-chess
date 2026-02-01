@@ -67,7 +67,6 @@ func update_alive_checks(chess: Chess):
 
 
 func move_character_effects(move: Move, moves: Array, chess: Chess):
-	print("move ", move.whos_turn, " ", move.did_capture, " ", move.piece_type)
 	if move.whos_turn == "black":
 		if not move.did_capture:
 			return

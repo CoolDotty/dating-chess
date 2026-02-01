@@ -310,8 +310,10 @@ func construct_move(from_square: int, to_square: int, promotion := "q", from_pie
 		from_piece_real = pieces[from_square].to_lower()
 	move.piece_type = from_piece_real
 
+	print("MOVE ", from_square, " ", to_square, " ", promotion, " ", from_piece, " ", from_piece_real)
 	if from_piece_real == "p":
 		var rank = square_get_rank(to_square)
+		print("RANK ", rank)
 		if rank == 1 or rank == 8:
 			move.promotion = promotion.to_lower() if turn else promotion.to_upper()
 		if to_square == ep_target:

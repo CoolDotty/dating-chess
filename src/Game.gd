@@ -92,7 +92,6 @@ func _on_FenText_text_entered(new_text: String) -> void:
 
 
 func _on_Square_piece_grabbed(from_index: int) -> void:
-	print("grabbed ", from_index)
 	if Settings.show_dests:
 		var target_squares := []
 		for move in legal_moves:
@@ -112,7 +111,7 @@ func _on_Square_piece_grabbed(from_index: int) -> void:
 
 func _on_Square_piece_dropped(from_index: int, to_index: int) -> void:
 	# TODO: probablt should use last arguemnt
-	var m := chess.construct_move(from_index, to_index, 'q', 'q')
+	var m := chess.construct_move(from_index, to_index, 'q', 'p')
 	for lm in legal_moves:
 		if m.from_square == lm.from_square and m.to_square == lm.to_square and m.promotion == lm.promotion:
 			chess.play_move(lm)
@@ -175,7 +174,6 @@ func update_state(after_move := false) -> void:
 		Global.advance_challenges(last_move, chess.move_stack, chess)
 		if Dialogic.current_timeline != null:
 			await Dialogic.timeline_ended
-		print("move character effect ", last_move, chess.move_stack, chess)
 		Global.move_character_effects(last_move, chess.move_stack, chess)
 		if Dialogic.current_timeline != null:
 			await Dialogic.timeline_ended

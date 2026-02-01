@@ -77,3 +77,4 @@ elif {pawn_love} == 10.0:
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 	[Something awaits if you can win with a pawn on the board]
+do Global.bot_play_if_turn()

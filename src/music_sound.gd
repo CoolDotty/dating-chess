@@ -7,7 +7,6 @@ func _ready() -> void:
 	globalSignal.music_toggled.connect(_on_music_toggled)
 	if Settings.sound_music:
 		play()
-		pass # Replace with function body.	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

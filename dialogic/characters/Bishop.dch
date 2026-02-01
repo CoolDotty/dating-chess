@@ -6,7 +6,18 @@
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
-"sound_moods": {},
+"sound_moods": {
+"male voice": {
+"mode": 1,
+"name": "male voice",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://assets/sound/Characters/Male",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
 "style": "",
 "suffix": ""
 },
@@ -24,7 +35,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "male voice"
 },
 "Happy": {
 "export_overrides": {
@@ -33,7 +45,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "male voice"
 },
 "Neutral": {
 "export_overrides": {
@@ -42,7 +55,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "male voice"
 },
 "Thinking": {
 "export_overrides": {
@@ -51,7 +65,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "male voice"
 }
 },
 &"scale": 1.0

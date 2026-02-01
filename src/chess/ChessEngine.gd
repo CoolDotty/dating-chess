@@ -114,6 +114,7 @@ static func flip_table(table: Array) -> Array:
 
 func get_move(chess: Chess) -> Array:
 	search_depth = Settings.bot_difficulty
+	print(Settings.bot_difficulty)
 	num_positions_searched = 0
 	num_positions_searched_q = 0
 	num_positions_evaluated = 0

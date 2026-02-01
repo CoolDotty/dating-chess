@@ -6,7 +6,28 @@
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
-"sound_moods": {},
+"sound_moods": {
+"post trans": {
+"mode": 1,
+"name": "post trans",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://assets/sound/Characters/Rook/Post trans",
+"volume_base": 0.0,
+"volume_variance": 0.0
+},
+"pre trans": {
+"mode": 1,
+"name": "pre trans",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://assets/sound/Characters/Rook/Pre trans",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
 "style": "",
 "suffix": ""
 },
@@ -24,7 +45,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
 "Happy Base": {
 "export_overrides": {
@@ -33,7 +55,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
 "Love Base": {
 "export_overrides": {
@@ -42,7 +65,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "post trans"
 },
 "Neutral Base": {
 "export_overrides": {
@@ -51,7 +75,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
 "Sad Base": {
 "export_overrides": {
@@ -60,7 +85,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
 "Thinking Base": {
 "export_overrides": {
@@ -69,7 +95,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 }
 },
 &"scale": 1.0

@@ -15,6 +15,9 @@
 [sub_resource type="Resource" id="Resource_c0who"]
 script = ExtResource("2_06sqv")
 scene = ExtResource("1_bsv77")
+overrides = {
+"global_font_color": "Color(0, 0, 0, 1)"
+}
 
 [sub_resource type="Resource" id="Resource_wcswo"]
 script = ExtResource("2_06sqv")
@@ -31,6 +34,16 @@ scene = ExtResource("5_xg8gy")
 [sub_resource type="Resource" id="Resource_3ua5v"]
 script = ExtResource("2_06sqv")
 scene = ExtResource("6_c0oig")
+overrides = {
+"box_color_custom": "Color(1, 1, 1, 1)",
+"box_color_use_global": "false",
+"box_panel": "\"res://dialogic/style/dialog_box.tres\"",
+"name_label_box_modulate": "Color(1, 1, 1, 1)",
+"name_label_box_offset": "Vector2(-32, -32)",
+"name_label_box_panel": "\"res://dialogic/style/dialog_box_micro.tres\"",
+"name_label_box_use_global_color": "false",
+"text_custom_color": "Color(0, 0, 0, 1)"
+}
 
 [sub_resource type="Resource" id="Resource_opxh2"]
 script = ExtResource("2_06sqv")
@@ -39,6 +52,17 @@ scene = ExtResource("7_b1kic")
 [sub_resource type="Resource" id="Resource_ydfo4"]
 script = ExtResource("2_06sqv")
 scene = ExtResource("8_npk6l")
+overrides = {
+"boxes_stylebox_disabled": "\"res://dialogic/style/dialog_box_micro.tres\"",
+"boxes_stylebox_focused": "\"res://dialogic/style/dialog_box_micro.tres\"",
+"boxes_stylebox_hovered": "\"res://dialogic/style/dialog_box_micro.tres\"",
+"boxes_stylebox_normal": "\"res://dialogic/style/dialog_box_micro.tres\"",
+"boxes_stylebox_pressed": "\"res://dialogic/style/dialog_box_micro.tres\"",
+"text_color_custom": "Color(0, 0, 0, 1)",
+"text_color_focused": "Color(0.421875, 0.421875, 0.421875, 1)",
+"text_color_hovered": "Color(0.4296875, 0.4296875, 0.4296875, 1)",
+"text_color_pressed": "Color(0, 0, 0, 1)"
+}
 
 [sub_resource type="Resource" id="Resource_nsibh"]
 script = ExtResource("2_06sqv")
@@ -63,4 +87,4 @@ layer_info = {
 "16": SubResource("Resource_nsibh"),
 "17": SubResource("Resource_yfh6u")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "15"

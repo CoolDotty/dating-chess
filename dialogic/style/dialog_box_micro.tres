@@ -1,0 +1,12 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cmxya870640sy"]
+
+[ext_resource type="Texture2D" uid="uid://13gans535vml" path="res://assets/ui/Character hover frame MICRO.png" id="1_sub53"]
+
+[resource]
+texture = ExtResource("1_sub53")
+texture_margin_left = 17.0
+texture_margin_top = 17.0
+texture_margin_right = 17.0
+texture_margin_bottom = 17.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2

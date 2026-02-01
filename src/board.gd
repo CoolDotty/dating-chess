@@ -1,5 +1,10 @@
 extends Node2D
 
+@onready var game := $RealChess as Control
+
+signal piece_grabbed(from_square);
+signal piece_dropped(from_square, to_square);
+
 # TODO: piece is actually a square that might have a piece (this allows selecting empty squares to move to)
 @export var piece: PackedScene
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +32,8 @@ func _ready() -> void:
 			area2d.x_i = x_i
 			area2d.y_i = y_i
 			area2d.piece_selected.connect(_on_piece_selected)
+			area2d.piece_grabbed.connect(_on_piece_grabbed)
+			area2d.piece_dropped.connect(_on_piece_dropped)
 			
 			# for rank in range(8, 0, -1):
 			#   for file in range(1, 9):
@@ -48,6 +55,14 @@ func _on_piece_selected(x_i, y_i):
 		var area2d = child.get_node("Area2D")
 		if area2d and (area2d.x_i != x_i or area2d.y_i != y_i):
 			area2d.unselect()
+			
+func _on_piece_grabbed(idx):
+	piece_grabbed.emit(idx)
+	#game._on_Square_piece_grabbed(idx)
+	
+func _on_piece_dropped(from, to):
+	piece_dropped.emit(from, to)
+	#game._on_Square_piece_dropped(from, to) # silly, I know
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

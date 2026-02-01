@@ -306,6 +306,8 @@ start_black = true
 [connection signal="pressed" from="C/V/H2/SetFen" to="." method="_on_SetFen_pressed"]
 [connection signal="timeout" from="C/V/H2/InvalidFenTimer" to="." method="_on_InvalidFenTimer_timeout"]
 [connection signal="changed" from="SettingsMenu" to="." method="_on_SettingsMenu_settings_changed"]
+[connection signal="piece_dropped" from="Board" to="." method="_on_Square_piece_dropped"]
+[connection signal="piece_grabbed" from="Board" to="." method="_on_Square_piece_grabbed"]
 [connection signal="pressed" from="Game/C/V/H/RSpacer/H/SettingsButton" to="Game" method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="Game/C/V/H/RSpacer/H/CreditsButton" to="Game" method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="Game/C/V/C/V/H2/ResetButton" to="Game" method="_on_ResetButton_pressed"]

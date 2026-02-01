@@ -23,7 +23,6 @@ func get_adjacent_piece_types(target_square: int, pieces: Array) -> Array:
 	var up = target_square - 8
 	var down = target_square + 8
 	var adjacents = [left, right, up, down]
-	print(adjacents)
 	
 	for adj in adjacents:
 		if adj < 0 or adj > 64:

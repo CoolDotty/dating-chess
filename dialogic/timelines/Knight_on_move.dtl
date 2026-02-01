@@ -1,2 +1,44 @@
-join Knight center
-Knight: hi
+if {knight_love} == 0.0:	
+	join Knight center
+	Knight:  Neiiiiiiiiiigghhhhhh! (You sense a strong determination and hint of breakfast)
+	set {knight_love} += 1
+elif {knight_love} == 1.0:
+	join Knight center
+	Knight: Nnneighhhh! (you hear a wonderful tale about breakfast. There seems to be some emphasis being placed on the variety of the spread. Somehow, you don't think you've heard about horses eating lily pads before)
+	set {knight_love} += 1
+elif {knight_love} == 2.0:
+	join Knight center
+	Knight: Nnnneighhhh! (you hear a wonderful tale about breakfast again? You swear it was the same story but with extra emphasis on the apples and... maple?)
+	set {knight_love} += 1
+elif {knight_love} == 3.0:
+	join Knight center
+	Knight: Nnneighhhh! (you begin to worry about the memory of the storyteller, as this is the 3rd time hearing such riveting tales of dodging the seeds in an apple core... with oddly a mention of a maple leaf?)
+	set {knight_love} += 1
+elif {knight_love} == 4.0:
+	join Knight center
+	Knight: Neighh. Neighhh. Neiggggghhhhhhhhhh! (Through a series of teeth and gestures you can tell the request is about letting them take 1 piece, NOT BREAKFAST)
+	set {knight_love} += 1
+	set {knight_challenge_1} = 1.0
+elif {knight_love}   ==   5.0 and {knight_challenge_1}   >=   1.0:
+	join Knight center
+	Knight: nn-HAWWWWWW!! (Through her beauty you've realized she was hiding herself all along and is the most eloquent moose you've ever seen. Things are going to be different from now on)
+	set {knight_love} += 1
+elif {knight_love} == 6.0:
+	join Knight center
+	Knight: HAWWWWWWWWWWWWWWW! (She seems to whisper sweet nothings in the form of a yell. How can someone be so bold about their affection?)
+	set {knight_love} += 1
+elif {knight_love} == 7.0:
+	join Knight center
+	Knight: HAWWWWWWW! (You hear a wonderful tale about all the thousand lives you could spend together, it's rare you could become so attached to someone but she's perfect. You hear all that and you know what else? Breakfast. There's this great diner that pretends it's your birthday)
+	set {knight_love} += 1
+	elif {knight_love} == 8.0:
+	join Knight center
+	Knight: HAWWWWWWWWW! (You hear some kind words, though abrupt, concerning their new appearance. You were not quite sure how to parse this misunderstanding, but it seemed to be more than comfortable with any confusion you are dealing with. What a kind moose)
+	set {knight_love} += 1
+elif {knight_love} == 9.0:
+	join Knight center
+	Knight: HAWWWWW! (You feel a strong understanding of her and would literally do a-anything for her. Look at that, she's making you stammer over your words)
+	set {knight_love} += 1
+elif {knight_love} == 10.0:
+	join Knight center
+	Knight: HAWWWWWWW! (You hear a wonderful tale about all the thousand lives you could spend together, it's rare you could become so attached to someone but she's perfect. You hear all that and you know what else? Breakfast. There's this great diner that pretends it's your birthday)

@@ -59,3 +59,4 @@ elif {rook_love} == 8.0:
 	join Rook (Happy) center
 	Rook: Eheh, you really worry too much! Cmon, lemme squish your cheek! You're royalty, but you worry way too much about me! C'mon, I'm just a girl, not a vase, I can still cut through your enemies like it's nothing\: that will never change. That... and my feelings for... you...
 	[Something awaits if you can win with the rook on the board]
+do Global.bot_play_if_turn()

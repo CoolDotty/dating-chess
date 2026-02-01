@@ -446,7 +446,7 @@ func generate_pseudo_legal_moves() -> Array:
 			"K", "k":
 				moves.append_array(generate_leaping_moves(color, square, ROYAL_OFFSETS))
 			"Q", "q":
-				if Global.queen_loves_you:
+				if !Global.queen_loves_you:
 					moves.append_array(generate_sliding_moves(color, square, ROYAL_OFFSETS))
 				else:
 					moves.append_array(generate_leaping_moves(color, square, ROYAL_OFFSETS))

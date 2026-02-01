@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var game := $RealChess as Control
+#@onready var game := $RealChess as Control
+@onready var game: ChessGame = $".."
 
 signal piece_grabbed(from_square);
 signal piece_dropped(from_square, to_square);
@@ -67,6 +68,8 @@ func _ready() -> void:
 func _on_piece_selected(x_i, y_i):
 	print(x_i, y_i)
 	for child in get_children():
+		if child.name == "Sprite2D":
+			continue
 		var area2d = child.get_node("Area2D")
 		if area2d and (area2d.x_i != x_i or area2d.y_i != y_i):
 			area2d.unselect()

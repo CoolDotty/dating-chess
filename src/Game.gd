@@ -111,6 +111,7 @@ func _on_Square_piece_grabbed(from_index: int) -> void:
 
 
 func _on_Square_piece_dropped(from_index: int, to_index: int) -> void:
+	# TODO: probablt should use last arguemnt
 	var m := chess.construct_move(from_index, to_index, 'q', 'q')
 	for lm in legal_moves:
 		if m.from_square == lm.from_square and m.to_square == lm.to_square and m.promotion == lm.promotion:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc0lvwit2may3"
-path="res://.godot/imported/King angry.png-a436c2680c37335bac14f20c19c9287c.ctex"
+uid="uid://dc17niwfpgsco"
+path="res://.godot/imported/background2.png-881407e6119575a6b132952b4db3a38c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogic/portraits/king/King angry.png"
-dest_files=["res://.godot/imported/King angry.png-a436c2680c37335bac14f20c19c9287c.ctex"]
+source_file="res://assets/background2.png"
+dest_files=["res://.godot/imported/background2.png-881407e6119575a6b132952b4db3a38c.ctex"]
 
 [params]
 

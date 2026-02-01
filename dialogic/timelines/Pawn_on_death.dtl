@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/woe.wav" [fade="0.0" sync="music"]
 join Pawn_mask center
 set {rand} = range(1,5).pick_random()
 if {rand} == 1:
@@ -11,3 +13,5 @@ elif {rand} == 4:
 elif {rand} == 5:
 	Pawn: I was so close to retirement though ...
 leave Pawn_mask [animation="Fade Out Up"]
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)

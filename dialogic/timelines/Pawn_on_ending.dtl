@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/ending-2-longer.wav" [sync="music"]
 join Pawn (Love) left
 join King (Love) right [mirrored="true"]
 Pawn: YAY LETS GET MARRIED AND HAVE 5 MILLION BABIES

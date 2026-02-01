@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/chat.wav" [fade="0.0" sync="music"]
 if {knight_love} == 0.0:
 	join Knight_mask center
 	Knight: Neiiiiiiiiiigghhhhhh! (You sense a strong determination and hint of breakfast)
@@ -46,4 +48,6 @@ elif {knight_love} == 10.0:
 	Knight: HAWWWWWWW! (You hear a wonderful tale about all the thousand lives you could spend together, it's rare you could become so attached to someone but she's perfect. You hear all that and you know what else? Breakfast. There's this great diner that pretends it's your birthday)
 	set {knight_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
-	: [Something awaits if you can win with a Knight on the board]
+	[Something awaits if you can win with a Knight on the board]
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)

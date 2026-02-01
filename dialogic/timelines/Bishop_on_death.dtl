@@ -1,6 +1,10 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/woe.wav" [fade="0.0" sync="music"]
 if {bishop_challenge_1}   <   1.0:
 	join Bishop_mask center
 	Bishop: ... No... My Grace, I have failed you... Please forgive me my Lord...
 elif {bishop_challenge_1}   >=   1.0:
 	join Bishop_mask center
 	Bishop: NOOOOOO, it cannot be! I cannot be seperated from him, no, no, no! I refuse! You cannot silence me, I will k-
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)

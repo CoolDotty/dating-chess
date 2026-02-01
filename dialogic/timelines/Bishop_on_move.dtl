@@ -1,7 +1,8 @@
-if {bishop_love} == 0.0:
-	join Bishop_mask center
-	Bishop: Good match my liege! The Lord has blessed us with a swift wind, and ample time for battle. Have you time to pray with me?
-	set {bishop_love} += 1
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/chat.wav" [fade="0.0" loop="true" sync="music"]
+join Bishop_mask center
+Bishop: Good match my liege! The Lord has blessed us with a swift wind, and ample time for battle. Have you time to pray with me?
+set {bishop_love} += 1
 elif {bishop_love} == 1.0:
 	join Bishop_mask center
 	Bishop: Ah, the enemy continues to stike, but the might granted by the Heavens shall protect us! My Liege, we will make it through.
@@ -30,6 +31,7 @@ elif {bishop_love} == 6.0:
 	join Bishop_mask center
 	Bishop: E-eheheh! The crimson rose, those ruby beads... Your grace... I will carve out a necklace with these colours all over our enemy's bodies! And then... the dark one... he will celebrate us... he will sactify our union... you... my king... forever...
 	set {bishop_love} += 1
+do Global.toggle_music(false)
 elif {bishop_love} == 7.0:
 	join Bishop_mask center
 	Bishop: Ah-you have caught me at a bad time... I was preparing this sacrifice for the union ritual and needed just the eye from this... thing. N-no, you are never a bother though! I just need to make sure that we are never apart again... Can... can I have your eye for this...?
@@ -54,4 +56,6 @@ elif {bishop_love} == 10.0:
 	Bishop: It has been completed! My... my love, my darling... the ritual has finally been completed! Now... you will be protected from any and all things, you shall be untouchable by anyone except... except me...
 	[Something awaits if you can win with a Bishop on the board]
 	set {bishop_love} += 1
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
 do Global.bot_play_if_turn()

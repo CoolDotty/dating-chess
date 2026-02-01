@@ -1,2 +1,6 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/woe.wav" [fade="0.0" sync="music"]
 join Queen_mask center
 Queen: ouch
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)

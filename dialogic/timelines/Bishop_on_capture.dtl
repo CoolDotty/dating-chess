@@ -1,7 +1,11 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/angy.wav" [fade="0.0" sync="music"]
 if {bishop_challenge_1}   <   1.0:
 	join Bishop_mask center
 	Bishop: For the Lord, for my liege!
 elif {bishop_challenge_1}   >=   1.0:
 	join Bishop_mask center
 	Bishop: YES, YES, YES... I will make them bleed! I will make them burn...
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
 do Global.bot_play_if_turn()

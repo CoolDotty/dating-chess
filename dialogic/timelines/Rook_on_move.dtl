@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/chat.wav" [sync="music"]
 if {rook_love} == 0.0:
 	join Rook_mask center
 	Rook: Ah, my brother, your highness, how are you? Those weaklings on the other side won't know what hit 'em.
@@ -59,4 +61,6 @@ elif {rook_love} == 8.0:
 	join Rook (Happy) center
 	Rook: Eheh, you really worry too much! Cmon, lemme squish your cheek! You're royalty, but you worry way too much about me! C'mon, I'm just a girl, not a vase, I can still cut through your enemies like it's nothing\: that will never change. That... and my feelings for... you...
 	[Something awaits if you can win with the rook on the board]
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
 do Global.bot_play_if_turn()

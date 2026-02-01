@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/angy.wav" [sync="music"]
 join Bishop_mask left
 join King (Happy) right [mirrored="true"]
 Bishop: Ew no

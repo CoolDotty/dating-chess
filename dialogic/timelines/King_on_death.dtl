@@ -1,0 +1,3 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/SFX/DEATH.wav" [fade="0.0" loop="false" sync="music"]
+audio music "res://assets/sound/Music/woe.wav" [fade="0.0" sync="music"]

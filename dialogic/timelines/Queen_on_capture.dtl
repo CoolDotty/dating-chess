@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/angy.wav" [fade="0.0" volume="0.0" sync="music"]
 join Queen_mask center
 set {rand} = range(1,5).pick_random()
 if {rand} == 1:
@@ -10,4 +12,6 @@ elif {rand} == 4:
 	Pawn: Adequate
 elif {rand} == 5:
 	Pawn: Confirmed
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
 do Global.bot_play_if_turn()

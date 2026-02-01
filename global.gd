@@ -10,6 +10,12 @@ var rook_loves_you := false
 var queen_loves_you := false
 
 var bot_enabled := false
+
+func toggle_music (is_playing : bool) -> void:
+	if Settings.sound_music:
+		music_toggled.emit(is_playing)
+
+
 func bot_play_if_turn():
 	if bot_enabled:
 		bot_turn.emit()

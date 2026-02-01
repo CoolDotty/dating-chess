@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/ending-2-longer.wav" [sync="music"]
 join Bishop (Love) left
 join King (Love) right [mirrored="true"]
 Bishop: yay love you forever and ever because you're literally the god I worship and I am on my knees for you ;)

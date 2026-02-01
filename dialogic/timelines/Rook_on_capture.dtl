@@ -1,3 +1,7 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/angy.wav" [sync="music"]
 join Rook_mask center
 Rook: Got em!
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
 do Global.bot_play_if_turn()

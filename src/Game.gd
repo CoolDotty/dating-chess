@@ -35,8 +35,7 @@ func _ready() -> void:
 	get_tree().call_group("Squares", "_connect_square_signals", self)
 	update_state()
 	
-func _physics_process(delta: float) -> void:
-	pass
+#func _physics_process(delta: float) -> void:
 	#if not bot_thinking:
 		#bot_play()
 

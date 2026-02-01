@@ -6,11 +6,12 @@ class_name ChessEngine
 
 const MATE_SCORE := 1_000_000_000
 const MATE_THRESHOLD := 999_000_000
+const WIN_SCORE := 2_000_000_000
 
 const INF_SCORE := 0xFFFF_FFFF_FFFF
 
 var search_depth := 2
-var quiescence_depth := 1
+var quiescence_depth := 2
 
 
 # Simplified Evaluation Function piece tables
@@ -112,6 +113,7 @@ static func flip_table(table: Array) -> Array:
 
 
 func get_move(chess: Chess) -> Array:
+	search_depth = Settings.bot_difficulty
 	num_positions_searched = 0
 	num_positions_searched_q = 0
 	num_positions_evaluated = 0
@@ -133,7 +135,7 @@ func get_move(chess: Chess) -> Array:
 static func get_piece_value(piece) -> int:
 	match piece:
 		null, "K", "k":
-			pass
+			return WIN_SCORE
 		"Q", "q":
 			return 900
 		"R", "r":

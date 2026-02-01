@@ -1,5 +1,6 @@
 extends Node
 
+signal music_toggled(is_playing : bool)
 
 func is_distance_6_or_more(from_square: int, to_square: int) -> bool:
 	var rank_diff = abs(from_square / 8 - to_square / 8)
@@ -98,4 +99,3 @@ func advance_challenges(move: Move, moves: Array, chess: Chess):
 			pass
 	
 	# Pawn challenge two undefined
-	

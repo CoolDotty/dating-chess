@@ -1,20 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0fhva7v6808"]
+[gd_scene format=3 uid="uid://c0fhva7v6808"]
 
-[ext_resource type="Script" path="res://src/SettingsMenu.gd" id="2"]
+[ext_resource type="Script" uid="uid://bw65mguxhf3mq" path="res://src/SettingsMenu.gd" id="2"]
 
-[node name="SettingsMenu" type="Window"]
+[node name="SettingsMenu" type="Window" unique_id=1830474107]
+oversampling_override = 1.0
 title = "Settings"
 position = Vector2i(0, 36)
-size = Vector2i(280, 144)
+size = Vector2i(280, 208)
 transient = true
 exclusive = true
 unresizable = true
 script = ExtResource("2")
 
-[node name="M" type="MarginContainer" parent="."]
+[node name="M" type="MarginContainer" parent="." unique_id=33824131]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.5
+offset_top = -6.0
+offset_right = 1.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/margin_left = 10
@@ -22,31 +29,58 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="V" type="VBoxContainer" parent="M"]
+[node name="V" type="VBoxContainer" parent="M" unique_id=76994563]
 layout_mode = 2
 
-[node name="ShowDestsCheck" type="CheckBox" parent="M/V"]
+[node name="ShowDestsCheck" type="CheckBox" parent="M/V" unique_id=1356278637]
 layout_mode = 2
 text = "Show Legal Move Destinations"
 
-[node name="ShowHighlightsCheck" type="CheckBox" parent="M/V"]
+[node name="ShowHighlightsCheck" type="CheckBox" parent="M/V" unique_id=1760981258]
 layout_mode = 2
 text = "Highlight Last Move/Check"
 
-[node name="SoundsCheck" type="CheckBox" parent="M/V"]
+[node name="SoundsCheck" type="CheckBox" parent="M/V" unique_id=1301071378]
 layout_mode = 2
 text = "Play Sounds"
 
-[node name="M" type="MarginContainer" parent="M/V"]
+[node name="M" type="MarginContainer" parent="M/V" unique_id=1724381203]
 layout_mode = 2
 theme_override_constants/margin_left = 24
 
-[node name="SoundCheckCheck" type="CheckBox" parent="M/V/M"]
+[node name="V" type="VBoxContainer" parent="M/V/M" unique_id=267878785]
+layout_mode = 2
+
+[node name="SoundCheckCheck" type="CheckBox" parent="M/V/M/V" unique_id=320172504]
 layout_mode = 2
 text = "Play Sound on Check"
+
+[node name="SoundMusicCheck" type="CheckBox" parent="M/V/M/V" unique_id=784916125]
+layout_mode = 2
+text = "Play Music"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="M/V" unique_id=127079958]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="M/V/VBoxContainer" unique_id=470561633]
+layout_mode = 2
+text = "Bot Difficulty"
+
+[node name="OptionButton" type="OptionButton" parent="M/V/VBoxContainer" unique_id=953077258]
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Easy"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Hard"
+popup/item_2/id = 2
 
 [connection signal="close_requested" from="." to="." method="hide"]
 [connection signal="toggled" from="M/V/ShowDestsCheck" to="." method="_on_ShowDestsCheck_toggled"]
 [connection signal="toggled" from="M/V/ShowHighlightsCheck" to="." method="_on_ShowHighlightsCheck_toggled"]
 [connection signal="toggled" from="M/V/SoundsCheck" to="." method="_on_SoundsCheck_toggled"]
-[connection signal="toggled" from="M/V/M/SoundCheckCheck" to="." method="_on_SoundCheckCheck_toggled"]
+[connection signal="toggled" from="M/V/M/V/SoundCheckCheck" to="." method="_on_SoundCheckCheck_toggled"]
+[connection signal="toggled" from="M/V/M/V/SoundMusicCheck" to="." method="_on_SoundMusicCheck_toggled"]
+[connection signal="item_selected" from="M/V/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

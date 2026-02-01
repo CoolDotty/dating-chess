@@ -7,6 +7,8 @@ var show_dests := true
 var show_highlights := true
 var sounds := true
 var sound_check := true
+var sound_music := true
+var bot_difficulty : int = 1
 
 
 func _ready() -> void:
@@ -39,6 +41,10 @@ func load_settings() -> void:
 		sounds = bool(d.sounds)
 	if "sound_check" in d:
 		sound_check = bool(d.sound_check)
+	if "sound_music" in d:
+		sound_music = bool(d.sound_music)
+	if "bot_difficulty" in d:
+		bot_difficulty = int(d.bot_difficulty)
 
 
 func save_settings() -> void:
@@ -49,6 +55,8 @@ func save_settings() -> void:
 		"show_highlights": show_highlights,
 		"sounds": sounds,
 		"sound_check": sound_check,
+		"sound_music": sound_music,
+		"bot_difficulty": bot_difficulty,
 	}
 
 	file.store_line(var_to_str(d))

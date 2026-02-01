@@ -40,12 +40,38 @@ directories/dch_directory={
 "Rook": "res://dialogic/characters/Rook.dch"
 }
 directories/dtl_directory={
-"King": "res://dialogic/timelines/King.dtl"
+"Bishop_on_capture": "res://dialogic/timelines/Bishop_on_capture.dtl",
+"Bishop_on_death": "res://dialogic/timelines/Bishop_on_death.dtl",
+"Bishop_on_ending": "res://dialogic/timelines/Bishop_on_ending.dtl",
+"Bishop_on_move": "res://dialogic/timelines/Bishop_on_move.dtl",
+"King_on_capture": "res://dialogic/timelines/King_on_capture.dtl",
+"King_on_death": "res://dialogic/timelines/King_on_death.dtl",
+"King_on_ending": "res://dialogic/timelines/King_on_ending.dtl",
+"King_on_move": "res://dialogic/timelines/King_on_move.dtl",
+"Knight_on_capture": "res://dialogic/timelines/Knight_on_capture.dtl",
+"Knight_on_death": "res://dialogic/timelines/Knight_on_death.dtl",
+"Knight_on_ending": "res://dialogic/timelines/Knight_on_ending.dtl",
+"Knight_on_move": "res://dialogic/timelines/Knight_on_move.dtl",
+"Pawn_on_capture": "res://dialogic/timelines/Pawn_on_capture.dtl",
+"Pawn_on_death": "res://dialogic/timelines/Pawn_on_death.dtl",
+"Pawn_on_ending": "res://dialogic/timelines/Pawn_on_ending.dtl",
+"Pawn_on_move": "res://dialogic/timelines/Pawn_on_move.dtl",
+"Queen_on_capture": "res://dialogic/timelines/Queen_on_capture.dtl",
+"Queen_on_death": "res://dialogic/timelines/Queen_on_death.dtl",
+"Queen_on_ending": "res://dialogic/timelines/Queen_on_ending.dtl",
+"Queen_on_move": "res://dialogic/timelines/Queen_on_move.dtl",
+"Rook_on_capture": "res://dialogic/timelines/Rook_on_capture.dtl",
+"Rook_on_death": "res://dialogic/timelines/Rook_on_death.dtl",
+"Rook_on_ending": "res://dialogic/timelines/Rook_on_ending.dtl",
+"Rook_on_move": "res://dialogic/timelines/Rook_on_move.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://dialogic/style.tres",
+"style": "res://dialogic/style.tres"
+}
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://dialogic/style.tres"]
+layout/default_style="res://dialogic/style.tres"
 variables={
 "bishop_challenge_1": 0,
 "bishop_challenge_2": 0,

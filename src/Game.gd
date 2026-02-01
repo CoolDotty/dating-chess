@@ -155,6 +155,12 @@ func update_state(after_move := false) -> void:
 	
 	if last_move and after_move:
 		Global.advance_challenges(last_move, chess.move_stack, chess)
+		if Dialogic.current_timeline != null:
+			await Dialogic.timeline_ended
+		Global.move_character_effects(last_move, chess.move_stack, chess)
+		if Dialogic.current_timeline != null:
+			await Dialogic.timeline_ended
+		
 
 	var result := chess.get_data()
 	var game_over: bool = result != Chess.RESULT.ONGOING

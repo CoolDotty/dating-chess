@@ -26,7 +26,7 @@ void fragment() {
         }
         
         // Blend original color with red based on red_factor
-        vec3 red = vec3(1.0, 0.0, 0.0);
+        vec3 red = vec3(1.0, 0.25, 0.25);
         vec3 blended_color = mix(original_color.rgb, red, red_factor);
         COLOR = vec4(blended_color, original_color.a);
     }

@@ -1,0 +1,6 @@
+join Rook_mask left
+join King (Happy) right [mirrored="true"]
+Rook: Ew no
+leave Rook_mask
+update King (Sad) center
+[BAD END]

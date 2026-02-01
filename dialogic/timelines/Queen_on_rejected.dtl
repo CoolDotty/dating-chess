@@ -1,0 +1,6 @@
+join Queen_mask left
+join King (Happy) right [mirrored="true"]
+Queen: Ew no
+leave Queen_mask
+update King (Sad) center
+[BAD END]

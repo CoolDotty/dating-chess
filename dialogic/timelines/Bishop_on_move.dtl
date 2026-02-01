@@ -1,6 +1,6 @@
 if {bishop_love} == 0.0:
 	join Bishop_mask center
-	Bishop_mask: Good match my liege! The Lord has blessed us with a swift wind, and ample time for battle. Have you time to pray with me?
+	Bishop: Good match my liege! The Lord has blessed us with a swift wind, and ample time for battle. Have you time to pray with me?
 	set {bishop_love} += 1
 elif {bishop_love} == 1.0:
 	join Bishop_mask center
@@ -17,9 +17,12 @@ elif {bishop_love} == 3.0:
 elif {bishop_love} == 4.0:
 	join Bishop_mask center
 	Bishop: My Liege, if I may make a humble request... There has been a split within me, and I can no longer see the face of light as before. Please aid in reclaiming that light... Please sacrifice someone for me. I need to see the glory of a soldier on the brink of death. I know this will redeem us, redeem me...
+	[Sacrafice a Bishop]
 	set {bishop_love} += 1
 	set {bishop_challenge_1} = 1.0
-elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   >=   1.0:
+elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   <   2.0:
+	[end_timeline]
+elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   >=   2.0:
 	join Bishop_mask center
 	Bishop: T-thank you my... love... You, you really did it! I can't believe you did that... for me! All the blood... and the look on their face... It's so perfect... It's so beautiful... No one shall ever take that away from me... No one will take you away from me again.
 	set {bishop_love} += 1
@@ -49,3 +52,5 @@ elif {bishop_love} == 9.0:
 elif {bishop_love} == 10.0:
 	join Bishop_mask center
 	Bishop: It has been completed! My... my love, my darling... the ritual has finally been completed! Now... you will be protected from any and all things, you shall be untouchable by anyone except... except me...
+	[Something awaits if you can win with a Bishop on the board]
+	set {bishop_love} += 1

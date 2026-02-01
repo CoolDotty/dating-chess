@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ducmc3t3472k1"
-path="res://.godot/imported/neutral.png-f70c88a6627686db1884e39bc7e4d68e.ctex"
+uid="uid://dsm8430hu7pj4"
+path="res://.godot/imported/neutral.png-573b1c2704fe50c57255ad915f1679dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogic/portraits/king/neutral.png"
-dest_files=["res://.godot/imported/neutral.png-f70c88a6627686db1884e39bc7e4d68e.ctex"]
+source_file="res://dialogic/portraits/King/neutral.png"
+dest_files=["res://.godot/imported/neutral.png-573b1c2704fe50c57255ad915f1679dc.ctex"]
 
 [params]
 

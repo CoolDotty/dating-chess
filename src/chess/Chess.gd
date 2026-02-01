@@ -618,13 +618,13 @@ func is_square_attacked(square: int, col: bool) -> bool:
 
 
 func is_king_attacked(col: bool) -> bool:
-	return false
-	# return is_square_attacked(get_king(col), not col)
+	#return false
+	return is_square_attacked(get_king(col), not col)
 
 
 func in_check() -> bool:
-	return false
-	# return is_king_attacked(turn)
+	#return false
+	return is_king_attacked(turn)
 
 
 # Generate all legal moves. This can be done much faster
@@ -930,7 +930,15 @@ func notate_moves(moves: Array) -> void:
 
 			if capture:
 				move.notation_san += "x"
-				move.did_capture = pieces[move.to_square]
+				if move.en_passant:
+					var piece = pieces[move.from_square]
+					move.whos_turn = "white" if piece == piece.to_upper() else "black"
+					if move.whos_turn == "white":
+						move.did_capture = "p"
+					else:
+						move.did_capture = "P"
+				else:
+					move.did_capture = pieces[move.to_square]
 
 			move.notation_san += square_get_name(move.to_square)
 

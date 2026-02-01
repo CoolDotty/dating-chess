@@ -52,6 +52,55 @@ func is_char_lowercase(char: String) -> bool:
 func is_white_move(move: Move) -> bool:
 	return is_char_lowercase(move.piece_type)
 
+func move_character_effects(move: Move, moves: Array, chess: Chess):
+	if move.whos_turn == "black":
+		if not move.did_capture:
+			return
+		match move.did_capture:
+			"K":
+				Dialogic.start('King_on_death')
+			"Q":
+				Dialogic.start('Queen_on_death')
+			"B":
+				Dialogic.start('Bishop_on_death')
+			"N":
+				Dialogic.start('Knight_on_death')
+			"R":
+				Dialogic.start('Rook_on_death')
+			"P":
+				Dialogic.start('Pawn_on_death')
+		return
+	var played_piece = move.piece_type
+	if move.did_capture:
+		match played_piece:
+			"K":
+				Dialogic.start('King_on_capture')
+			"Q":
+				Dialogic.start('Queen_on_capture')
+			"B":
+				Dialogic.start('Bishop_on_capture')
+			"N":
+				Dialogic.start('Knight_on_capture')
+			"R":
+				Dialogic.start('Rook_on_capture')
+			"P":
+				Dialogic.start('Pawn_on_capture')
+	else:
+		match played_piece:
+			"K":
+				Dialogic.start('King_on_move')
+			"Q":
+				Dialogic.start('Queen_on_move')
+			"B":
+				Dialogic.start('Bishop_on_move')
+			"N":
+				Dialogic.start('Knight_on_move')
+			"R":
+				Dialogic.start('Rook_on_move')
+			"P":
+				Dialogic.start('Pawn_on_move')
+	
+
 func advance_challenges(move: Move, moves: Array, chess: Chess):
 	if move.whos_turn == "black":
 		return

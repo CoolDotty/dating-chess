@@ -1,6 +1,4 @@
-[gd_scene format=3 uid="uid://b70nlk7m1xki4"]
-
-[ext_resource type="Script" uid="uid://b5irviod0o32a" path="res://src/Board.gd" id="1"]
+[gd_scene format=3 uid="uid://b0q6l0xw6pxty"]
 
 [node name="Board" type="GridContainer" unique_id=484600394]
 offset_right = 40.0
@@ -8,4 +6,3 @@ offset_bottom = 40.0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 8
-script = ExtResource("1")

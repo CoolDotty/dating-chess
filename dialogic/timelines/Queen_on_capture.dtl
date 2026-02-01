@@ -1,2 +1,12 @@
-join Queen center
-Queen: yay
+join Queen_mask center
+set {rand} = range(1,5).pick_random()
+if {rand} == 1:
+	Pawn: Lovely
+elif {rand} == 2:
+	Pawn: Wonderful
+elif {rand} == 3:
+	Pawn: As expected
+elif {rand} == 4:
+	Pawn: Adequate
+elif {rand} == 5:
+	Pawn: Confirmed

@@ -58,6 +58,14 @@ func is_char_lowercase(char: String) -> bool:
 func is_white_move(move: Move) -> bool:
 	return is_char_lowercase(move.piece_type)
 
+func update_alive_checks(chess: Chess):
+	Dialogic.VAR.pawn_alive = "P" in chess.pieces
+	Dialogic.VAR.rook_alive = "R" in chess.pieces
+	Dialogic.VAR.knight_alive = "N" in chess.pieces
+	Dialogic.VAR.queen_alive = "Q" in chess.pieces
+	Dialogic.VAR.bishop_alive = "B" in chess.pieces
+
+
 func move_character_effects(move: Move, moves: Array, chess: Chess):
 	if move.whos_turn == "black":
 		if not move.did_capture:
@@ -91,20 +99,19 @@ func move_character_effects(move: Move, moves: Array, chess: Chess):
 				Dialogic.start('Rook_on_capture')
 			"P":
 				Dialogic.start('Pawn_on_capture')
-	else:
-		match played_piece:
-			"K":
-				Dialogic.start('King_on_move')
-			"Q":
-				Dialogic.start('Queen_on_move')
-			"B":
-				Dialogic.start('Bishop_on_move')
-			"N":
-				Dialogic.start('Knight_on_move')
-			"R":
-				Dialogic.start('Rook_on_move')
-			"P":
-				Dialogic.start('Pawn_on_move')
+	match played_piece:
+		"K":
+			Dialogic.start('King_on_move')
+		"Q":
+			Dialogic.start('Queen_on_move')
+		"B":
+			Dialogic.start('Bishop_on_move')
+		"N":
+			Dialogic.start('Knight_on_move')
+		"R":
+			Dialogic.start('Rook_on_move')
+		"P":
+			Dialogic.start('Pawn_on_move')
 	
 
 func advance_challenges(move: Move, moves: Array, chess: Chess):
@@ -112,11 +119,11 @@ func advance_challenges(move: Move, moves: Array, chess: Chess):
 		return
 	var played_piece = move.piece_type
 	
-	# use a rook to defeat 5 pieces
+	# use a rook to defeat 3 pieces
 	if Dialogic.VAR.rook_challenge_1 >= 1:
 		if move.piece_type == "R" and move.captured_piece:
 			Dialogic.VAR.rook_challenge_1 += 1
-		if Dialogic.VAR.rook_challenge_1 >= 6:
+		if Dialogic.VAR.rook_challenge_1 >= 3:
 			pass
 	
 	# Move king adjacent to rook
@@ -140,6 +147,7 @@ func advance_challenges(move: Move, moves: Array, chess: Chess):
 	
 	# SACRIFICE A BISHOP
 	if Dialogic.VAR.bishop_challenge_1 >= 1:
+		print(move.did_capture)
 		if move.did_capture == "B":
 			Dialogic.VAR.bishop_challenge_1 += 1
 	
@@ -147,14 +155,15 @@ func advance_challenges(move: Move, moves: Array, chess: Chess):
 	
 	# Queen move 6 spaces or more in one turn
 	if Dialogic.VAR.queen_challenge_1 >= 1:
+		print(is_distance_6_or_more(move.from_square, move.to_square))
 		if move.piece_type == "Q" and is_distance_6_or_more(move.from_square, move.to_square):
-			Dialogic.VAR.bishop_challenge_1 += 1
+			Dialogic.VAR.queen_challenge_1 += 1
 	
 	# Queen challenge 2 undefined
 	
 	# Pawn take two pieces
 	if Dialogic.VAR.pawn_challenge_1 >= 1:
-		if move.piece_type == "N" and move.captured_piece:
+		if move.piece_type == "P" and move.captured_piece:
 			Dialogic.VAR.pawn_challenge_1 += 1
 		if Dialogic.VAR.pawn_challenge_1 >= 3:
 			pass

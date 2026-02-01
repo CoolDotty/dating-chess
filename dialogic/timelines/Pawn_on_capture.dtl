@@ -1,2 +1,12 @@
-join Pawn center
-Pawn: yay
+join Pawn_mask center
+set {rand} = range(1,5).pick_random()
+if {rand} == 1:
+	Pawn: Get Rocked!
+elif {rand} == 2:
+	Pawn: Eat It!
+elif {rand} == 3:
+	Pawn: The predator becoems the prawn!
+elif {rand} == 4:
+	Pawn: Too slow!
+elif {rand} == 5:
+	Pawn: Taken!

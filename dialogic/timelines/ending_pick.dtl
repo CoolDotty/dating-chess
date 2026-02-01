@@ -1,12 +1,52 @@
-join Rook leftmost
-join Knight left
-join Queen center
-join Bishop right [mirrored="true"]
-join Pawn rightmost [mirrored="true"]
+if {rook_alive} == true:
+	if {rook_love} > 5.0:
+		join Rook leftmost
+	else:
+		join Rook_mask leftmost
+if {knight_alive} == true:
+	if {knight_love} > 5.0:
+		join Knight  left
+	else:
+		join Knight_mask  left
+if {queen_alive} == true:
+	if {queen_love} > 5.0:
+		join Queen center
+	else:
+		join Queen_mask center
+if {bishop_alive} == true:
+	if {bishop_love} > 5.0:
+		join Bishop right [mirrored="true"]
+	else:
+		join Bishop_mask right [mirrored="true"]
+if {pawn_alive} == true:
+	if {pawn_love} > 5.0:
+		join Pawn rightmost [mirrored="true"]
+	else:
+		join Pawn_mask  rightmost [mirrored="true"]
 King: Hmmmm
 King: Hmmm, who do I love the mostest?
-- Rook
-- Knight
-- Queen
-- Bishop
-- Pawn
+- Rook | [if {rook_alive} == true]
+	if {rook_love} > 5.0:
+		do Dialogic.start("Rook_on_ending")
+	else:
+		do Dialogic.start("Rook_on_rejected")
+- Knight | [if {knight_alive} == true]
+	if {knight_love} > 5.0:
+		do Dialogic.start("Knight_on_ending")
+	else:
+		do Dialogic.start("Knight_on_rejected")
+- Queen | [if {queen_alive} == true]
+	if {queen_love} > 5.0:
+		do Dialogic.start("Queen_on_ending")
+	else:
+		do Dialogic.start("Queen_on_rejected")
+- Bishop | [if {bishop_alive} == true]
+	if {bishop_love} > 5.0:
+		do Dialogic.start("Bishop_on_ending")
+	else:
+		do Dialogic.start("Bishop_on_rejected")
+- Pawn | [if {pawn_alive} == true]
+	if {pawn_love} > 5.0:
+		do Dialogic.start("Pawn_on_ending")
+	else:
+		do Dialogic.start("Pawn_on_rejected")

@@ -1,0 +1,6 @@
+join Pawn_mask left
+join King (Happy) right [mirrored="true"]
+Pawn: Ew no
+leave Pawn_mask
+update King (Sad) center
+[BAD END]

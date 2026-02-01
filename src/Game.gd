@@ -156,8 +156,14 @@ func update_state(after_move := false) -> void:
 	var last_move = null
 	if chess.move_stack.size() > 0:
 		last_move = chess.move_stack[-1]
-	
+	if last_move:
+		# HACK: after_move only true after white turn
+		# SACRIFICE A BISHOP
+		if Dialogic.VAR.bishop_challenge_1 >= 1:
+			if last_move.did_capture == "B":
+				Dialogic.VAR.bishop_challenge_1 += 1
 	if last_move and after_move:
+		Global.update_alive_checks(chess)
 		Global.advance_challenges(last_move, chess.move_stack, chess)
 		if Dialogic.current_timeline != null:
 			await Dialogic.timeline_ended

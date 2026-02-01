@@ -33,17 +33,23 @@ Global="*uid://bwq1ano4tn5gg"
 
 directories/dch_directory={
 "Bishop": "res://dialogic/characters/Bishop.dch",
+"Bishop_mask": "res://dialogic/characters/Bishop_mask.dch",
 "King": "res://dialogic/characters/King.dch",
 "Knight": "res://dialogic/characters/Knight.dch",
+"Knight_mask": "res://dialogic/characters/Knight_mask.dch",
 "Pawn": "res://dialogic/characters/Pawn.dch",
+"Pawn_mask": "res://dialogic/characters/Pawn_mask.dch",
 "Queen": "res://dialogic/characters/Queen.dch",
-"Rook": "res://dialogic/characters/Rook.dch"
+"Queen_mask": "res://dialogic/characters/Queen_mask.dch",
+"Rook": "res://dialogic/characters/Rook.dch",
+"Rook_mask": "res://dialogic/characters/Rook_mask.dch"
 }
 directories/dtl_directory={
 "Bishop_on_capture": "res://dialogic/timelines/Bishop_on_capture.dtl",
 "Bishop_on_death": "res://dialogic/timelines/Bishop_on_death.dtl",
 "Bishop_on_ending": "res://dialogic/timelines/Bishop_on_ending.dtl",
 "Bishop_on_move": "res://dialogic/timelines/Bishop_on_move.dtl",
+"Bishop_on_rejected": "res://dialogic/timelines/Bishop_on_rejected.dtl",
 "King_on_capture": "res://dialogic/timelines/King_on_capture.dtl",
 "King_on_death": "res://dialogic/timelines/King_on_death.dtl",
 "King_on_ending": "res://dialogic/timelines/King_on_ending.dtl",
@@ -52,18 +58,22 @@ directories/dtl_directory={
 "Knight_on_death": "res://dialogic/timelines/Knight_on_death.dtl",
 "Knight_on_ending": "res://dialogic/timelines/Knight_on_ending.dtl",
 "Knight_on_move": "res://dialogic/timelines/Knight_on_move.dtl",
+"Knight_on_rejected": "res://dialogic/timelines/Knight_on_rejected.dtl",
 "Pawn_on_capture": "res://dialogic/timelines/Pawn_on_capture.dtl",
 "Pawn_on_death": "res://dialogic/timelines/Pawn_on_death.dtl",
 "Pawn_on_ending": "res://dialogic/timelines/Pawn_on_ending.dtl",
 "Pawn_on_move": "res://dialogic/timelines/Pawn_on_move.dtl",
+"Pawn_on_rejected": "res://dialogic/timelines/Pawn_on_rejected.dtl",
 "Queen_on_capture": "res://dialogic/timelines/Queen_on_capture.dtl",
 "Queen_on_death": "res://dialogic/timelines/Queen_on_death.dtl",
 "Queen_on_ending": "res://dialogic/timelines/Queen_on_ending.dtl",
 "Queen_on_move": "res://dialogic/timelines/Queen_on_move.dtl",
+"Queen_on_rejected": "res://dialogic/timelines/Queen_on_rejected.dtl",
 "Rook_on_capture": "res://dialogic/timelines/Rook_on_capture.dtl",
 "Rook_on_death": "res://dialogic/timelines/Rook_on_death.dtl",
 "Rook_on_ending": "res://dialogic/timelines/Rook_on_ending.dtl",
 "Rook_on_move": "res://dialogic/timelines/Rook_on_move.dtl",
+"Rook_on_rejected": "res://dialogic/timelines/Rook_on_rejected.dtl",
 "ending_bad": "res://dialogic/timelines/ending_bad.dtl",
 "ending_pick": "res://dialogic/timelines/ending_pick.dtl"
 }
@@ -75,21 +85,27 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic/style.tres"]
 layout/default_style="res://dialogic/style.tres"
 variables={
+"bishop_alive": true,
 "bishop_challenge_1": 0,
 "bishop_challenge_2": 0,
 "bishop_love": 0,
 "king_challenge_1": 0,
 "king_challenge_2": 0,
 "king_love": 0,
+"knight_alive": true,
 "knight_challenge_1": 0,
 "knight_challenge_2": 0,
 "knight_love": 0,
+"pawn_alive": true,
 "pawn_challenge_1": 0,
 "pawn_challenge_2": 0,
 "pawn_love": 0,
+"queen_alive": true,
 "queen_challenge_1": 0,
 "queen_challenge_2": 0,
 "queen_love": 0,
+"rand": 0.0,
+"rook_alive": true,
 "rook_challenge_1": 0,
 "rook_challenge_2": 0,
 "rook_love": 0

@@ -1,6 +1,6 @@
-if {bishop_challenge_1}   <   1.0
-	join Bishop center
+if {bishop_challenge_1}   <   1.0:
+	join Bishop_mask center
 	Bishop: For the Lord, for my liege!
-elif {bishop_challenge_1}   >=   1.0
-	join Bishop center
+elif {bishop_challenge_1}   >=   1.0:
+	join Bishop_mask center
 	Bishop: YES, YES, YES... I will make them bleed! I will make them burn...

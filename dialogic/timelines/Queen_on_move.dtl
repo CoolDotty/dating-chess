@@ -38,8 +38,23 @@ elif {queen_love} == 6.0:
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 elif {queen_love} == 7.0:
-	join Queen_mask center
-	Queen: I don't ever want to look back but sometimes it's the only place that truly feels safe... With you. Thank you for leading us through it. We... I could not have done it without you. With you I feel seen. Thank you my liege. I'm with you. till death do us part...
-	[Something awaits if you can win with the queen on the board]
+	join Queen center
+	Queen: Alas, you keep catching me at moments of weakness... But perhaps that's no coincidence. Perhaps the only time I can be weak, is around you.
 	set {queen_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
+elif {queen_love} == 8.0:
+	join Queen center
+	Queen: The court has been rather dull this day; have you a moment to stay with me? I would like to have you company here, if only for a moment...
+	set {queen_love} += 1
+	audio "res://assets/sound/Emotes/heart.wav"
+elif {queen_love} == 9.0:
+	join Queen center
+	Queen: Queen do this, queen do that... When will there come a day when I can demand someone care for me? O-oh... I suppose you are right...
+	set {queen_love} += 1set {queen_love} += 1
+	audio "res://assets/sound/Emotes/heart.wav"
+elif {queen_love} == 10.0:
+	join Queen center
+	Queen: I don't ever want to look back but sometimes it's the only place that truly feels safe... With you. Thank you for leading us through it. We... I could not have done it without you. With you I feel seen. Thank you my liege. I'm with you. till death do us part...
+	set {queen_love} += 1
+	audio "res://assets/sound/Emotes/heart.wav"
+	[Something awaits if you can win with the queen on the board]

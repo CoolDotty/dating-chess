@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw1fs4vp0p4tm"]
 
-[ext_resource type="PackedScene" path="res://src/Board.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://b70nlk7m1xki4" path="res://src/Board.tscn" id="1"]
 [ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="2"]
 [ext_resource type="Script" uid="uid://dyuiaxuvry28u" path="res://src/Game.gd" id="3"]
 [ext_resource type="PackedScene" path="res://src/SanDisplay.tscn" id="4"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw1fs4vp0p4tm"]
 
-[ext_resource type="PackedScene" path="res://src/Board.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://b70nlk7m1xki4" path="res://src/Board.tscn" id="1"]
 [ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="2"]
 [ext_resource type="Script" uid="uid://dyuiaxuvry28u" path="res://src/Game.gd" id="3"]
 [ext_resource type="PackedScene" path="res://src/SanDisplay.tscn" id="4"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bsf6rpmbd3raf" path="res://assets/ui/Love meter smoke.png" id="16_goodv"]
 [ext_resource type="Texture2D" uid="uid://cjwyg86s3i5cx" path="res://assets/ui/Love meter potion base.png" id="17_821k0"]
 [ext_resource type="Texture2D" uid="uid://iujpasdg03p2" path="res://assets/ui/Love meter hearts.png" id="19_goodv"]
+[ext_resource type="Script" uid="uid://cc3mn6tdcx67p" path="res://src/music_sound.gd" id="13_0rf6s"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2")])

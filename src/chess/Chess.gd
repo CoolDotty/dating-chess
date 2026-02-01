@@ -446,15 +446,27 @@ func generate_pseudo_legal_moves() -> Array:
 			"K", "k":
 				moves.append_array(generate_leaping_moves(color, square, ROYAL_OFFSETS))
 			"Q", "q":
-				moves.append_array(generate_sliding_moves(color, square, ROYAL_OFFSETS))
+				if !Global.queen_loves_you:
+					moves.append_array(generate_sliding_moves(color, square, ROYAL_OFFSETS))
+				else:
+					moves.append_array(generate_leaping_moves(color, square, ROYAL_OFFSETS))
 			"R", "r":
 				moves.append_array(generate_sliding_moves(color, square, ROOK_OFFSETS))
+				if Global.rook_loves_you:
+					moves.append_array(generate_sliding_moves(color, square, BISHOP_OFFSETS))
 			"B", "b":
 				moves.append_array(generate_sliding_moves(color, square, BISHOP_OFFSETS))
+				if Global.bishop_loves_you:
+					moves.append_array(generate_sliding_moves(color, square, ROOK_OFFSETS))
 			"N", "n":
 				moves.append_array(generate_leaping_moves(color, square, KNIGHT_OFFSETS))
+				if Global.knight_loves_you:
+					moves.append_array(generate_leaping_moves(color, square, [[1, 3], [3, 1], [3, -1], [1, -3], [-1, -3], [-3, -1], [-3, 1], [-1, 3]]))
 			"p", "P":
-				moves.append_array(generate_pawn_moves(color, square))
+				if Global.pawn_loves_you:
+					moves.append_array(generate_leaping_moves(color, square, ROYAL_OFFSETS))
+				else:
+					moves.append_array(generate_pawn_moves(color, square))
 	return moves
 
 

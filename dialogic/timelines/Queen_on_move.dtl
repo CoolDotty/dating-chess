@@ -75,3 +75,4 @@ elif {queen_love} == 10.0:
 	[Something awaits if you can win with the queen on the board]
 set {queen_love} += 1
 audio "res://assets/sound/Emotes/heart.wav"
+do Global.bot_play_if_turn()

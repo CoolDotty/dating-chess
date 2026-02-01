@@ -10,3 +10,4 @@ elif {rand} == 4:
 	Pawn: Adequate
 elif {rand} == 5:
 	Pawn: Confirmed
+do Global.bot_play_if_turn()

@@ -54,3 +54,4 @@ elif {bishop_love} == 10.0:
 	Bishop: It has been completed! My... my love, my darling... the ritual has finally been completed! Now... you will be protected from any and all things, you shall be untouchable by anyone except... except me...
 	[Something awaits if you can win with a Bishop on the board]
 	set {bishop_love} += 1
+do Global.bot_play_if_turn()

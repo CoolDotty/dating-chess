@@ -4,3 +4,4 @@ if {bishop_challenge_1}   <   1.0:
 elif {bishop_challenge_1}   >=   1.0:
 	join Bishop_mask center
 	Bishop: YES, YES, YES... I will make them bleed! I will make them burn...
+do Global.bot_play_if_turn()

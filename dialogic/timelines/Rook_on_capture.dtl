@@ -1,2 +1,3 @@
 join Rook_mask center
 Rook: Got em!
+do Global.bot_play_if_turn()

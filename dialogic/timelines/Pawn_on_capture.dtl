@@ -10,3 +10,4 @@ elif {rand} == 4:
 	Pawn: Too slow!
 elif {rand} == 5:
 	Pawn: Taken!
+do Global.bot_play_if_turn()

@@ -21,7 +21,7 @@ elif {pawn_love} == 3.0:
 elif {pawn_love} == 4.0:
 	join Pawn_mask center
 	Pawn: Do you think I can be more? I... I try to help wherever I can, but I can't shake this feeling that I can still be more... for you...
-	: [Take two pieces with any Pawn]
+	[Take two pieces with any Pawn]
 	set {pawn_love} += 1.0
 	audio "res://assets/sound/Emotes/heart.wav"
 	set {pawn_challenge_1} = 1.0
@@ -61,4 +61,5 @@ elif {pawn_love} == 10.0:
 	Pawn_mask: My liege, have you seen the scene? Truly, our victory is afoot; it needs only the finishing touches... Would you do the honours? I would not be here without you my grace... my darling...
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
-	: [Something awaits if you can win with a pawn on the board]
+	[Something awaits if you can win with a pawn on the board]
+do Global.bot_play_if_turn()

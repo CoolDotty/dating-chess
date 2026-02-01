@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cw1fs4vp0p4tm"]
 
-[ext_resource type="PackedScene" uid="uid://b70nlk7m1xki4" path="res://src/Board.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://dc17niwfpgsco" path="res://assets/background2.png" id="1_8c8jm"]
 [ext_resource type="Script" uid="uid://bnh5boial1cj" path="res://src/game.gd" id="1_ok2ji"]
 [ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="2"]
@@ -153,10 +152,6 @@ theme_override_constants/separation = 12
 [node name="H" type="HBoxContainer" parent="Game/C/V/C/V" unique_id=580030462]
 layout_mode = 2
 theme_override_constants/separation = 30
-
-[node name="Board" parent="Game/C/V/C/V/H" unique_id=593486743 instance=ExtResource("1")]
-visible = false
-layout_mode = 2
 
 [node name="SanDisplay" parent="Game/C/V/C/V/H" unique_id=1821147659 instance=ExtResource("4")]
 visible = false

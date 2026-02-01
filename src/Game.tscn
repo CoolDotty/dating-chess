@@ -58,7 +58,6 @@ shader_parameter/fill_percentage = 1.0
 shader = ExtResource("15_ok2ji")
 shader_parameter/fill_percentage = 1.0
 
-
 [node name="RealChess" type="Control" unique_id=909272398]
 layout_mode = 3
 anchors_preset = 0
@@ -279,34 +278,22 @@ material = SubResource("ShaderMaterial_aom5e")
 position = Vector2(-424.99997, -114.99999)
 texture = ExtResource("19_goodv")
 
-[connection signal="pressed" from="C/V/H/RSpacer/H/SettingsButton" to="." method="_on_SettingsButton_pressed"]
-[connection signal="pressed" from="C/V/H/RSpacer/H/CreditsButton" to="." method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/ResetButton" to="." method="_on_ResetButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/FlipButton" to="." method="_on_FlipButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/UndoButton" to="." method="_on_UndoButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/BotButton" to="." method="_on_BotButton_pressed"]
-[connection signal="pressed" from="C/V/C/V/H2/BotCheck" to="." method="_on_BotCheck_pressed"]
-[connection signal="timeout" from="C/V/C/V/H2/BotTimer" to="." method="_on_BotTimer_timeout"]
-[connection signal="text_submitted" from="C/V/H2/FenText" to="." method="_on_FenText_text_entered"]
-[connection signal="pressed" from="C/V/H2/SetFen" to="." method="_on_SetFen_pressed"]
-[connection signal="timeout" from="C/V/H2/InvalidFenTimer" to="." method="_on_InvalidFenTimer_timeout"]
-[connection signal="changed" from="SettingsMenu" to="." method="_on_SettingsMenu_settings_changed"]
 [connection signal="piece_dropped" from="Board" to="." method="_on_Square_piece_dropped"]
 [connection signal="piece_grabbed" from="Board" to="." method="_on_Square_piece_grabbed"]
 [connection signal="pressed" from="Game/C/V/H/RSpacer/H/SettingsButton" to="Game" method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="Game/C/V/H/RSpacer/H/CreditsButton" to="Game" method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="Game/C/V/C/V/H2/ResetButton" to="Game" method="_on_ResetButton_pressed"]
 [connection signal="pressed" from="Game/C/V/C/V/H2/ResetButton" to="." method="_on_ResetButton_pressed"]
-[connection signal="pressed" from="Game/C/V/C/V/H2/FlipButton" to="Game" method="_on_FlipButton_pressed"]
+[connection signal="pressed" from="Game/C/V/C/V/H2/ResetButton" to="Game" method="_on_ResetButton_pressed"]
 [connection signal="pressed" from="Game/C/V/C/V/H2/FlipButton" to="." method="_on_FlipButton_pressed"]
-[connection signal="pressed" from="Game/C/V/C/V/H2/UndoButton" to="Game" method="_on_UndoButton_pressed"]
+[connection signal="pressed" from="Game/C/V/C/V/H2/FlipButton" to="Game" method="_on_FlipButton_pressed"]
 [connection signal="pressed" from="Game/C/V/C/V/H2/UndoButton" to="." method="_on_UndoButton_pressed"]
-[connection signal="pressed" from="Game/C/V/C/V/H2/BotButton" to="Game" method="_on_BotButton_pressed"]
+[connection signal="pressed" from="Game/C/V/C/V/H2/UndoButton" to="Game" method="_on_UndoButton_pressed"]
 [connection signal="pressed" from="Game/C/V/C/V/H2/BotButton" to="." method="_on_BotButton_pressed"]
-[connection signal="pressed" from="Game/C/V/C/V/H2/BotCheck" to="Game" method="_on_BotCheck_pressed"]
+[connection signal="pressed" from="Game/C/V/C/V/H2/BotButton" to="Game" method="_on_BotButton_pressed"]
 [connection signal="pressed" from="Game/C/V/C/V/H2/BotCheck" to="." method="_on_BotCheck_pressed"]
-[connection signal="timeout" from="Game/C/V/C/V/H2/BotTimer" to="Game" method="_on_BotTimer_timeout"]
+[connection signal="pressed" from="Game/C/V/C/V/H2/BotCheck" to="Game" method="_on_BotCheck_pressed"]
 [connection signal="timeout" from="Game/C/V/C/V/H2/BotTimer" to="." method="_on_BotTimer_timeout"]
+[connection signal="timeout" from="Game/C/V/C/V/H2/BotTimer" to="Game" method="_on_BotTimer_timeout"]
 [connection signal="text_submitted" from="Game/C/V/H2/FenText" to="Game" method="_on_FenText_text_entered"]
 [connection signal="pressed" from="Game/C/V/H2/SetFen" to="Game" method="_on_SetFen_pressed"]
 [connection signal="timeout" from="Game/C/V/H2/InvalidFenTimer" to="Game" method="_on_InvalidFenTimer_timeout"]

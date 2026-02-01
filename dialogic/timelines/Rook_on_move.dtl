@@ -12,7 +12,7 @@ elif {rook_love} == 2.0:
 	set {rook_love} += 1
 elif {rook_love} == 3.0:
 	join Rook center
-	Rook: What's up? Oh! You wanted to know what happened to those Bishops last week? Well, nothing... No, I didn't get these from them, I just... tripped! Why do you want to know so much anyway?
+	Rook: What's up? Oh! You wanted to know what happened to those Rooks last week? Well, nothing... No, I didn't get these from them, I just... tripped! Why do you want to know so much anyway?
 	set {rook_love} += 1
 elif {rook_love} == 4.0:
 	join Rook center
@@ -29,16 +29,16 @@ elif {rook_love} == 6.0:
 	set {rook_love} += 1
 elif {rook_love} == 7.0:
 	join Rook center
-	Rook: Eheh, you really worry too much! Cmon, lemme squish your cheek! You're royalty, but you worry way too much about me! C'mon, I'm just a girl, not a vase, I can still cut through your enemies like it's nothing: that will never change. That... and my feelings for... you...
+	Rook: Hey, you aren't trying to keep me safe or something are you? Cmon, I know you're a sap, but it doesn't mean you should try and protect me like this! Cmon... you know that I'm here to protect you...
 	set {rook_love} += 1
-	elif {bishop_love} == 8.0:
-	join Bishop center
-	Bishop: 
-	set {bishop_love} += 1
-elif {bishop_love} == 9.0:
-	join Bishop center
-	Bishop: 
-	set {bishop_love} += 1
-elif {bishop_love} == 10.0:
-	join Bishop center
-	Bishop:
+	elif {rook_love} == 8.0:
+	join Rook center
+	Rook: 
+	set {rook_love} += 1
+elif {rook_love} == 9.0:
+	join Rook center
+	Rook: 
+	set {rook_love} += 1
+elif {rook_love} == 10.0:
+	join Rook center
+	Rook: Eheh, you really worry too much! Cmon, lemme squish your cheek! You're royalty, but you worry way too much about me! C'mon, I'm just a girl, not a vase, I can still cut through your enemies like it's nothing: that will never change. That... and my feelings for... you...

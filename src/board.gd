@@ -11,8 +11,8 @@ func xy2pos(x_i, y_i):
 	var y0 = side*y_i
 	var x = x0*1.0 - 0.22*y0
 	var y = x0*0.1 + 0.92*y0
-	var z = x0*0.0 - 0.0009*y0 + 1
-	return Vector2(360+1.08*x/z, 100+0.85*y/z - 10)
+	var z = -x0*0.0000 - 0.00087*y0 + 1
+	return Vector2(360+1.1*x/z, 100+0.8*y/z - 10)
 
 func new_piece(file, rank):
 	var y_i = rank - 1

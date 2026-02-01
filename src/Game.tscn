@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bsf6rpmbd3raf" path="res://assets/ui/Love meter smoke.png" id="16_goodv"]
 [ext_resource type="Texture2D" uid="uid://cjwyg86s3i5cx" path="res://assets/ui/Love meter potion base.png" id="17_821k0"]
 [ext_resource type="Texture2D" uid="uid://iujpasdg03p2" path="res://assets/ui/Love meter hearts.png" id="19_goodv"]
+[ext_resource type="Script" uid="uid://dwfuef5wyt4ib" path="res://src/main_menu/fade_out.gd" id="22_aom5e"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -244,6 +245,20 @@ texture = ExtResource("17_821k0")
 material = SubResource("ShaderMaterial_aom5e")
 position = Vector2(-424.99997, -114.99999)
 texture = ExtResource("19_goodv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=662852818]
+z_index = 999
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("22_aom5e")
+start_black = true
 
 [connection signal="pressed" from="C/V/H/RSpacer/H/SettingsButton" to="." method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="C/V/H/RSpacer/H/CreditsButton" to="." method="_on_CreditsButton_pressed"]

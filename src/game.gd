@@ -35,6 +35,7 @@ var bot_thinking_thread: Thread = null
 func _ready() -> void:
 	randomize()
 	get_tree().call_group("Squares", "_connect_square_signals", self)
+	get_tree().call_group("Squares", "_connect_square_signals", self)
 	update_state()
 	
 #func _physics_process(delta: float) -> void:
@@ -89,11 +90,13 @@ func _on_FenText_text_entered(new_text: String) -> void:
 
 
 func _on_Square_piece_grabbed(from_index: int) -> void:
+	print("grabbed ", from_index)
 	if Settings.show_dests:
 		var target_squares := []
 		for move in legal_moves:
 			if move.from_square == from_index:
 				target_squares.push_back(move.to_square)
+		print(target_squares)
 		for square in get_tree().get_nodes_in_group("Squares"):
 			if square.index in target_squares:
 				var indicator = square.get_node("LegalMoveIndicator/ColorRect")

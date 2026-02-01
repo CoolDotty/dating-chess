@@ -19,9 +19,9 @@ func _input(event: InputEvent) -> void:
 			$Piece.modulate = Color.WHITE
 			$LegalMoveIndicator.hide()
 
-func _connect_square_signals(game: ChessGame):
-	piece_grabbed.connect(game._on_Square_piece_grabbed)
-	piece_dropped.connect(game._on_Square_piece_dropped)
+#func _connect_square_signals(game: ChessGame):
+	#piece_grabbed.connect(game._on_Square_piece_grabbed)
+	#piece_dropped.connect(game._on_Square_piece_dropped)
 
 
 func _get_drag_data(_position: Vector2):

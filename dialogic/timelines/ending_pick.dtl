@@ -3,6 +3,7 @@ join Knight left
 join Queen center
 join Bishop right [mirrored="true"]
 join Pawn rightmost [mirrored="true"]
+King: Hmmmm
 King: Hmmm, who do I love the mostest?
 - Rook
 - Knight

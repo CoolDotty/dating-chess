@@ -6,70 +6,87 @@
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
-"sound_moods": {},
+"sound_moods": {
+"pawn": {
+"mode": 1,
+"name": "pawn",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://assets/sound/Characters/Female/femalevoice4.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Neutral Base",
+&"default_portrait": "Neutral",
 &"description": "",
 &"display_name": "Pawn",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Angry Base": {
+"Angry": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Angry base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn angry.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pawn"
 },
-"Happy Base": {
+"Happy": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Happy base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn happy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pawn"
 },
-"Love Base": {
+"Love": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Love base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn love.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pawn"
 },
-"Neutral Base": {
+"Neutral": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Neutral base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn neutral.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pawn"
 },
-"Sad Base": {
+"Sad": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Sad base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pawn"
 },
-"Thinking Base": {
+"Thinking": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Thinking base.png\""
+"image": "\"res://dialogic/portraits/Pawn/Pawn thinking.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pawn"
 }
 },
 &"scale": 1.0

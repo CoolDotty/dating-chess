@@ -43,8 +43,6 @@ func load_settings() -> void:
 		sound_check = bool(d.sound_check)
 	if "sound_music" in d:
 		sound_music = bool(d.sound_music)
-	if "bot_difficulty" in d:
-		bot_difficulty = int(d.bot_difficulty)
 
 
 func save_settings() -> void:
@@ -56,7 +54,6 @@ func save_settings() -> void:
 		"sounds": sounds,
 		"sound_check": sound_check,
 		"sound_music": sound_music,
-		"bot_difficulty": bot_difficulty,
 	}
 
 	file.store_line(var_to_str(d))

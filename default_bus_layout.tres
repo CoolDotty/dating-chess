@@ -1,5 +1,3 @@
 [gd_resource type="AudioBusLayout" format=3 uid="uid://cfwn87irr33qd"]
 
 [resource]
-bus/0/mute = true
-bus/0/send = &"New Bus"

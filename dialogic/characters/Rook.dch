@@ -6,70 +6,97 @@
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
-"sound_moods": {},
+"sound_moods": {
+"post trans": {
+"mode": 1,
+"name": "post trans",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://assets/sound/Characters/Rook/Post trans",
+"volume_base": 0.0,
+"volume_variance": 0.0
+},
+"pre trans": {
+"mode": 1,
+"name": "pre trans",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://assets/sound/Characters/Rook/Pre trans",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Neutral Base",
+&"default_portrait": "Neutral",
 &"description": "",
 &"display_name": "Rook",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Angry Base": {
+"Angry": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Angry base.png\""
+"image": "\"res://dialogic/portraits/Rook/Rook angry.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
-"Happy Base": {
+"Happy": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Happy base.png\""
+"image": "\"res://dialogic/portraits/Rook/Rook happy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
-"Love Base": {
+"Love": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Love base.png\""
+"image": "\"res://dialogic/portraits/Rook/Rook love.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "post trans"
 },
-"Neutral Base": {
+"Neutral": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Neutral base.png\""
+"image": "\"res://dialogic/portraits/Rook/Rook neutral.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
-"Sad Base": {
+"Sad": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Sad base.png\""
+"image": "\"res://dialogic/portraits/Rook/Rook sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 },
-"Thinking Base": {
+"Thinking": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/Base/Thinking base.png\""
+"image": "\"res://dialogic/portraits/Rook/Rook thinking.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "pre trans"
 }
 },
 &"scale": 1.0

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://43bm75dc3e0c"
-path="res://.godot/imported/horse-neigh.wav-a96bb1a60c0b2cda823d7c3e988ed95a.sample"
+path="res://.godot/imported/horse-neigh.wav-95801643d660248176eb74d89cb100a6.sample"
 
 [deps]
 
-source_file="res://assets/sound/horse-neigh.wav"
-dest_files=["res://.godot/imported/horse-neigh.wav-a96bb1a60c0b2cda823d7c3e988ed95a.sample"]
+source_file="res://assets/sound/Characters/horse-neigh.wav"
+dest_files=["res://.godot/imported/horse-neigh.wav-95801643d660248176eb74d89cb100a6.sample"]
 
 [params]
 

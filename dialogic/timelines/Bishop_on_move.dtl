@@ -24,7 +24,7 @@ elif {bishop_love} == 4.0:
 	set {bishop_love} += 1
 	set {bishop_challenge_1} = 1.0
 	audio "res://assets/sound/Emotes/heart.wav"
-	[Sacrafice a Bishop]
+	[Sacrifice a Bishop]
 elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   <   2.0:
 	[end_timeline]
 elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   >=   2.0:

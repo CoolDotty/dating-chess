@@ -27,26 +27,36 @@ King: Hmmmm
 King: Hmmm, who do I love the mostest?
 - Rook | [if {rook_alive} == true]
 	if {rook_love} > 5.0:
+		leave --All--
 		do Dialogic.start("Rook_on_ending")
 	else:
+		leave --All--
 		do Dialogic.start("Rook_on_rejected")
 - Knight | [if {knight_alive} == true]
 	if {knight_love} > 5.0:
+		leave --All--
 		do Dialogic.start("Knight_on_ending")
 	else:
+		leave --All--
 		do Dialogic.start("Knight_on_rejected")
 - Queen | [if {queen_alive} == true]
 	if {queen_love} > 5.0:
+		leave --All--
 		do Dialogic.start("Queen_on_ending")
 	else:
+		leave --All--
 		do Dialogic.start("Queen_on_rejected")
 - Bishop | [if {bishop_alive} == true]
 	if {bishop_love} > 5.0:
+		leave --All--
 		do Dialogic.start("Bishop_on_ending")
 	else:
+		leave --All--
 		do Dialogic.start("Bishop_on_rejected")
 - Pawn | [if {pawn_alive} == true]
+	leave --All--
 	if {pawn_love} > 5.0:
 		do Dialogic.start("Pawn_on_ending")
 	else:
+		leave --All--
 		do Dialogic.start("Pawn_on_rejected")

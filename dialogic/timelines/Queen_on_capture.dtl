@@ -1,17 +1,35 @@
 do Global.toggle_music(false)
 audio music "res://assets/sound/Music/angy.wav" [fade="0.0" volume="0.0" sync="music"]
-join Queen_mask center
-set {rand} = range(1,5).pick_random()
-if {rand} == 1:
-	Pawn: Lovely
-elif {rand} == 2:
-	Pawn: Wonderful
-elif {rand} == 3:
-	Pawn: As expected
-elif {rand} == 4:
-	Pawn: Adequate
-elif {rand} == 5:
-	Pawn: Confirmed
+if {queen_challenge_1} < 2.0:
+	join Queen_mask (Neutral) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Queen: Lovely
+	elif {rand} == 2:
+		Queen: Wonderful
+	elif {rand} == 3:
+		Queen: As expected
+	elif {rand} == 4:
+		Queen: Adequate
+	elif {rand} == 5:
+		Queen: Confirmed
+	leave Queen_mask [animation="Instant Out" wait="true"]
+	do Dialogic.start("Queen_on_move") 
+elif {queen_challenge_1}   >=   2.0:
+	join Queen (Happy) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Queen: What a delight
+	elif {rand} == 2:
+		Queen: A fitting strike
+	elif {rand} == 3:
+		Queen: Perfectly executed
+	elif {rand} == 4:
+		Queen: A move befitting you my liege
+	elif {rand} == 5:
+		Queen: Yet another victory for us
+	leave Queen [animation="Instant Out" wait="true"]
+	do Dialogic.start("Queen_on_move")
 [clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
 do Global.toggle_music(true)
 do Global.bot_play_if_turn()

@@ -1,6 +1,33 @@
 do Global.toggle_music(false)
 audio music "res://assets/sound/Music/angy.wav" [fade="0.0" sync="music"]
-join Knight center
-Knight: Neiiiiiiiiiigghhhhhh!
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+if {knight_challenge_1} < 4.0:
+	join Knight_mask (Happy Base) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Knight: Neigh! (Galloping victory!)
+	elif {rand} == 2:
+		Knight: Neigh! (Another win!)
+	elif {rand} == 3:
+		Knight: Neigh! (More breakfast!)
+	elif {rand} == 4:
+		Knight: Neigh! (Apples to Apples, dust to dust!)
+	elif {rand} == 5:
+		Knight: Neigh! (Fall before my strength!)
+	leave knight_mask [animation="Instant Out" wait="true"]
+	do Dialogic.start("Knight_on_move") 
+elif {knight_challenge_1}   >=   4.0:
+	join Knight (Happy Base) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Knight: NAWH (For the maple!)
+	elif {rand} == 2:
+		Knight: NAWH (Red and white baby!)
+	elif {rand} == 3:
+		Knight: NAWH (Get Canucked!)
+	elif {rand} == 4:
+		Knight: NAWH (You've just been snow'd in!)
+	elif {rand} == 5:
+		Knight: NAWH (Feel my hooves!)
+	leave Knight [animation="Instant Out" wait="true"]
+	do Dialogic.start("Knight_on_move")
 do Global.toggle_music(true)

@@ -1,6 +1,9 @@
 do Global.toggle_music(false)
 audio music "res://assets/sound/Music/woe.wav"
-join Knight center
-Knight: Neiiiiiiiiiigghhhhhh! (Naauuurrrrrr)
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+if {knight_challenge_1} < 4.0:
+	join Knight_mask (Angry Base) center
+	Knight: NEEEIGHHHHHH (Let me go, let me be free!)
+elif {knight_challenge_1}   >=   4.0:
+	join Knight (Sad Base) center
+	Knight: RAWEHHHHHHHH (My... my Canadian heritage will go on!)
 do Global.toggle_music(true)

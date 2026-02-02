@@ -2,7 +2,7 @@ do Global.toggle_music(false)
 audio music "res://assets/sound/Music/woe.wav" [sync="music"]
 join Knight_mask left
 join King (Happy) right [mirrored="true"]
-Knight: Ew no
+Knight: N...nay...
 leave Knight_mask
 update King (Sad) center
 [BAD END]

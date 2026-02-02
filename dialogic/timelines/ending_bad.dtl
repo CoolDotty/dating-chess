@@ -1,6 +1,6 @@
 do Global.toggle_music(false)
 audio music "res://assets/sound/Music/woe.wav" [sync="music"]
 join King (Sad) center
-King: NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-King: NOW NO ONE WILL EVER LOVE ME
+King: Ah, I have won, but at what cost?
+King: No one loves me in the end. Have I made a mistake?
 [BAD END]

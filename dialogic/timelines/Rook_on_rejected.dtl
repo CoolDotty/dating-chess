@@ -2,7 +2,7 @@ do Global.toggle_music(false)
 audio music "res://assets/sound/Music/woe.wav" [sync="music"]
 join Rook_mask left
 join King (Happy) right [mirrored="true"]
-Rook: Ew no
+Rook: What? You're my liege, I'm here to protect you. This... you're making this awkward...
 leave Rook_mask
 update King (Sad) center
 [BAD END]

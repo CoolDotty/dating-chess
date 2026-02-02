@@ -1,7 +1,35 @@
 do Global.toggle_music(false)
 audio music "res://assets/sound/Music/angy.wav" [sync="music"]
-join Rook_mask center
-Rook: Got em!
+if {rook_challenge_1} < 2.0:
+	join Rook_mask (Neutral) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Rook: Out of my way!
+	elif {rand} == 2:
+		Rook: Hit the hay!
+	elif {rand} == 3:
+		Rook: You've been slacking!
+	elif {rand} == 4:
+		Rook: No one gets near my liege!
+	elif {rand} == 5:
+		Rook: Taste this!
+	leave Rook_mask [animation="Instant Out" wait="true"]
+	do Dialogic.start("Rook_on_move") 
+elif {rook_challenge_1}   >=   2.0:
+	join Rook (Happy) center
+	set {rand} = range(1,5).pick_random()
+	if {rand} == 1:
+		Rook: Swift as a coursing river!
+	elif {rand} == 2:
+		Rook: Force of a great typhoon!
+	elif {rand} == 3:
+		Rook: Strength of a raging fire!
+	elif {rand} == 4:
+		Rook: Smooth as a knife through butter!
+	elif {rand} == 5:
+		Rook: Slay... like, slay!
+	leave Rook [animation="Instant Out" wait="true"]
+	do Dialogic.start("Rook_on_move")
 [clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
 do Global.toggle_music(true)
 do Global.bot_play_if_turn()

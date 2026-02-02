@@ -27,9 +27,9 @@ var bot_thinking_thread: Thread = null
 @onready var san_display := $Game/C/V/C/V/H/SanDisplay as ColorRect
 
 @onready var move_sound: AudioStreamPlayer = $MoveSound
-@onready var capture_sound := $Game/CaptureSound as AudioStreamPlayer
-@onready var check_sound := $Game/CheckSound as AudioStreamPlayer
-@onready var terminal_sound := $Game/TerminalSound as AudioStreamPlayer
+@onready var capture_sound: AudioStreamPlayer = $CaptureSound
+@onready var check_sound: AudioStreamPlayer = $Game/CheckSound
+@onready var terminal_sound: AudioStreamPlayer = $Game/TerminalSound
 
 
 func _ready() -> void:

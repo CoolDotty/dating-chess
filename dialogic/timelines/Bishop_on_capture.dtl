@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/angy.wav" [fade="0.0" sync="music"]
 if {bishop_challenge_1} < 2.0:
 	join Bishop_mask (Angry) center
 	set {rand} = range(1,5).pick_random()
@@ -28,3 +30,6 @@ elif {bishop_challenge_1}   >=   2.0:
 		Bishop: Please, no, stay a little longer... I want to hear you whimper...
 	leave Bishop [animation="Instant Out" wait="true"]
 	do Dialogic.start("Bishop_on_move")
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
+do Global.bot_play_if_turn()

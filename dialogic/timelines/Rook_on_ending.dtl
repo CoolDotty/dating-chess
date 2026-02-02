@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/ending-2-longer.wav" [sync="music"]
 join Rook (Love) left
 join King (Love) right [mirrored="true"]
 Rook: No one knows me as well as you. You know... all the parts of me now... and you still want to stay? Well, you better keep up, silly!

@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/woe.wav" [sync="music"]
 join Pawn_mask left
 join King (Happy) right [mirrored="true"]
 Pawn: I... Sorry, I can't. This feels... like a gross abuse of your power over me. No...

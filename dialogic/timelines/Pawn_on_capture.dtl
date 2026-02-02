@@ -1,3 +1,19 @@
+
+join Pawn_mask center
+set {rand} = range(1,5).pick_random()
+if {rand} == 1:
+	Pawn: Get Rocked!
+elif {rand} == 2:
+	Pawn: Eat It!
+elif {rand} == 3:
+	Pawn: The predator becoems the prawn!
+elif {rand} == 4:
+	Pawn: Too slow!
+elif {rand} == 5:
+	Pawn: Taken!
+
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/angy.wav" [fade="0.0" volume="0.0" bus="" loop="true" sync="music"]
 if {pawn_challenge_1} < 3.0:
 	join Pawn_mask (Sad) center
 	set {rand} = range(1,5).pick_random()
@@ -28,3 +44,6 @@ elif {queen_challenge_1}   >=   3.0:
 		Pawn: We're so good, it's almost scary!
 	leave Pawn [animation="Instant Out" wait="true"]
 	do Dialogic.start("Pawn_on_move")
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
+do Global.bot_play_if_turn()

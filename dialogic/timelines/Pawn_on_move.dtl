@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/chat.wav" [fade="0.0" loop="true" sync="music"]
 if {pawn_love} == 0.0:
 	join Pawn_mask (Thinking) center
 	Pawn: Eh... What? O-oh sorry your highness... I was just so... sleepy... Do I really have to do this?
@@ -77,4 +79,6 @@ elif {pawn_love} == 10.0:
 	set {pawn_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 	[Something awaits if you can win with a pawn on the board]
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
 do Global.bot_play_if_turn()

@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/angy.wav" [fade="0.0" sync="music"]
 if {knight_challenge_1} < 4.0:
 	join Knight_mask (Happy Base) center
 	set {rand} = range(1,5).pick_random()
@@ -28,3 +30,5 @@ elif {knight_challenge_1}   >=   4.0:
 		Knight: NAWH (Feel my hooves!)
 	leave Knight [animation="Instant Out" wait="true"]
 	do Dialogic.start("Knight_on_move")
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)

@@ -1,14 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://db06obuq4k38h"]
+[gd_scene format=3 uid="uid://db06obuq4k38h"]
 
-[ext_resource type="Script" path="res://src/Square.gd" id="1"]
+[ext_resource type="Script" uid="uid://b7hykpxj7c7a7" path="res://src/Square.gd" id="1"]
 
-[node name="Square" type="ColorRect" groups=["Squares"]]
+[node name="Square" type="ColorRect" unique_id=26158595 groups=["Squares"]]
 custom_minimum_size = Vector2(60, 60)
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1")
 
-[node name="CheckIndicator" type="ColorRect" parent="."]
+[node name="CheckIndicator" type="ColorRect" parent="." unique_id=510292936]
 visible = false
 layout_mode = 0
 anchor_right = 1.0
@@ -16,7 +16,7 @@ anchor_bottom = 1.0
 mouse_filter = 2
 color = Color(1, 0, 0, 0.392157)
 
-[node name="LastMoveHighlight" type="ColorRect" parent="."]
+[node name="LastMoveHighlight" type="ColorRect" parent="." unique_id=850968420]
 visible = false
 layout_mode = 0
 anchor_right = 1.0
@@ -24,20 +24,20 @@ anchor_bottom = 1.0
 mouse_filter = 2
 color = Color(1, 1, 0, 0.392157)
 
-[node name="Piece" type="TextureRect" parent="."]
+[node name="Piece" type="TextureRect" parent="." unique_id=381067524]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 expand_mode = 1
 
-[node name="LegalMoveIndicator" type="CenterContainer" parent="."]
+[node name="LegalMoveIndicator" type="CenterContainer" parent="." unique_id=249644704]
 visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="LegalMoveIndicator"]
+[node name="ColorRect" type="ColorRect" parent="LegalMoveIndicator" unique_id=481515038]
 custom_minimum_size = Vector2(15, 15)
 layout_mode = 2
 mouse_filter = 2

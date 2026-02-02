@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cw1fs4vp0p4tm"]
 
-[ext_resource type="PackedScene" uid="uid://b70nlk7m1xki4" path="res://src/Board.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://b0q6l0xw6pxty" path="res://src/Board.tscn" id="1"]
 [ext_resource type="FontFile" uid="uid://bidxcbkineva8" path="res://assets/orkney/Orkney Bold.otf" id="2"]
 [ext_resource type="Script" uid="uid://dyuiaxuvry28u" path="res://src/Game.gd" id="3"]
 [ext_resource type="PackedScene" path="res://src/SanDisplay.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://bfnk0q7gpuo6v" path="res://assets/2d/chess board.png" id="4_ec0nq"]
 [ext_resource type="PackedScene" uid="uid://c0fhva7v6808" path="res://src/SettingsMenu.tscn" id="5"]
 [ext_resource type="AudioStream" uid="uid://bwevr8ykpn5mf" path="res://assets/sound/move.wav" id="6"]
 [ext_resource type="AudioStream" uid="uid://dduxkebeodh7u" path="res://assets/sound/check.wav" id="7"]
@@ -14,7 +15,6 @@
 [ext_resource type="AudioStream" uid="uid://cwb5qngryeu6x" path="res://assets/sound/Music/chess.wav" id="12_at4if"]
 [ext_resource type="Script" uid="uid://cc3mn6tdcx67p" path="res://src/music_sound.gd" id="13_0rf6s"]
 [ext_resource type="Texture2D" uid="uid://cehncf6qrjq74" path="res://assets/ui/Love meter line art.png" id="14_8c8jm"]
-[ext_resource type="Texture2D" uid="uid://6lah8fp32wc5" path="res://assets/paper.png" id="14_821k0"]
 [ext_resource type="Script" uid="uid://dtgyntc27glnd" path="res://src/love_meter.gd" id="15_goodv"]
 [ext_resource type="Shader" uid="uid://bcdviobdb1vg" path="res://src/reveal.gdshader" id="15_ok2ji"]
 [ext_resource type="Material" uid="uid://down4o71bhsf" path="res://squigglevision_mat.tres" id="15_vxdjv"]
@@ -22,12 +22,34 @@
 [ext_resource type="Texture2D" uid="uid://cjwyg86s3i5cx" path="res://assets/ui/Love meter potion base.png" id="17_821k0"]
 [ext_resource type="Texture2D" uid="uid://iujpasdg03p2" path="res://assets/ui/Love meter hearts.png" id="19_goodv"]
 [ext_resource type="Script" uid="uid://dwfuef5wyt4ib" path="res://src/main_menu/fade_out.gd" id="22_aom5e"]
+[ext_resource type="Texture2D" uid="uid://bt5hjwax8yx4p" path="res://assets/2d/background.png" id="23_ec0nq"]
 
 [sub_resource type="FontFile" id="1"]
+resource_local_to_scene = false
+resource_name = ""
 fallbacks = Array[Font]([ExtResource("2")])
+data = PackedByteArray()
+generate_mipmaps = false
+disable_embedded_bitmaps = true
+antialiasing = 1
+font_name = ""
+style_name = ""
+font_style = 0
+font_weight = 400
+font_stretch = 100
 subpixel_positioning = 0
+keep_rounding_remainders = true
+multichannel_signed_distance_field = false
 msdf_pixel_range = 14
 msdf_size = 128
+allow_system_fallback = true
+force_autohinter = false
+modulate_color_glyphs = false
+hinting = 1
+fixed_size = 0
+fixed_size_scale_mode = 0
+opentype_feature_overrides = {}
+oversampling = 0.0
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -126,6 +148,11 @@ theme_override_constants/separation = 30
 [node name="Board" parent="C/V/C/V/H" unique_id=593486743 instance=ExtResource("1")]
 layout_mode = 2
 
+[node name="ChessBoard" type="Sprite2D" parent="C/V/C/V/H/Board" unique_id=1022846806]
+z_index = -1
+position = Vector2(391, 267)
+texture = ExtResource("4_ec0nq")
+
 [node name="SanDisplay" parent="C/V/C/V/H" unique_id=1821147659 instance=ExtResource("4")]
 layout_mode = 2
 
@@ -214,14 +241,6 @@ volume_db = -6.0
 stream = ExtResource("12_at4if")
 script = ExtResource("13_0rf6s")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1985753143]
-z_index = -100
-position = Vector2(636.00006, 347)
-rotation = 1.5707964
-scale = Vector2(1.25, 1.25)
-texture = ExtResource("14_821k0")
-metadata/_edit_lock_ = true
-
 [node name="LoveMeter" type="Sprite2D" parent="." unique_id=358004775]
 process_mode = 3
 material = ExtResource("15_vxdjv")
@@ -259,6 +278,11 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0)
 script = ExtResource("22_aom5e")
 start_black = true
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1437389144]
+z_index = -100
+texture = ExtResource("23_ec0nq")
+centered = false
 
 [connection signal="pressed" from="C/V/H/RSpacer/H/SettingsButton" to="." method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="C/V/H/RSpacer/H/CreditsButton" to="." method="_on_CreditsButton_pressed"]

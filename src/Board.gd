@@ -23,6 +23,8 @@ func _ready() -> void:
 
 func setup_board(chess: Chess) -> void:
 	for square in get_children():
+		if square.get_name() == "ChessBoard":
+			continue
 		var piece = chess.pieces[square.index]
 		if piece != null:
 			var col := "b" if Chess.piece_color(piece) else "w"

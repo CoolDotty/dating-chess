@@ -53,5 +53,6 @@ elif {knight_love} == 10.0:
 	set {knight_love} += 1
 	audio "res://assets/sound/Emotes/heart.wav"
 	[Something awaits if you can win with a Knight on the board]
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
 do Global.toggle_music(true)
 do Global.bot_play_if_turn()

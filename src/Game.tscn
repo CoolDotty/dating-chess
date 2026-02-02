@@ -234,14 +234,6 @@ one_shot = true
 visible = false
 layout_mode = 1
 
-[node name="MoveSound" type="AudioStreamPlayer" parent="." unique_id=1721394747]
-stream = SubResource("AudioStreamWAV_goodv")
-volume_db = -6.0
-
-[node name="CaptureSound" type="AudioStreamPlayer" parent="." unique_id=456379974]
-stream = SubResource("AudioStreamWAV_821k0")
-volume_db = -6.0
-
 [node name="CheckSound" type="AudioStreamPlayer" parent="Game" unique_id=2062687617]
 stream = ExtResource("7")
 volume_db = -6.0
@@ -253,6 +245,14 @@ volume_db = -6.0
 [node name="MusicSound" type="AudioStreamPlayer" parent="Game" unique_id=485771712]
 stream = ExtResource("12_at4if")
 script = ExtResource("13_0rf6s")
+
+[node name="MoveSound" type="AudioStreamPlayer" parent="." unique_id=1721394747]
+stream = SubResource("AudioStreamWAV_goodv")
+volume_db = -6.0
+
+[node name="CaptureSound" type="AudioStreamPlayer" parent="." unique_id=456379974]
+stream = SubResource("AudioStreamWAV_821k0")
+volume_db = -6.0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1985753143]
 z_index = -100

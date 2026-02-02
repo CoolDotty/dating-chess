@@ -6,4 +6,5 @@ if {bishop_challenge_1}   <   2.0:
 elif {bishop_challenge_1}   >=   2.0:
 	join Bishop_mask (Angry) center
 	Bishop: NOOOOOO, it cannot be! I cannot be seperated from him, no, no, no! I refuse! You cannot silence me, I will k-
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
 do Global.toggle_music(true)

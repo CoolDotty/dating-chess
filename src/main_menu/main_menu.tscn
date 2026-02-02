@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://7ktr67dmg1s2" path="res://src/main_menu/Title.png" id="3_wrmdx"]
 [ext_resource type="FontFile" uid="uid://bhyf0nnv2h6je" path="res://assets/orkney/Orkney Bold Italic.otf" id="4_b2bbe"]
 [ext_resource type="Script" uid="uid://bics5kgdhqmj" path="res://src/main_menu/start.gd" id="6_b2bbe"]
-[ext_resource type="AudioStream" uid="uid://3ijvrk6fekqt" path="res://src/main_menu/title-2.wav" id="6_wrmdx"]
+[ext_resource type="AudioStream" uid="uid://blf8xn3vrx214" path="res://src/main_menu/title-2.ogg" id="6_wrmdx"]
 [ext_resource type="Script" uid="uid://dwfuef5wyt4ib" path="res://src/main_menu/fade_out.gd" id="8_axgno"]
-[ext_resource type="AudioStream" uid="uid://bp7pr1kmi5o5b" path="res://assets/sound/Emotes/heart.wav" id="9_bk001"]
+[ext_resource type="AudioStream" uid="uid://dgkhe5puct2u7" path="res://assets/sound/Emotes/heart.ogg" id="9_bk001"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_axgno"]
 font = ExtResource("4_b2bbe")

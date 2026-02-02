@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/woe.wav" [sync="music"]
+audio music "res://assets/sound/Music/woe.ogg" [sync="music"]
 if {rook_challenge_1}   <   2.0:
 	join Rook_mask (Rook Angry) center
 	Rook: I cannot be defeated! I... how did this happen...

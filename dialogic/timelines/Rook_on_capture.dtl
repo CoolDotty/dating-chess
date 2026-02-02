@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/angy.wav" [sync="music"]
+audio music "res://assets/sound/Music/angy.ogg" [sync="music"]
 if {rook_challenge_1} < 2.0:
 	join Rook_mask (Neutral) center
 	set {rand} = range(1,5).pick_random()

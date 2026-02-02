@@ -501,7 +501,7 @@ horizontal_alignment = 1
 [node name="MoveLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("6")
-text = "move.wav"
+text = "move.ogg"
 label_settings = SubResource("LabelSettings_4jxue")
 horizontal_alignment = 1
 
@@ -531,7 +531,7 @@ horizontal_alignment = 1
 [node name="CaptureLabel2" type="Label" parent="M/Panel/M/ScrollContainer/V/CenterContainer/GridContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("6")
-text = "capture.wav"
+text = "capture.ogg"
 label_settings = SubResource("LabelSettings_4jxue")
 horizontal_alignment = 1
 

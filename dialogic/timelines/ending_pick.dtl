@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/chat.wav" [sync="music"]
+audio music "res://assets/sound/Music/chat.ogg" [sync="music"]
 if {rook_alive} == true:
 	if {rook_love} > 5.0:
 		join Rook leftmost

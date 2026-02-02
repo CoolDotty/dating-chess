@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/woe.wav" [fade="0.0" sync="music"]
+audio music "res://assets/sound/Music/woe.ogg" [fade="0.0" sync="music"]
 if {queen_challenge_1}   <   2.0:
 	join Queen_mask center
 	Queen: No-how? You cannot win without me!

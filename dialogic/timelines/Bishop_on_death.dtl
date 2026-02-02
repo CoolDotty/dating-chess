@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/woe.wav" [fade="0.0" sync="music"]
+audio music "res://assets/sound/Music/woe.ogg" [fade="0.0" sync="music"]
 if {bishop_challenge_1}   <   2.0:
 	join Bishop_mask (Sad) center
 	Bishop: ... No... My Grace, I have failed you... Please forgive me my Lord...

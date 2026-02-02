@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/angy.wav" [sync="music"]
+audio music "res://assets/sound/Music/angy.ogg" [sync="music"]
 join Bishop_mask left
 join King (Happy) right [mirrored="true"]
 Bishop: I apologize my liege, but the Lord will forbid this union. This... this is too much, I'm sorry.

@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/chat.wav" [fade="0.0" loop="true" sync="music"]
+audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" loop="true" sync="music"]
 if {bishop_love} == 0.0:
 	join Bishop_mask (Neutral) center
 	Bishop: Good match my liege! The Lord has blessed us with a swift wind. Have you time to pray with me?
@@ -25,7 +25,7 @@ elif {bishop_love} == 4.0:
 	Bishop_mask (Thinking): Please aid in reclaiming that light... Please sacrifice someone for me. I need to see the glory of a soldier on the brink of death...
 	set {bishop_love} += 1
 	set {bishop_challenge_1} = 1.0
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 	[Sacrafice a Bishop]
 elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   <   2.0:
 	[end_timeline]

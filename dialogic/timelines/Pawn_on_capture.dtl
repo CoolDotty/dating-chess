@@ -13,7 +13,7 @@ elif {rand} == 5:
 	Pawn: Taken!
 
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/angy.wav" [fade="0.0" volume="0.0" bus="" loop="true" sync="music"]
+audio music "res://assets/sound/Music/angy.ogg" [fade="0.0" volume="0.0" bus="" loop="true" sync="music"]
 if {pawn_challenge_1} < 3.0:
 	join Pawn_mask (Sad) center
 	set {rand} = range(1,5).pick_random()

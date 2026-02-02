@@ -1,5 +1,5 @@
 do Global.toggle_music(false)
-audio music "res://assets/sound/Music/chat.wav" [fade="0.0" sync="music"]
+audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" sync="music"]
 if {king_love} == 0.0:
 	join King center
 	King: The pawn... what a silly creature. I wonder if there's anything I can do to encourage it to take some initiative?

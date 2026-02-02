@@ -10,6 +10,27 @@ var rook_loves_you := false
 var queen_loves_you := false
 
 var bot_enabled := false
+
+func set_bishop_love(love : bool):
+	bishop_loves_you = love
+
+func set_knight_love(love : bool):
+	rook_loves_you = love
+	
+func set_rook_love(love : bool):
+	rook_loves_you = love
+	
+func set_queen_love(love : bool):
+	queen_loves_you = love
+	
+func set_pawn_love(love : bool):
+	pawn_loves_you = love
+
+func toggle_music (is_playing : bool) -> void:
+	if Settings.sound_music:
+		music_toggled.emit(is_playing)
+
+
 func bot_play_if_turn():
 	if bot_enabled:
 		bot_turn.emit()
@@ -84,7 +105,7 @@ func move_character_effects(move: Move, moves: Array, chess: Chess):
 			"P":
 				Dialogic.start('Pawn_on_death')
 		return
-	var played_piece = move.piece_type
+	var played_piece = move.piece_type.capitalize()
 	if move.did_capture:
 		match played_piece:
 			"K":

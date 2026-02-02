@@ -9,34 +9,37 @@ var legal_moves = null
 var bot_thinking := false
 var bot_thinking_thread: Thread = null
 
-@onready var board := $C/V/C/V/H/Board as GridContainer
-@onready var title_label := $C/V/H/Title as Label
+#@export  var board: ;
+@onready var board := $Board as Node2D
+#@onready var board = $C/V/C/V/H/Board as GridContainer
+@onready var title_label := $Game/C/V/H/Title as Label
 @onready var title_text := title_label.text
-@onready var bot_timer := $C/V/C/V/H2/BotTimer as Timer
-@onready var bot_check := $C/V/C/V/H2/BotCheck as CheckBox
+@onready var bot_timer := $Game/C/V/C/V/H2/BotTimer as Timer
+@onready var bot_check := $Game/C/V/C/V/H2/BotCheck as CheckBox
 
-@onready var reset_button := $C/V/C/V/H2/ResetButton as Button
-@onready var undo_button := $C/V/C/V/H2/UndoButton as Button
-@onready var bot_button := $C/V/C/V/H2/BotButton as Button
-@onready var fen_text := $C/V/H2/FenText as LineEdit
-@onready var invalid_fen := $C/V/H2/InvalidFen as Label
-@onready var invalid_fen_timer := $C/V/H2/InvalidFenTimer as Timer
+@onready var reset_button := $Game/C/V/C/V/H2/ResetButton as Button
+@onready var undo_button := $Game/C/V/C/V/H2/UndoButton as Button
+@onready var bot_button := $Game/C/V/C/V/H2/BotButton as Button
+@onready var fen_text := $Game/C/V/H2/FenText as LineEdit
+@onready var invalid_fen := $Game/C/V/H2/InvalidFen as Label
+@onready var invalid_fen_timer := $Game/C/V/H2/InvalidFenTimer as Timer
 
-@onready var san_display := $C/V/C/V/H/SanDisplay as ColorRect
+@onready var san_display := $Game/C/V/C/V/H/SanDisplay as ColorRect
 
-@onready var move_sound := $MoveSound as AudioStreamPlayer
-@onready var capture_sound := $CaptureSound as AudioStreamPlayer
-@onready var check_sound := $CheckSound as AudioStreamPlayer
-@onready var terminal_sound := $TerminalSound as AudioStreamPlayer
+@onready var move_sound: AudioStreamPlayer = $MoveSound
+@onready var capture_sound: AudioStreamPlayer = $CaptureSound
+@onready var check_sound: AudioStreamPlayer = $Game/CheckSound
+@onready var terminal_sound: AudioStreamPlayer = $Game/TerminalSound
 
 
 func _ready() -> void:
 	randomize()
 	get_tree().call_group("Squares", "_connect_square_signals", self)
+	get_tree().call_group("Squares", "_connect_square_signals", self)
 	update_state()
 	var globalSignal = get_node("/root/Global")
 	globalSignal.bot_turn.connect(_on_Bot_turn)
-
+	
 #func _physics_process(delta: float) -> void:
 	#if not bot_thinking:
 		#bot_play()
@@ -45,6 +48,7 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	if bot_thinking_thread != null:
 		bot_thinking_thread.wait_to_finish()
+
 
 func _on_ResetButton_pressed() -> void:
 	bot_thinking = false
@@ -93,18 +97,21 @@ func _on_Square_piece_grabbed(from_index: int) -> void:
 		for move in legal_moves:
 			if move.from_square == from_index:
 				target_squares.push_back(move.to_square)
-		for square in get_tree().get_nodes_in_group("Squares"):
-			if square.index in target_squares:
-				var indicator = square.get_node("LegalMoveIndicator/ColorRect")
-				if chess.pieces[square.index] == null:
-					indicator.custom_minimum_size = Vector2(15, 15)
-				else:
-					indicator.custom_minimum_size = Vector2(40, 40)
-				indicator.get_parent().show()
+		print(target_squares)
+		board.mark_possible_moves(from_index, target_squares)
+		#for square in get_tree().get_nodes_in_group("Squares"):
+			#if square.index in target_squares:
+				#var indicator = square.get_node("LegalMoveIndicator/ColorRect")
+				#if chess.pieces[square.index] == null:
+					#indicator.custom_minimum_size = Vector2(15, 15)
+				#else:
+					#indicator.custom_minimum_size = Vector2(40, 40)
+				#indicator.get_parent().show()
 
 
 func _on_Square_piece_dropped(from_index: int, to_index: int) -> void:
-	var m := chess.construct_move(from_index, to_index)
+	# TODO: probablt should use last arguemnt
+	var m := chess.construct_move(from_index, to_index, 'q', 'p')
 	for lm in legal_moves:
 		if m.from_square == lm.from_square and m.to_square == lm.to_square and m.promotion == lm.promotion:
 			chess.play_move(lm)
@@ -119,7 +126,7 @@ func _on_InvalidFenTimer_timeout() -> void:
 
 
 func _on_SettingsButton_pressed() -> void:
-	$SettingsMenu.popup_centered()
+	$Game/SettingsMenu.popup_centered()
 
 
 func _on_SettingsMenu_settings_changed() -> void:
@@ -128,7 +135,7 @@ func _on_SettingsMenu_settings_changed() -> void:
 
 
 func _on_CreditsButton_pressed() -> void:
-	$CreditsMenu.show()
+	$Game/CreditsMenu.show()
 
 
 func _on_BotButton_pressed() -> void:
@@ -141,11 +148,10 @@ func _on_BotCheck_pressed() -> void:
 
 func _on_BotTimer_timeout() -> void:
 	#bot_play()
-	pass # I think this is replaced by signal?
+	pass
 
-func _on_Bot_turn():
+func _on_Bot_turn(): # TODO: Connect signal
 	bot_play()
-
 
 func update_state(after_move := false) -> void:
 	board.setup_board(chess)
@@ -162,6 +168,7 @@ func update_state(after_move := false) -> void:
 		if Dialogic.VAR.bishop_challenge_1 >= 1:
 			if last_move.did_capture == "B":
 				Dialogic.VAR.bishop_challenge_1 += 1
+
 	if last_move and after_move:
 		Global.update_alive_checks(chess)
 		Global.advance_challenges(last_move, chess.move_stack, chess)
@@ -277,3 +284,23 @@ func bot_finalize(result: Array) -> void:
 	bot_thinking = false
 	bot_timer.stop()
 	update_state(true)
+
+
+func _on_reset_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_flip_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_undo_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_bot_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_bot_check_pressed() -> void:
+	pass # Replace with function body.

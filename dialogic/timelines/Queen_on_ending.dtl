@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/ending-2-longer.ogg" [sync="music"]
 join Queen (Love) left
 join King (Love) right [mirrored="true"]
 Queen: Finally, I have found someone my equal... I will be by your side forever... so long as you'll have me too.

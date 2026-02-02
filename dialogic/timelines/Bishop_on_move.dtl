@@ -1,3 +1,5 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" loop="true" sync="music"]
 if {bishop_love} == 0.0:
 	join Bishop_mask (Neutral) center
 	Bishop: Good match my liege! The Lord has blessed us with a swift wind. Have you time to pray with me?
@@ -23,8 +25,8 @@ elif {bishop_love} == 4.0:
 	Bishop_mask (Thinking): Please aid in reclaiming that light... Please sacrifice someone for me. I need to see the glory of a soldier on the brink of death...
 	set {bishop_love} += 1
 	set {bishop_challenge_1} = 1.0
-	audio "res://assets/sound/Emotes/heart.wav"
-	[Sacrifice a Bishop]
+	audio "res://assets/sound/Emotes/heart.ogg"
+	[Sacrafice a Bishop]
 elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   <   2.0:
 	[end_timeline]
 elif {bishop_love}   ==   5.0 and {bishop_challenge_1}   >=   2.0:
@@ -38,6 +40,7 @@ elif {bishop_love} == 6.0:
 	join Bishop (Happy) center
 	Bishop: E-eheheh! The crimson rose, those ruby beads... Your grace... I will carve out a necklace with these colours! And then... the dark one... he will sactify our union... us... forever...
 	set {bishop_love} += 1
+do Global.toggle_music(false)
 elif {bishop_love} == 7.0:
 	join Bishop (Angry) center
 	Bishop: Ah-you have caught me at a bad time... I was preparing this sacrifice for the union ritual and needed just the eye from this... thing. I just need to make sure that we are never apart again...
@@ -59,3 +62,6 @@ elif {bishop_love} == 10.0:
 	Bishop: It has been completed! My... my love, my darling... the ritual has finally been completed!
 	update Bishop
 	Bishop: Now... you will be protected from any and all things, you shall be untouchable by anyone except... except me...
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
+do Global.bot_play_if_turn()

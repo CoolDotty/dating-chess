@@ -1,6 +1,10 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/woe.ogg" [fade="0.0" sync="music"]
 if {pawn_challenge_1}   <   3.0:
 	join Pawn_mask (Thinking) center
 	Pawn: At least I can sleep now...
 elif {pawn_challenge_1}   >=   3.0:
 	join Pawn (Sad) center
 	Pawn: Carry on my dear! We will achieve victory still!
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)

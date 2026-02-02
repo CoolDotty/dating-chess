@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfsobcgcktohq"
+path="res://.godot/imported/malevoice3.ogg-27e905b47f946231e7e893a7dbabd072.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Characters/Rook/Pre trans/malevoice3.ogg"
+dest_files=["res://.godot/imported/malevoice3.ogg-27e905b47f946231e7e893a7dbabd072.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -13,7 +13,7 @@
 "pitch_base": 1.0,
 "pitch_variance": 0.0,
 "skip_characters": 0.0,
-"sound_path": "res://assets/sound/Characters/Queen/femalevoice4.wav",
+"sound_path": "res://assets/sound/Characters/Queen/femalevoice4.ogg",
 "volume_base": 0.0,
 "volume_variance": 0.0
 }

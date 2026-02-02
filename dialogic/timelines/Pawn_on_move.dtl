@@ -1,33 +1,35 @@
+do Global.toggle_music(false)
+audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" loop="true" sync="music"]
 if {pawn_love} == 0.0:
 	join Pawn_mask (Thinking) center
 	Pawn: Eh... What? O-oh sorry your highness... I was just so... sleepy... Do I really have to do this?
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 1.0:
 	join Pawn_mask (Sad) center
 	Pawn: Wha- Your grace, you're asking for me again? I... got distracted. I can do that... Can I have a break after that though...?
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 2.0:
 	join Pawn_mask (Sad) center
 	Pawn: Heh... check out these sweet moves... W-what, oh! My grace I... I just fell asleep standing up haha... Sorry.
 	update Pawn_mask (Happy)
 	Pawn: Oh... You're... you're way too nice to me...
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 3.0:
 	join Pawn_mask (Sad) center
 	Pawn: C'mon... move... Ah, my liege! Why are you always here spooking me when I'm trying to prepare something?
 	update Pawn_mask (Neutral)
 	Pawn_mask: You're picking me...? Ah... alright I guess...
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 4.0:
 	join Pawn_mask (Sad) center
 	Pawn: Do you think I can be more? I... I try to help wherever I can, but I can't shake this feeling that I can still be more... for you...
 	[Take two pieces with any Pawn]
 	set {pawn_love} += 1.0
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 	set {pawn_challenge_1} = 1.0
 elif {pawn_love}   ==   5.0 and {pawn_challenge_1}   <   3.0:
 	[end_timeline]
@@ -42,38 +44,41 @@ elif {pawn_love}   ==   5.0 and {pawn_challenge_1}   >=   3.0:
 	Pawn: I will use every part of myself to make sure that we will take victory...
 	Pawn: whether on the battlefield, or in... your heart...
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 6.0:
 	join Pawn (Happy) center
 	Pawn: Heh, they never saw that coming. Sometimes... the plan comes together beautifully... just like you my grace... you are truly... ahem...
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 7.0:
 	join Pawn (Happy) center
 	Pawn: Heh... far too simple a read. How could it be, that their moves are this transparent? It's so easy...
 	update Pawn (Thinking)
 	Pawn: Unlike your... expressions. Ugh...
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 8.0:
 	join Pawn (Happy) center
 	Pawn_mask: Read em and weep!
 	update Pawn (Love)
 	Pawn: Oh, I didn't mean you my liege! Ah, I may have some wits now but alas... I still need to learn much much more...
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 9.0:
 	join Pawn (Happy) center
 	Pawn_mask: Aha, did you see that last move? Every second calculated. Oh! But the one thing I did not calculate was your... departure.
 	update Pawn (Sad)
 	Can... you stay a moment?
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {pawn_love} == 10.0:
 	join Pawn (Happy) center
 	Pawn_mask: My liege, have you seen the scene? Truly, our victory is afoot; it needs only the finishing touches... Would you do the honours?
 	update Pawn (Love)
 	Pawn:  I would not be here without you my grace... my darling...
 	set {pawn_love} += 1
-	audio "res://assets/sound/Emotes/heart.wav"
+	audio "res://assets/sound/Emotes/heart.ogg"
 	[Something awaits if you can win with a pawn on the board]
+[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
+do Global.toggle_music(true)
+do Global.bot_play_if_turn()

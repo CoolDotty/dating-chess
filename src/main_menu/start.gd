@@ -18,6 +18,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		title_2.stop()
 		start_flash()
 
 func start_flash() -> void:

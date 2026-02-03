@@ -1,9 +1,6 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/woe.ogg"
 if {knight_challenge_1} < 4.0:
 	join Knight_mask (Angry Base) center
 	Knight: NEEEIGHHHHHH (Let me go, let me be free!)
 elif {knight_challenge_1}   >=   4.0:
 	join Knight (Sad Base) center
 	Knight: RAWEHHHHHHHH (My... my Canadian heritage will go on!)
-do Global.toggle_music(true)

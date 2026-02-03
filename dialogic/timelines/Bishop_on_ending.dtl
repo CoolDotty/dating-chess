@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/ending-2-longer.ogg" [sync="music"]
 join Bishop (Love) left
 join King (Love) right [mirrored="true"]
 Bishop: My love... the dark lord blesses us on this day... I love you, I love you,  I love you...

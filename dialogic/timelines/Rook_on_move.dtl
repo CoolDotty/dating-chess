@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/chat.ogg" [sync="music"]
 if {rook_love} == 0.0:
 	join Rook_mask (Ook Happy) center
 	Rook: Ah, my brother, your highness, how are you? Those weaklings on the other side won't know what hit 'em.
@@ -78,6 +76,4 @@ elif {rook_love} == 10.0:
 	set {rook_love} += 1
 	audio "res://assets/sound/Emotes/heart.ogg"
 	[Something awaits if you can win with the rook on the board]
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)
 do Global.bot_play_if_turn()

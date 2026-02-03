@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" loop="true" sync="music"]
 if {bishop_love} == 0.0:
 	join Bishop_mask (Neutral) center
 	Bishop (Neutral): Good match my liege! The Lord has blessed us with a swift wind. Have you time to pray with me?
@@ -62,6 +60,4 @@ elif {bishop_love} == 10.0:
 	Bishop: It has been completed! My... my love, my darling... the ritual has finally been completed!
 	update Bishop
 	Bishop: Now... you will be protected from any and all things, you shall be untouchable by anyone except... except me...
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)
 do Global.bot_play_if_turn()

@@ -1,10 +1,6 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/woe.ogg" [sync="music"]
 if {rook_challenge_1}   <   2.0:
 	join Rook_mask (Rook Angry) center
 	Rook: I cannot be defeated! I... how did this happen...
 elif {rook_challenge_1}   >=   2.0:
 	join Rook (Sad) center
 	Rook: I cannot... I'm sorry your grace... someone else needs to protect you now.
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)

@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/angy.ogg" [fade="0.0" volume="0.0" sync="music"]
 if {queen_challenge_1} < 2.0:
 	join Queen_mask (Neutral) center
 	set {rand} = range(1,5).pick_random()
@@ -14,7 +12,7 @@ if {queen_challenge_1} < 2.0:
 	elif {rand} == 5:
 		Queen: Confirmed
 	leave Queen_mask [animation="Instant Out" wait="true"]
-	do Dialogic.start("Queen_on_move") 
+	do Dialogic.start("Queen_on_move")
 elif {queen_challenge_1}   >=   2.0:
 	join Queen (Happy) center
 	set {rand} = range(1,5).pick_random()
@@ -30,6 +28,4 @@ elif {queen_challenge_1}   >=   2.0:
 		Queen: Yet another victory for us
 	leave Queen [animation="Instant Out" wait="true"]
 	do Dialogic.start("Queen_on_move")
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)
 do Global.bot_play_if_turn()

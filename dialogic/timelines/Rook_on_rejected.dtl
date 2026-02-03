@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/woe.ogg" [sync="music"]
 join Rook_mask left
 join King (Happy) right [mirrored="true"]
 Rook: What? You're my liege, I'm here to protect you. This... you're making this awkward...

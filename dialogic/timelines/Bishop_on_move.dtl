@@ -2,19 +2,19 @@ do Global.toggle_music(false)
 audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" loop="true" sync="music"]
 if {bishop_love} == 0.0:
 	join Bishop_mask (Neutral) center
-	Bishop: Good match my liege! The Lord has blessed us with a swift wind. Have you time to pray with me?
+	Bishop (Neutral): Good match my liege! The Lord has blessed us with a swift wind. Have you time to pray with me?
 	set {bishop_love} += 1
 elif {bishop_love} == 1.0:
 	join Bishop_mask (Angry) center
-	Bishop: Ah, the enemy continues to stike, but the might granted by the Heavens shall protect us!
+	Bishop (Angry): Ah, the enemy continues to stike, but the might granted by the Heavens shall protect us!
 	set {bishop_love} += 1
 elif {bishop_love} == 2.0:
 	join Bishop_mask (Sad) center
-	Bishop: Please... Oh, you have caught me in prayer. Your voice is like a balm... Please continue to speak to me like this.
+	Bishop (Sad): Please... Oh, you have caught me in prayer. Your voice is like a balm... Please continue to speak to me like this.
 	set {bishop_love} += 1
 elif {bishop_love} == 3.0:
 	join Bishop_mask (Angry) center
-	Bishop: The wicked are nothing before your might! The Lord's face truly does shine through your majesty...
+	Bishop (Angry): The wicked are nothing before your might! The Lord's face truly does shine through your majesty...
 	update Bishop_mask (Love)
 	Bishop: I... Let me look at it a moment longer?
 	set {bishop_love} += 1

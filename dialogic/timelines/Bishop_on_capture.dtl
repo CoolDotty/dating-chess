@@ -4,15 +4,15 @@ if {bishop_challenge_1} < 2.0:
 	join Bishop_mask (Angry) center
 	set {rand} = range(1,5).pick_random()
 	if {rand} == 1:
-		Bishop: For the Lord!
+		Bishop (Angry): For the Lord!
 	elif {rand} == 2:
-		Bishop: Smited!
+		Bishop (Angry): Smited!
 	elif {rand} == 3:
-		Bishop: The wicked fall!
+		Bishop (Angry): The wicked fall!
 	elif {rand} == 4:
-		Bishop: Feel his wrath!
+		Bishop (Angry): Feel his wrath!
 	elif {rand} == 5:
-		Bishop: the light befall you!
+		Bishop (Angry): the light befall you!
 	leave Bishop_mask [animation="Instant Out" wait="true"]
 	do Dialogic.start("Bishop_on_move")
 elif {bishop_challenge_1}   >=   2.0:

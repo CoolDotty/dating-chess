@@ -38,7 +38,6 @@ elif {bishop_love} == 6.0:
 	join Bishop (Happy) center
 	Bishop: E-eheheh! The crimson rose, those ruby beads... Your grace... I will carve out a necklace with these colours! And then... the dark one... he will sactify our union... us... forever...
 	set {bishop_love} += 1
-do Global.toggle_music(false)
 elif {bishop_love} == 7.0:
 	join Bishop (Angry) center
 	Bishop: Ah-you have caught me at a bad time... I was preparing this sacrifice for the union ritual and needed just the eye from this... thing. I just need to make sure that we are never apart again...

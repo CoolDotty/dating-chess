@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" sync="music"]
 if {knight_love} == 0.0:
 	join Knight_mask (Happy Base) center
 	Knight: Neiiiiiiiiiigghhhhhh! (You sense a strong determination and hint of breakfast)
@@ -53,6 +51,4 @@ elif {knight_love} == 10.0:
 	set {knight_love} += 1
 	audio "res://assets/sound/Emotes/heart.ogg"
 	[Something awaits if you can win with a Knight on the board]
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)
 do Global.bot_play_if_turn()

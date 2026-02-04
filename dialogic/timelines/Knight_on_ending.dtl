@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/ending-2-longer.ogg" [sync="music"]
 join Knight (Love) left
 join King (Love) right [mirrored="true"]
 Knight: NEEEIIIGGGGHHH!!! (LET US RIDE INTO VALHALLA)

@@ -5,7 +5,7 @@
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "prefix": "",
-"sound_mood_default": "",
+"sound_mood_default": "pawn",
 "sound_moods": {
 "pawn": {
 "mode": 1,

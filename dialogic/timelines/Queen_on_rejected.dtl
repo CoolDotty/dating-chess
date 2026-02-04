@@ -1,5 +1,3 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/angy.ogg" [sync="music"]
 join Queen_mask left
 join King (Happy) right [mirrored="true"]
 Queen: Me? I have no need for a partner. Yes, you are my liege, but that is only by marriage. Love... is not in the discussion.

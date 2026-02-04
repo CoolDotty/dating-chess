@@ -1,20 +1,18 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/chat.ogg" [fade="0.0" loop="true" sync="music"]
 if {bishop_love} == 0.0:
 	join Bishop_mask (Neutral) center
-	Bishop: Good match my liege! The Lord has blessed us with a swift wind. Have you time to pray with me?
+	Bishop (Neutral): Good match my liege! The Lord has blessed us with a swift wind. Have you time to pray with me?
 	set {bishop_love} += 1
 elif {bishop_love} == 1.0:
 	join Bishop_mask (Angry) center
-	Bishop: Ah, the enemy continues to stike, but the might granted by the Heavens shall protect us!
+	Bishop (Angry): Ah, the enemy continues to stike, but the might granted by the Heavens shall protect us!
 	set {bishop_love} += 1
 elif {bishop_love} == 2.0:
 	join Bishop_mask (Sad) center
-	Bishop: Please... Oh, you have caught me in prayer. Your voice is like a balm... Please continue to speak to me like this.
+	Bishop (Sad): Please... Oh, you have caught me in prayer. Your voice is like a balm... Please continue to speak to me like this.
 	set {bishop_love} += 1
 elif {bishop_love} == 3.0:
 	join Bishop_mask (Angry) center
-	Bishop: The wicked are nothing before your might! The Lord's face truly does shine through your majesty...
+	Bishop (Angry): The wicked are nothing before your might! The Lord's face truly does shine through your majesty...
 	update Bishop_mask (Love)
 	Bishop: I... Let me look at it a moment longer?
 	set {bishop_love} += 1
@@ -40,7 +38,6 @@ elif {bishop_love} == 6.0:
 	join Bishop (Happy) center
 	Bishop: E-eheheh! The crimson rose, those ruby beads... Your grace... I will carve out a necklace with these colours! And then... the dark one... he will sactify our union... us... forever...
 	set {bishop_love} += 1
-do Global.toggle_music(false)
 elif {bishop_love} == 7.0:
 	join Bishop (Angry) center
 	Bishop: Ah-you have caught me at a bad time... I was preparing this sacrifice for the union ritual and needed just the eye from this... thing. I just need to make sure that we are never apart again...
@@ -62,6 +59,4 @@ elif {bishop_love} == 10.0:
 	Bishop: It has been completed! My... my love, my darling... the ritual has finally been completed!
 	update Bishop
 	Bishop: Now... you will be protected from any and all things, you shall be untouchable by anyone except... except me...
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)
 do Global.bot_play_if_turn()

@@ -1,18 +1,16 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/angy.ogg" [fade="0.0" sync="music"]
 if {bishop_challenge_1} < 2.0:
 	join Bishop_mask (Angry) center
 	set {rand} = range(1,5).pick_random()
 	if {rand} == 1:
-		Bishop: For the Lord!
+		Bishop (Angry): For the Lord!
 	elif {rand} == 2:
-		Bishop: Smited!
+		Bishop (Angry): Smited!
 	elif {rand} == 3:
-		Bishop: The wicked fall!
+		Bishop (Angry): The wicked fall!
 	elif {rand} == 4:
-		Bishop: Feel his wrath!
+		Bishop (Angry): Feel his wrath!
 	elif {rand} == 5:
-		Bishop: the light befall you!
+		Bishop (Angry): the light befall you!
 	leave Bishop_mask [animation="Instant Out" wait="true"]
 	do Dialogic.start("Bishop_on_move")
 elif {bishop_challenge_1}   >=   2.0:
@@ -30,6 +28,4 @@ elif {bishop_challenge_1}   >=   2.0:
 		Bishop: Please, no, stay a little longer... I want to hear you whimper...
 	leave Bishop [animation="Instant Out" wait="true"]
 	do Dialogic.start("Bishop_on_move")
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)
 do Global.bot_play_if_turn()

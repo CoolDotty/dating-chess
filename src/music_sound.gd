@@ -5,8 +5,6 @@ extends AudioStreamPlayer
 func _ready() -> void:
 	var globalSignal = get_node("/root/Global")
 	globalSignal.music_toggled.connect(_on_music_toggled)
-	if Settings.sound_music:
-		play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

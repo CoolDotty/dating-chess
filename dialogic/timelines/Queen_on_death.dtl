@@ -1,10 +1,6 @@
-do Global.toggle_music(false)
-audio music "res://assets/sound/Music/woe.ogg" [fade="0.0" sync="music"]
 if {queen_challenge_1}   <   2.0:
 	join Queen_mask center
 	Queen: No-how? You cannot win without me!
 elif {queen_challenge_1}   >=   2.0:
 	join Queen center
 	Queen: My dear, I must leave you now... Please push on, I believe in you!
-[clear time="0.1" text="false" portraits="false" background="false" positions="false" style="false"]
-do Global.toggle_music(true)

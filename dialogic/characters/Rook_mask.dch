@@ -5,8 +5,19 @@
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "prefix": "",
-"sound_mood_default": "",
-"sound_moods": {},
+"sound_mood_default": "Pre-trans",
+"sound_moods": {
+"Pre-trans": {
+"mode": 1,
+"name": "Pre-trans",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://assets/sound/Characters/Rook/Pre trans",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
 "style": "",
 "suffix": ""
 },

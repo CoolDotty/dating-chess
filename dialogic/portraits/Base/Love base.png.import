@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcpirjakm8oeh"
-path="res://.godot/imported/Love base.png-ef68dd3eee615d0e69bb8ab52802bdab.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://dialogic/portraits/Base/Love base.png"
-dest_files=["res://.godot/imported/Love base.png-ef68dd3eee615d0e69bb8ab52802bdab.ctex"]
 
 [params]
 

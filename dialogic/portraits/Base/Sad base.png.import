@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s2womt6bkcqs"
-path="res://.godot/imported/Sad base.png-eb8c971f527a80df88c3ebe6623fff5a.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://dialogic/portraits/Base/Sad base.png"
-dest_files=["res://.godot/imported/Sad base.png-eb8c971f527a80df88c3ebe6623fff5a.ctex"]
 
 [params]
 

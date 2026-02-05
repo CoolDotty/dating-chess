@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://7ktr67dmg1s2" path="res://src/main_menu/Title.png" id="3_wrmdx"]
 [ext_resource type="FontFile" uid="uid://bhyf0nnv2h6je" path="res://assets/orkney/Orkney Bold Italic.otf" id="4_b2bbe"]
 [ext_resource type="Script" uid="uid://bics5kgdhqmj" path="res://src/main_menu/start.gd" id="6_b2bbe"]
-[ext_resource type="AudioStream" uid="uid://blf8xn3vrx214" path="res://src/main_menu/title-2.ogg" id="6_wrmdx"]
+[ext_resource type="AudioStream" uid="uid://4e16edmpo1vx" path="res://assets/sound/Music/title-2.ogg" id="7_bk001"]
 [ext_resource type="Script" uid="uid://dwfuef5wyt4ib" path="res://src/main_menu/fade_out.gd" id="8_axgno"]
-[ext_resource type="AudioStream" uid="uid://dgkhe5puct2u7" path="res://assets/sound/Emotes/heart.ogg" id="9_bk001"]
+[ext_resource type="AudioStream" uid="uid://b270dbayd0abo" path="res://assets/sound/SFX/gamestart.ogg" id="9_bk001"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_axgno"]
 font = ExtResource("4_b2bbe")
@@ -42,8 +42,7 @@ label_settings = SubResource("LabelSettings_axgno")
 script = ExtResource("6_b2bbe")
 
 [node name="Title2" type="AudioStreamPlayer" parent="." unique_id=1881702777]
-stream = ExtResource("6_wrmdx")
-volume_db = -11.86
+stream = ExtResource("7_bk001")
 autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=186028706]

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccirq0hcdpqf7"
-path="res://.godot/imported/Character hover frame.png-55269bdf214a1b12fe51660bf95814cc.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/ui/Character hover frame.png"
-dest_files=["res://.godot/imported/Character hover frame.png-55269bdf214a1b12fe51660bf95814cc.ctex"]
 
 [params]
 

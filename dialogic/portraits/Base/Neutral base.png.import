@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg5fa1c1u4yo6"
-path="res://.godot/imported/Neutral base.png-217249b883ca767e638ada3bdad8b5a9.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://dialogic/portraits/Base/Neutral base.png"
-dest_files=["res://.godot/imported/Neutral base.png-217249b883ca767e638ada3bdad8b5a9.ctex"]
 
 [params]
 

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c0fhva7v6808" path="res://src/SettingsMenu.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://fctovp54ejhp" path="res://src/CreditsMenu.tscn" id="10"]
 [ext_resource type="Script" uid="uid://b7ugoehrrxp5r" path="res://src/BotThinkingIndicator.gd" id="11"]
-[ext_resource type="AudioStream" uid="uid://ysjaniii1h1b" path="res://assets/sound/SFX/check.wav" id="11_cifi6"]
+[ext_resource type="AudioStream" uid="uid://brv3kif5lr6r1" path="res://assets/sound/SFX/check-3.ogg" id="11_bc1m7"]
 [ext_resource type="AudioStream" uid="uid://7krrk0o407si" path="res://assets/sound/Music/chess.ogg" id="12_at4if"]
 [ext_resource type="Script" uid="uid://cc3mn6tdcx67p" path="res://src/music_sound.gd" id="13_0rf6s"]
 [ext_resource type="Texture2D" uid="uid://cehncf6qrjq74" path="res://assets/ui/Love meter line art.png" id="14_8c8jm"]
@@ -222,7 +222,7 @@ visible = false
 layout_mode = 1
 
 [node name="CheckSound" type="AudioStreamPlayer" parent="Game" unique_id=2062687617]
-stream = ExtResource("11_cifi6")
+stream = ExtResource("11_bc1m7")
 
 [node name="TerminalSound" type="AudioStreamPlayer" parent="Game" unique_id=1608531396]
 stream = ExtResource("15_s3sml")

@@ -37,8 +37,11 @@ offset_left = 428.0
 offset_top = 591.0
 offset_right = 770.0
 offset_bottom = 629.0
-text = "Press anything to play"
+text = "
+~ CLICK TO BEGIN ~"
 label_settings = SubResource("LabelSettings_axgno")
+horizontal_alignment = 1
+uppercase = true
 script = ExtResource("6_b2bbe")
 
 [node name="Title2" type="AudioStreamPlayer" parent="." unique_id=1881702777]

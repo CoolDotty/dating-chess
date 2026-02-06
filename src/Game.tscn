@@ -223,7 +223,7 @@ visible = false
 layout_mode = 1
 
 [node name="CheckSound" type="AudioStreamPlayer" parent="Game" unique_id=2062687617]
-stream = ExtResource("11_cifi6")
+stream = ExtResource("11_bc1m7")
 
 [node name="TerminalSound" type="AudioStreamPlayer" parent="Game" unique_id=1608531396]
 stream = ExtResource("15_s3sml")

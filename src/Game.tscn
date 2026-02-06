@@ -10,14 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://c0fhva7v6808" path="res://src/SettingsMenu.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://fctovp54ejhp" path="res://src/CreditsMenu.tscn" id="10"]
 [ext_resource type="Script" uid="uid://b7ugoehrrxp5r" path="res://src/BotThinkingIndicator.gd" id="11"]
-[ext_resource type="AudioStream" uid="uid://brv3kif5lr6r1" path="res://assets/sound/SFX/check-3.ogg" id="11_bc1m7"]
+[ext_resource type="AudioStream" uid="uid://ysjaniii1h1b" path="res://assets/sound/SFX/check.wav" id="11_cifi6"]
 [ext_resource type="AudioStream" uid="uid://7krrk0o407si" path="res://assets/sound/Music/chess.ogg" id="12_at4if"]
 [ext_resource type="Script" uid="uid://cc3mn6tdcx67p" path="res://src/music_sound.gd" id="13_0rf6s"]
 [ext_resource type="Texture2D" uid="uid://cehncf6qrjq74" path="res://assets/ui/Love meter line art.png" id="14_8c8jm"]
 [ext_resource type="Texture2D" uid="uid://6lah8fp32wc5" path="res://assets/paper.png" id="14_821k0"]
+[ext_resource type="AudioStream" uid="uid://bhwf6rlt74ixi" path="res://assets/sound/SFX/move.ogg" id="15_f165c"]
 [ext_resource type="Script" uid="uid://dtgyntc27glnd" path="res://src/love_meter.gd" id="15_goodv"]
 [ext_resource type="Shader" uid="uid://bcdviobdb1vg" path="res://src/reveal.gdshader" id="15_ok2ji"]
-[ext_resource type="AudioStream" uid="uid://bhwf6rlt74ixi" path="res://assets/sound/SFX/move.ogg" id="15_s3sml"]
+[ext_resource type="AudioStream" path="res://assets/sound/move.ogg" id="15_s3sml"]
 [ext_resource type="Material" uid="uid://down4o71bhsf" path="res://squigglevision_mat.tres" id="15_vxdjv"]
 [ext_resource type="AudioStream" uid="uid://buevch8mfulce" path="res://assets/sound/SFX/capture.ogg" id="16_2yi6x"]
 [ext_resource type="Texture2D" uid="uid://bsf6rpmbd3raf" path="res://assets/ui/Love meter smoke.png" id="16_goodv"]
@@ -232,7 +233,7 @@ stream = ExtResource("12_at4if")
 script = ExtResource("13_0rf6s")
 
 [node name="MoveSound" type="AudioStreamPlayer" parent="." unique_id=1721394747]
-stream = ExtResource("15_s3sml")
+stream = ExtResource("15_f165c")
 
 [node name="CaptureSound" type="AudioStreamPlayer" parent="." unique_id=456379974]
 stream = ExtResource("16_2yi6x")

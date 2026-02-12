@@ -22,9 +22,10 @@ func _input(event: InputEvent) -> void:
 		start_flash()
 
 func start_flash() -> void:
-	start.play()
-	flash_count = 0
-	flash_timer.start()
+	if flash_timer.is_stopped():
+		start.play()
+		flash_count = 0
+		flash_timer.start()
 
 func _on_flash_timer_timeout() -> void:
 	# Toggle visibility

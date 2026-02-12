@@ -134,7 +134,9 @@ func get_move(chess: Chess) -> Array:
 
 static func get_piece_value(piece) -> int:
 	match piece:
-		null, "K", "k":
+		null:
+			pass
+		"K", "k":
 			return WIN_SCORE
 		"Q", "q":
 			return 900

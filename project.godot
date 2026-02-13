@@ -50,6 +50,7 @@ directories/dtl_directory={
 "Bishop_on_ending": "res://dialogic/timelines/Bishop_on_ending.dtl",
 "Bishop_on_move": "res://dialogic/timelines/Bishop_on_move.dtl",
 "Bishop_on_rejected": "res://dialogic/timelines/Bishop_on_rejected.dtl",
+"IntroTimeline": "res://dialogic/timelines/IntroTimeline.dtl",
 "King_on_capture": "res://dialogic/timelines/King_on_capture.dtl",
 "King_on_death": "res://dialogic/timelines/King_on_death.dtl",
 "King_on_ending": "res://dialogic/timelines/King_on_ending.dtl",

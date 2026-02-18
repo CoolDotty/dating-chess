@@ -1,2 +1,10 @@
 join King (Thinking) center
-King (Thinking): It's been a long a lonely rule over my kingdom. I need to find a new partner to rule at my side, for aren't two minds stronger than one? Blerrrgh
+King (Thinking): It's been a long a lonely rule over my kingdom. I need to find a new partner to rule at my side, for aren't two minds stronger than one? But I'll need your help!
+join King (Neutral) left
+King (Love): Every time you move a piece I will interact with the chosen subject. Reveal their true self through interactions to increase our love <3
+join King (Sad) left
+join Queen_mask (Angry) right
+King (Sad): With enough love, anything is possible (I think TwT) for my marriage to the queen is loveless and in name only... She can rule without me she says...
+leave Queen_mask
+join King (Happy) center
+But enough sad memories! My kingdom lies in your capable hands, capture the enemy king and get a me a date!

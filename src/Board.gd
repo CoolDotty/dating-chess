@@ -165,6 +165,14 @@ func setup_board(chess: Chess) -> void:
 		else:
 			sprite.texture = null
 
+func get_piece_sprite_at(square_idx: int) -> Sprite2D:                                                                                                                                                  
+	for child in get_children():                                                                                                                                                                      
+		if child.scene_file_path != "res://piece.tscn":                                                                                                                                           
+			continue                                                                                                                                                                          
+		var area2d = child.get_node("Area2D")                                                                                                                                                     
+		if area2d.index == square_idx:
+			return child.get_node("Sprite2D")  
+	return null
 
 # TODO: flipping doesn't work (try simply reversing y coordinate!)
 func flip_board() -> void:

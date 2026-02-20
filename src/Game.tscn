@@ -89,6 +89,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="C" type="CenterContainer" parent="Game" unique_id=1703768777]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -216,6 +217,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="SettingsMenu" parent="Game" unique_id=1446169887 instance=ExtResource("5")]
+visible = false
 
 [node name="CreditsMenu" parent="Game" unique_id=549160077 instance=ExtResource("10")]
 visible = false
@@ -247,12 +249,22 @@ metadata/_edit_lock_ = true
 
 [node name="LoveMeter" type="Sprite2D" parent="." unique_id=358004775]
 process_mode = 3
+z_index = 1
 material = ExtResource("15_vxdjv")
 position = Vector2(1190, 185)
 scale = Vector2(-0.2, 0.2)
 texture = ExtResource("14_8c8jm")
 script = ExtResource("15_goodv")
-metadata/_edit_lock_ = true
+
+[node name="fill_bg" type="Sprite2D" parent="LoveMeter" unique_id=77114639]
+z_index = -1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("16_goodv")
+
+[node name="jar_bg" type="Sprite2D" parent="LoveMeter" unique_id=82573692]
+z_index = -1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("17_821k0")
 
 [node name="Fill" type="Sprite2D" parent="LoveMeter" unique_id=228776297]
 z_index = -1
@@ -275,7 +287,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1280.0
+offset_left = 1.0
+offset_right = 1281.0
 offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2

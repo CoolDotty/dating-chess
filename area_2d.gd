@@ -19,7 +19,10 @@ var piece_name = '';
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	selected = false
-	#pass # Replace with function body.
+	if black:
+		add_to_group("black_pieces")
+	else:
+		add_to_group("white_pieces")
 
 func _connect_square_signals(game: ChessGame):
 	piece_grabbed.connect(game._on_Square_piece_grabbed)
@@ -46,15 +49,19 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if not target_selector:
 			selected = true
-			print(san_name)
+			#print(san_name)
 			piece_selected.emit(x_i, y_i)
 			piece_grabbed.emit(index)
 			get_parent().modulate = selected_color
 			#print(viewport, event, shape_idx)
 		else:
-			print("move ", target_selector_from, " ", index)
+			#print("move ", target_selector_from, " ", index)
 			target_selector = false;
 			piece_dropped.emit(piece_name, target_selector_from, index);
+			
+			await get_tree().create_timer(0.1).timeout
+			for piece in get_tree().get_nodes_in_group("white_pieces"):
+				piece.unselect()
 		
 func unselect():
 	selected = false

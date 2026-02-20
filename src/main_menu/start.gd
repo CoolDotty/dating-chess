@@ -2,9 +2,10 @@ extends Label
 
 var flash_count = 0
 var max_flashes = 17
-var target_scene = "uid://cw1fs4vp0p4tm"  # Change this to your scene path
 
-@onready var color_rect: ColorRect = $"../ColorRect"
+const INTRO_TUTORIAL = preload("uid://c1jpgorcpm4ef")
+
+@onready var fade_out: ColorRect = $"../Fade out"
 @onready var start: AudioStreamPlayer = $"../start"
 @onready var title_2: AudioStreamPlayer = $"../Title2"
 
@@ -35,6 +36,6 @@ func _on_flash_timer_timeout() -> void:
 	# After max flashes, change scene
 	if flash_count >= max_flashes:
 		flash_timer.stop()
-		await color_rect.fade_to_black()
+		await fade_out.fade_to_black()
 		await get_tree().create_timer(1.0).timeout
-		get_tree().change_scene_to_file(target_scene)
+		get_tree().change_scene_to_packed(INTRO_TUTORIAL)

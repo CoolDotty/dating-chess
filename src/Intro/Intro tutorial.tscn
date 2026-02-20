@@ -1,12 +1,46 @@
 [gd_scene format=3 uid="uid://c1jpgorcpm4ef"]
 
 [ext_resource type="Script" uid="uid://qoq3p56aarvv" path="res://src/Intro/intro_tutorial.gd" id="1_274qy"]
-[ext_resource type="Texture2D" uid="uid://gcjowwfkbfca" path="res://assets/background1.png" id="2_52gip"]
+[ext_resource type="Texture2D" uid="uid://tbvy8smuwb0t" path="res://assets/intro/Tutorial background.png" id="2_52gip"]
+[ext_resource type="AudioStream" uid="uid://cbounqcokf3ts" path="res://assets/intro/quieterchess-2-2.ogg" id="3_ktuhu"]
+[ext_resource type="Script" uid="uid://dwfuef5wyt4ib" path="res://src/main_menu/fade_out.gd" id="4_1wlif"]
 
 [node name="IntroTutorial" type="Node2D" unique_id=1965146800]
 script = ExtResource("1_274qy")
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=542408091]
-position = Vector2(721, 485.00003)
-scale = Vector2(0.7416906, 0.6414033)
 texture = ExtResource("2_52gip")
+centered = false
+
+[node name="Quieterchess22" type="AudioStreamPlayer" parent="." unique_id=189594844]
+stream = ExtResource("3_ktuhu")
+autoplay = true
+parameters/looping = true
+
+[node name="Fade out" type="ColorRect" parent="." unique_id=265136949]
+z_index = 999
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 1282.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("4_1wlif")
+manual = true
+
+[node name="Fade in" type="ColorRect" parent="." unique_id=613012155]
+z_index = 999
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1281.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("4_1wlif")
+start_black = true

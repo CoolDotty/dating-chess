@@ -48,7 +48,7 @@ script = ExtResource("6_b2bbe")
 stream = ExtResource("7_bk001")
 autoplay = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=186028706]
+[node name="Fade out" type="ColorRect" parent="." unique_id=186028706]
 z_index = 999
 anchors_preset = 15
 anchor_right = 1.0

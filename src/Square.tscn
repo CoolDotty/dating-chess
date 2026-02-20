@@ -28,7 +28,17 @@ color = Color(1, 1, 0, 0.392157)
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -60.0
+offset_bottom = -60.0
 expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Piece" unique_id=1535750168]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -100.0
+offset_right = 75.0
+offset_bottom = 60.0
+mouse_filter = 2
 
 [node name="LegalMoveIndicator" type="CenterContainer" parent="." unique_id=249644704]
 visible = false

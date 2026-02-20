@@ -5,15 +5,15 @@
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "prefix": "",
-"sound_mood_default": "Male talking",
+"sound_mood_default": "male voice",
 "sound_moods": {
-"Male talking": {
+"male voice": {
 "mode": 1,
-"name": "Male talking",
+"name": "male voice",
 "pitch_base": 1.0,
 "pitch_variance": 0.0,
 "skip_characters": 0.0,
-"sound_path": "res://assets/sound/Characters/Male/malevoice4.ogg",
+"sound_path": "res://assets/sound/Characters/Male",
 "volume_base": 0.0,
 "volume_variance": 0.0
 }
@@ -23,70 +23,68 @@
 },
 &"default_portrait": "Neutral",
 &"description": "",
-&"display_name": "King",
+&"display_name": "Bishop",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
 "Angry": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/King/King angry.png\""
+"image": "\"res://dialogic/portraits/king/King angry.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": "",
-"sound_mood": "Male talking"
+"sound_mood": "male voice"
 },
 "Happy": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/King/King happy.png\""
+"image": "\"res://dialogic/portraits/king/King happy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": "",
-"sound_mood": "Male talking"
+"sound_mood": "male voice"
 },
 "Love": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/King/King love.png\""
+"image": "\"res://dialogic/portraits/king/King love.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": "",
-"sound_mood": "Male talking"
+"scene": ""
 },
 "Neutral": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/King/King neutral.png\""
+"image": "\"res://dialogic/portraits/king/King neutral.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": "",
-"sound_mood": "Male talking"
+"sound_mood": "male voice"
 },
 "Sad": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/King/King sad.png\""
+"image": "\"res://dialogic/portraits/king/King sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": "",
-"sound_mood": "Male talking"
+"scene": ""
 },
 "Thinking": {
 "export_overrides": {
-"image": "\"res://dialogic/portraits/King/King thinking.png\""
+"image": "\"res://dialogic/portraits/king/King thinking.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": "",
-"sound_mood": "Male talking"
+"sound_mood": "male voice"
 }
 },
 &"scale": 1.0

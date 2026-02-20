@@ -9,6 +9,7 @@
 script = ExtResource("1_274qy")
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=542408091]
+z_index = -999
 texture = ExtResource("2_52gip")
 centered = false
 

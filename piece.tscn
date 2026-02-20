@@ -2,9 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://ciyiv6rluhrka" path="res://assets/test piece.png" id="1_3makh"]
 [ext_resource type="Script" uid="uid://bstm4mbnxe67a" path="res://area_2d.gd" id="1_hisf2"]
+[ext_resource type="Shader" uid="uid://bgousdhe5mnds" path="res://invert.gdshader" id="2_sk825"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hisf2"]
 size = Vector2(29, 26)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1xrd"]
+shader = ExtResource("2_sk825")
+shader_parameter/invert_colors = false
 
 [node name="Piece" type="Node2D" unique_id=1246193162]
 
@@ -16,6 +21,7 @@ position = Vector2(2.5, 13)
 shape = SubResource("RectangleShape2D_hisf2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=119960271]
+material = SubResource("ShaderMaterial_y1xrd")
 position = Vector2(1.1920929e-07, 1.1920929e-07)
 scale = Vector2(0.038124997, 0.038124986)
 texture = ExtResource("1_3makh")

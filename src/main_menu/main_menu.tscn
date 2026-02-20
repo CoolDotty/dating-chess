@@ -46,7 +46,7 @@ stream = ExtResource("6_wrmdx")
 volume_db = -11.86
 autoplay = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=186028706]
+[node name="Fade out" type="ColorRect" parent="." unique_id=186028706]
 z_index = 999
 anchors_preset = 15
 anchor_right = 1.0

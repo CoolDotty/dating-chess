@@ -65,14 +65,14 @@ elif {queen_love} == 9.0:
 	Queen: Queen do this, queen do that... When will there come a day when I can demand someone care for me?
 	update Queen (Love)
 	Queen: O-oh... I suppose you are right..
-set {queen_love} += 1set {queen_love} += 1
-audio "res://assets/sound/Emotes/heart.ogg"
+	set {queen_love} += 1set {queen_love} += 1
+	audio "res://assets/sound/Emotes/heart.ogg"
 elif {queen_love} == 10.0:
 	join Queen (Happy) center
 	Queen: I don't ever want to look back but sometimes it's the only place that truly feels safe... With you. Thank you for leading us through it. We... I could not have done it without you. With you I feel seen.
 	update Queen (Love)
 	Queen: Thank you my liege. I'm with you. till death do us part...
 	[Something awaits if you can win with the queen on the board]
-set {queen_love} += 1
-audio "res://assets/sound/Emotes/heart.ogg"
+	set {queen_love} += 1set {queen_love} += 1
+	audio "res://assets/sound/Emotes/heart.ogg"
 do Global.bot_play_if_turn()

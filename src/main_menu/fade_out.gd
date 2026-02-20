@@ -1,12 +1,16 @@
 extends ColorRect
 
 @export var start_black: bool = false
+@export var manual: bool = false
 
 var master_bus_idx: int
 
 func _ready() -> void:
 	mouse_filter = MOUSE_FILTER_IGNORE  # Don't block clicks
 	master_bus_idx = AudioServer.get_bus_index("Master")
+	
+	if manual:
+		return
 	
 	if start_black:
 		color = Color.BLACK

@@ -234,6 +234,8 @@ volume_db = -6.0
 [node name="MusicSound" type="AudioStreamPlayer" parent="Game" unique_id=485771712]
 stream = ExtResource("12_at4if")
 volume_db = -9.0
+autoplay = true
+parameters/looping = true
 script = ExtResource("13_0rf6s")
 
 [node name="MoveSound" type="AudioStreamPlayer" parent="." unique_id=1721394747]

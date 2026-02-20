@@ -231,6 +231,8 @@ stream = ExtResource("15_s3sml")
 
 [node name="MusicSound" type="AudioStreamPlayer" parent="Game" unique_id=485771712]
 stream = ExtResource("12_at4if")
+autoplay = true
+parameters/looping = true
 script = ExtResource("13_0rf6s")
 
 [node name="MoveSound" type="AudioStreamPlayer" parent="." unique_id=1721394747]

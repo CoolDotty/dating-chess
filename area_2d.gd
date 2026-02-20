@@ -2,7 +2,7 @@ extends Area2D
 
 signal piece_selected(x_i, y_i);
 signal piece_grabbed(from_square);
-signal piece_dropped(from_square, to_square);
+signal piece_dropped(piece_name, from_square, to_square);
 
 var x_i;
 var y_i;
@@ -14,6 +14,7 @@ var selected;
 var target_selector = false # is this a dummy node used for selecting the targets?
 var target_selector_from = 0;
 var black = false;
+var piece_name = '';
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,6 +46,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if not target_selector:
 			selected = true
+			print(san_name)
 			piece_selected.emit(x_i, y_i)
 			piece_grabbed.emit(index)
 			get_parent().modulate = selected_color
@@ -52,7 +54,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		else:
 			print("move ", target_selector_from, " ", index)
 			target_selector = false;
-			piece_dropped.emit(target_selector_from, index);
+			piece_dropped.emit(piece_name, target_selector_from, index);
 		
 func unselect():
 	selected = false

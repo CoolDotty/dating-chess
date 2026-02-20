@@ -4,7 +4,7 @@ extends Node2D
 @onready var game: ChessGame = $".."
 
 signal piece_grabbed(from_square);
-signal piece_dropped(from_square, to_square);
+signal piece_dropped(piece_name, from_square, to_square);
 
 var black_color = Color(0.2,0.23,0.25);
 
@@ -75,8 +75,8 @@ func _on_piece_grabbed(idx):
 	piece_grabbed.emit(idx)
 	#game._on_Square_piece_grabbed(idx)
 	
-func _on_piece_dropped(from, to):
-	piece_dropped.emit(from, to)
+func _on_piece_dropped(piece_name, from, to):
+	piece_dropped.emit(piece_name, from, to)
 	#game._on_Square_piece_dropped(from, to) # silly, I know
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -138,6 +138,7 @@ func mark_possible_moves(from_idx, ids):
 			square.target_selector = true;
 			square.target_selector_from = from_idx;
 			square.black = oldSquare.black
+			square.piece_name = oldSquare.piece_name
 		else:
 			sprite.texture = null
 
@@ -153,6 +154,7 @@ func setup_board(chess: Chess) -> void:
 			piece = piece.to_upper()
 			#sprite.texture = load("res://assets/tatiana/" + col + piece + ".svg")
 			sprite.texture = load("res://assets/cool_pieces/" + piece + ".png")
+			square.piece_name = piece;
 			#sprite.scale = Vector2(0.1,0.1)
 			# TODO: col as effect
 			if col == "b":

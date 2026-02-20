@@ -168,7 +168,7 @@ func advance_challenges(move: Move, moves: Array, chess: Chess):
 	
 	# SACRIFICE A BISHOP
 	if Dialogic.VAR.bishop_challenge_1 >= 1:
-		print(move.did_capture)
+		#print(move.did_capture)
 		if move.did_capture == "B":
 			Dialogic.VAR.bishop_challenge_1 += 1
 	
@@ -176,7 +176,7 @@ func advance_challenges(move: Move, moves: Array, chess: Chess):
 	
 	# Queen move 6 spaces or more in one turn
 	if Dialogic.VAR.queen_challenge_1 >= 1:
-		print(is_distance_6_or_more(move.from_square, move.to_square))
+		#print(is_distance_6_or_more(move.from_square, move.to_square))
 		if move.piece_type == "Q" and is_distance_6_or_more(move.from_square, move.to_square):
 			Dialogic.VAR.queen_challenge_1 += 1
 	

@@ -36,6 +36,8 @@ func _ready() -> void:
 	randomize()
 	get_tree().call_group("Squares", "_connect_square_signals", self)
 	get_tree().call_group("Squares", "_connect_square_signals", self)
+	bot_check.button_pressed = true
+	Global.bot_enabled = true
 	update_state()
 	var globalSignal = get_node("/root/Global")
 	globalSignal.bot_turn.connect(_on_Bot_turn)
@@ -147,7 +149,6 @@ func _on_BotCheck_pressed() -> void:
 
 
 func _on_BotTimer_timeout() -> void:
-	#bot_play()
 	pass
 
 func _on_Bot_turn(): # TODO: Connect signal
@@ -280,10 +281,17 @@ func bot_finalize(result: Array) -> void:
 	#print("%s  score: %d  searched: %d %d  eval: %d  time: %dms" % [result[1].notation_san, result[0],
 	#		engine.num_positions_searched, engine.num_positions_searched_q, engine.num_positions_evaluated,
 	#		engine.search_time / 1000.0])
+	var bot_move: Move = result[1]
 	chess.play_move(result[1])
 	bot_thinking = false
 	bot_timer.stop()
 	update_state(true)
+	
+	var moved_sprite = board.get_piece_sprite_at(bot_move.to_square)
+	if moved_sprite:
+		for bp in get_tree().get_nodes_in_group("black_pieces"):
+			bp.unselect()
+		moved_sprite.modulate = Color.PALE_VIOLET_RED
 
 
 func _on_reset_button_pressed() -> void:

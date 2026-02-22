@@ -13,12 +13,21 @@ var san_name;
 var selected;
 var target_selector = false # is this a dummy node used for selecting the targets?
 var target_selector_from = 0;
-var black = false;
+var black = false:
+	set(new_color):
+		black = new_color
+		var shader_mat = sprite_2d.material as ShaderMaterial
+		shader_mat.set_shader_parameter("invert_colors", black)
 var piece_name = '';
+
+@onready var sprite_2d: Sprite2D = $"../Sprite2D"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	selected = false
+	sprite_2d.material = sprite_2d.material.duplicate()
+	var shader_mat = sprite_2d.material as ShaderMaterial
+	shader_mat.set_shader_parameter("invert_colors", black)
 	if black:
 		add_to_group("black_pieces")
 	else:

@@ -98,7 +98,8 @@ func unmark_moves():
 					sprite.texture = oldTexture
 
 			if square.black:
-				sprite.modulate = black_color
+				sprite.modulate = Color.WHITE
+				#sprite.modulate = black_color
 			else:
 				sprite.modulate = Color.WHITE
 		#if square.index in movesMarked:
@@ -159,7 +160,7 @@ func setup_board(chess: Chess) -> void:
 			# TODO: col as effect
 			if col == "b":
 				square.black = true
-				sprite.modulate = black_color;
+				#sprite.modulate = black_color;
 			else:
 				square.black = false
 		else:

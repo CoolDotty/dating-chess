@@ -291,7 +291,7 @@ func bot_finalize(result: Array) -> void:
 	if moved_sprite:
 		for bp in get_tree().get_nodes_in_group("black_pieces"):
 			bp.unselect()
-		moved_sprite.modulate = Color.PALE_VIOLET_RED
+		moved_sprite.modulate = Color.PALE_VIOLET_RED.inverted()
 
 
 func _on_reset_button_pressed() -> void:

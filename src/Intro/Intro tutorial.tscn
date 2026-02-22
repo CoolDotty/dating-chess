@@ -9,6 +9,7 @@
 script = ExtResource("1_274qy")
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=542408091]
+z_index = -999
 texture = ExtResource("2_52gip")
 centered = false
 
@@ -22,8 +23,7 @@ z_index = 999
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_right = 1282.0
+offset_right = 1280.0
 offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -36,8 +36,7 @@ z_index = 999
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_right = 1281.0
+offset_right = 1280.0
 offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
